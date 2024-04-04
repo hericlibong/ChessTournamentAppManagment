@@ -37,3 +37,17 @@ class Tournament:
         self.total_round = total_round
 
     
+
+    def add_player(self, player):
+        """Ajoute un joueur à la liste des joueurs inscrits au tournoi."""
+        self.register_player.append(player)
+        print(f"{player} a été ajouté au tournoi '{self.name}'.")
+    
+
+    def remove_player(self, player):
+        """Retire un joueur de la liste des joueurs inscrits au tournoi, s'il y est."""
+        if player in self.register_player:
+            self.register_player.remove(player)
+            print(f"{player} a été retiré du tournoi '{self.name}'.")
+        else:
+            print(f"{player} n'est pas inscrit au tournoi '{self.name}'.")

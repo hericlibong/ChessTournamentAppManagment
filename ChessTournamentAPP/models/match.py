@@ -1,5 +1,5 @@
 from typing import Tuple
-from player import Player
+from .player import Player
 
 class Match:
     """Représentation d'un match entre deux joueurs."""

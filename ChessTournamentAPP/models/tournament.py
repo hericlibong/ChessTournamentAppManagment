@@ -1,21 +1,3 @@
-"""  
-Tournois : Les tournois sont des collections de tours et de matchs, 
-avec des informations telles que le nom, lieu, dates, nombre de tours prévu, 
-liste des joueurs inscrits, et une description générale. 
-Les informations sur les tournois seront également stockées dans des fichiers JSON.
-
-● nom ;
-● lieu ;
-● date de début et de fin ;
-● nombre de tours – réglez la valeur par défaut sur 4 ;
-● numéro correspondant au tour actuel ;
-● une liste des tours ;
-● une liste des joueurs enregistrés ;
-● description pour les remarques générales du directeur du tournoi.
-
-
-"""
-
 from datetime import datetime
 
 class Tournament:
@@ -37,7 +19,7 @@ class Tournament:
         self.total_round = total_round
 
     
-
+    # Méthodes créé pour tester le modèle
     def add_player(self, player):
         """Ajoute un joueur à la liste des joueurs inscrits au tournoi."""
         self.register_player.append(player)

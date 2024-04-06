@@ -14,10 +14,10 @@ class Tournament:
         self.start_date = self.validate_date(start_date, "start")
         self.end_date = self.validate_date(end_date, "end", self.start_date)
         self.description = description
-        self.current_round = current_round
+        self.current_round = 0 # Commence à zéro, indicant qu'aucun round n'a encore été joué
         self.rounds = [] # Liste de tours effectués pendant un tournoi
         self.register_player = [] # Liste de joueurs enregistrés dans le tournoi
-        self.total_round = total_round
+        self.total_round = total_round # 4 par défaut mais peut être ajusté
 
     
     def validate_date(self, date_str, date_type, start_date=None):

@@ -3,7 +3,7 @@ from models.round import Round
 from models.match import Match
 from datetime import datetime
 from models.tournament import Tournament
-from controllers.application import ApplicationController
+from controllers.application_controller import ApplicationController
 import random
 
 

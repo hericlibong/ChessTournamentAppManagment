@@ -44,26 +44,6 @@ class Tournament:
     
 
 
-    
-    # def validate_date(self, date_str, date_type, start_date=None):
-    #     """ Valide et convertit les dates de début et de fin."""
-    #     if not date_str:
-    #         raise ValueError(f"Aucune date fournie pour {date_type}.")
-    #     try:
-    #         date = datetime.strptime(date_str, "%Y-%m-%d")
-    #         if date_type == "end" and start_date and date <= start_date:
-    #             raise ValueError("La date de fin doit être après la date de début.")
-    #         return date
-    #     except ValueError as e:
-    #         raise ValueError(f"Erreur de validation pour la date de {date_type}: {e}")
-
-
-
-
-
-
-
-
     # Méthodes créé pour tester le modèle
     def add_player(self, player):
         """Ajoute un joueur à la liste des joueurs inscrits au tournoi."""

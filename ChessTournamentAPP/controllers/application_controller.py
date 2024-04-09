@@ -3,7 +3,9 @@
 from datetime import datetime
 from views.menu_view import MenuView
 from views.tournament_views import TournamentView 
+from views.player_views import PlayerView
 from models.tournament import Tournament
+from models.player import Player
 from util.data_manager import load_tournaments, save_tournaments
 
 
@@ -28,8 +30,11 @@ class ApplicationController:
                 # Charger un tournoi existant (fonctionnalité à développer)
                 pass
             elif choice == '4':
-                self.update_tournament()    
+                self.update_tournament()
             elif choice == '5':
+                self.add_player()    
+            
+            elif choice == '6':
                 print("Exit Application")
                 break
             else :
@@ -79,23 +84,16 @@ class ApplicationController:
         else:
             print("Tournoi non trouvé.")
 
-    # def update_tournament_description(self):
-    #     # Afficher les tournois avec leurs ID pour la sélection
-    #     TournamentView.display_tournaments(self.tournaments)
-    #     # Demander à l'utilisateur l'ID du tournoi à modifier
-    #     t_id = input("Entrez l'ID du conyrol à modifier : ")
-    #     # Trouver le tournoi correspondant
-    #     tournament = next((t for t in self.tournaments if t.t_id == t_id), None)
-    #     if tournament:
-    #         # Demander la nouvelle description
-    #         new_description = input("Entrez la nouvelle description : ")
-    #         # Mettre à jour la description
-    #         tournament.description = new_description
-    #         # sauvegarder les modifications
-    #         self.save_data()
-    #         print("La description du tournoi a été mise à jour.")
-    #     else:
-    #         print("Tournoi non trouvé")
+    
+    #### Gestion des joueurs ####
 
+    def add_player(self):
+        player_details = PlayerView.create_player()  # Supposer qu'une vue PlayerView existe
+        new_player = Player(*player_details)
+        # Ajouter ici la logique pour associer le joueur à un tournoi si nécessaire
+        print(f"Player '{new_player.name}' added successfully.")
+
+
+    
     
     

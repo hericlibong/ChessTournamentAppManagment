@@ -9,6 +9,7 @@ class MenuView:
         print("2. See the existing tournaments")
         print("3. Load a tournament")
         print("4. Update a tournament")
-        print("5. Quit")
+        print("5. add players")
+        print("6. Quit")
         choice = input("Enter your choice : ")
         return choice

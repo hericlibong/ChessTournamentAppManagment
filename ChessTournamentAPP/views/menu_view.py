@@ -1,4 +1,4 @@
-
+# menu_view.py
 
 class MenuView:
     """Creation du menu"""

@@ -11,6 +11,15 @@ class Player:
         self.firstname = firstname
         self.birthdate = self.validate_birthdate(birthdate)
         self.unique_id = self.validate_unique_id(unique_id)
+
+
+    def to_dict(self):
+        return {
+            "name": self.name,
+            "firstname": self.firstname,
+            "birthdate": self.birthdate.strftime("%Y-%m-%d"),
+            "unique_id": self.unique_id
+        }
         
     
     def validate_birthdate(self, birthdate_str):

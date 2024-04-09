@@ -1,3 +1,5 @@
+# tournament_views.py
+
 class TournamentView:
 
     @staticmethod
@@ -5,6 +7,7 @@ class TournamentView:
         """
         Vue statique pour créer un nouveau tournoi, collectant toutes les informations nécessaires.
         """
+        
         name = input("Entrez le nom du tournoi : ")
         location = input("Entrez le lieu du tournoi : ")
         description = input("Entrez une description : ")
@@ -14,7 +17,7 @@ class TournamentView:
         total_round = input("Entrez le nombre total de rounds (laissez vide pour la valeur par défaut de 4) : ") or 4
         total_round = int(total_round)  # Convertit la saisie en entier
 
-        return name, location, description, start_date, end_date, total_round
+        return  name, location, description, start_date, end_date, total_round
     
 
 

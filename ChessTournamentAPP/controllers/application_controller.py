@@ -24,8 +24,10 @@ class ApplicationController:
                 TournamentView.display_tournaments(self.tournaments)
             elif choice =='3':
                 # Charger un tournoi existant (fonctionnalité à développer)
-                pass    
+                pass
             elif choice == '4':
+                self.update_tournament_description()    
+            elif choice == '5':
                 print("Exit Application")
                 break
             else :
@@ -34,4 +36,25 @@ class ApplicationController:
     
     def save_data(self):
         save_tournaments(self.tournaments)
+
+    
+    def update_tournament_description(self):
+        # Afficher les tournois avec leurs ID pour la sélection
+        TournamentView.display_tournaments(self.tournaments)
+        # Demander à l'utilisateur l'ID du tournoi à modifier
+        t_id = input("Entrez l'ID du conyrol à modifier : ")
+        # Trouver le tournoi correspondant
+        tournament = next((t for t in self.tournaments if t.t_id == t_id), None)
+        if tournament:
+            # Demander la nouvelle description
+            new_description = input("Entrez la nouvelle description : ")
+            # Mettre à jour la description
+            tournament.description = new_description
+            # sauvegarder les modifications
+            self.save_data()
+            print("La description du tournoi a été mise à jour.")
+        else:
+            print("Tournoi non trouvé")
+
+    
     

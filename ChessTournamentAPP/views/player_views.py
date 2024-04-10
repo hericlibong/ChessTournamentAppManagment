@@ -14,5 +14,15 @@ class PlayerView:
         u_id = input("Entrez l'identifiant unique : ")
 
         return name, firstname, birthdate, u_id
+    
 
+    @staticmethod
+    def display_players(players):
+        """Affiche les joueurs enregistrés"""
+        if not players:
+            print("Aucun joueur n'est enregistré.")
+        else:
+            print("Liste des joueurs enregistrés :")
+            for player in players:
+                print(f"ID: {player.unique_id}, Nom: {player.name}, Prénom: {player.firstname}, Date de naissance: {player.birthdate.strftime('%d/%m/%Y')}")
 

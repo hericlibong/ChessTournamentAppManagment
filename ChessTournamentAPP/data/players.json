@@ -16,5 +16,71 @@
         "firstname": "Johnson",
         "birthdate": "17/06/1987",
         "unique_id": "OJ98345"
+    },
+    {
+        "name": "Riner",
+        "firstname": "Teddy",
+        "birthdate": "24/03/1969",
+        "unique_id": "NB09876"
+    },
+    {
+        "name": "Harit",
+        "firstname": "Amin",
+        "birthdate": "23/08/2000",
+        "unique_id": "AH07896"
+    },
+    {
+        "name": "Pérec",
+        "firstname": "Marie-Josée",
+        "birthdate": "24/03/1970",
+        "unique_id": "MP09876"
+    },
+    {
+        "name": "Décimus",
+        "firstname": "Maximus",
+        "birthdate": "23/08/1978",
+        "unique_id": "MD76890"
+    },
+    {
+        "name": "Benzema",
+        "firstname": "Karim",
+        "birthdate": "22/09/1998",
+        "unique_id": "KB09875"
+    },
+    {
+        "name": "Ledru",
+        "firstname": "Rollin",
+        "birthdate": "21/09/1987",
+        "unique_id": "LR78912"
+    },
+    {
+        "name": "1",
+        "firstname": "8",
+        "birthdate": "24/03/1969",
+        "unique_id": "OI98765"
+    },
+    {
+        "name": "Skywalker",
+        "firstname": "Luc",
+        "birthdate": "12/01/1999",
+        "unique_id": "LS99987"
+    },
+    {
+        "name": "Jedi",
+        "firstname": "L",
+        "birthdate": "26/08/1977",
+        "unique_id": "JL77911"
+    },
+    {
+        "name": "Solo",
+        "firstname": "Yann",
+        "birthdate": "06/07/1977",
+        "unique_id": "YS77912"
+    },
+    {
+        "name": "Dark",
+        "firstname": "Vador",
+        "birthdate": "11/02/2005",
+        "unique_id": "DV50022"
     }
 ]

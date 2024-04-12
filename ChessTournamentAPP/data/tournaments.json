@@ -1,38 +1,64 @@
 [
     {
-        "t_id": "726a599a",
+        "t_id": "a86035a8",
         "name": "grand_slam",
         "location": "Paris",
-        "start_date": "10/04/2024",
-        "end_date": "11/04/2024",
+        "start_date": "11/04/2024",
+        "end_date": "12/04/2024",
         "description": "le meilleur des échecs sur la Seine",
         "current_round": 0,
         "rounds": [],
-        "registered_players": [],
+        "registered_players": [
+            {
+                "name": "Usain",
+                "firstname": "Bolt",
+                "birthdate": "24/03/1969",
+                "unique_id": "AK54321"
+            },
+            {
+                "name": "Kylian",
+                "firstname": "Mbappé",
+                "birthdate": "10/08/2001",
+                "unique_id": "OY67854"
+            },
+            {
+                "name": "Majic",
+                "firstname": "Johnson",
+                "birthdate": "17/06/1987",
+                "unique_id": "OJ98345"
+            },
+            {
+                "name": "Riner",
+                "firstname": "Teddy",
+                "birthdate": "24/03/1969",
+                "unique_id": "NB09876"
+            }
+        ],
         "total_round": 4
     },
     {
-        "t_id": "6ab0046d",
+        "t_id": "aeb9cdf0",
         "name": "little_slam",
-        "location": "Paris",
+        "location": "Caen",
         "start_date": "12/04/2024",
         "end_date": "13/04/2024",
-        "description": "les joueurs d'échecs sur la Seine",
+        "description": "Le meilleur des échecs en Normandie",
         "current_round": 0,
         "rounds": [],
-        "registered_players": [],
-        "total_round": 4
-    },
-    {
-        "t_id": "e9920620",
-        "name": "middle_slam",
-        "location": "Alençon",
-        "start_date": "09/04/2024",
-        "end_date": "11/09/2024",
-        "description": "le meilleur des échecs en Normandie",
-        "current_round": 0,
-        "rounds": [],
-        "registered_players": [],
+        "registered_players": [
+            {
+                "name": "Usain",
+                "firstname": "Bolt",
+                "birthdate": "24/03/1969",
+                "unique_id": "AK54321"
+            },
+            {
+                "name": "Kylian",
+                "firstname": "Mbappé",
+                "birthdate": "10/08/2001",
+                "unique_id": "OY67854"
+            }
+        ],
         "total_round": 4
     }
 ]

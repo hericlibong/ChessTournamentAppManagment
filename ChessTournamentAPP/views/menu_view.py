@@ -3,14 +3,15 @@
 class MenuView:
     """Creation du menu"""
     
-    
+
     @staticmethod
     def display_main_menu():
         """Affiche les options du menu principal """
         print("\nMenu principal :")
         print("1. Gérer les tournois")
         print("2. Gérer les joueurs")
-        print("3. Quitter l'application")
+        print("3. Associer un joueur à un tournoi")
+        print("4. Quitter l'application")
         choice = input("Entrez le choix : ")
         return choice
     

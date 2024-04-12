@@ -44,11 +44,13 @@ class Tournament:
     
 
 
-    # Méthodes créé pour tester le modèle
-    def add_player(self, player):
-        """Ajoute un joueur à la liste des joueurs inscrits au tournoi."""
-        self.register_player.append(player)
-        print(f"{player} a été ajouté au tournoi '{self.name}'.")
+    def register_player(self, player):
+        """ Ajoute un joueur au tournoi"""
+        if player not in self.registered_players:
+            self.registered_players.append(player)
+            print(f"{player.firstname} {player.name} a été ajouté(e) au tournoi '{self.name}'.")
+        else:
+            print(f"{player.firstname} {player.name} est déjà inscrit(e) à ce tournoi.")
     
 
     def remove_player(self, player):

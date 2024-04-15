@@ -33,7 +33,8 @@ class MenuView:
         print("\nGestion des Joueurs :")
         print("1. Ajouter un Nouveau Joueur")
         print("2. Voir les Joueurs Existant")
-        print("3. Modifier un Joueur")
-        print("4. Retour")
+        print("3. Supprimer un Joueur")
+        print("4. Supprimer un joueur d'un tournoi")
+        print("5. Retour au menu principal")
         choice = input("Entrez votre choix : ")
         return choice

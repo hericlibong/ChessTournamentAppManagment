@@ -26,12 +26,6 @@
                 "firstname": "Johnson",
                 "birthdate": "17/06/1987",
                 "unique_id": "OJ98345"
-            },
-            {
-                "name": "Riner",
-                "firstname": "Teddy",
-                "birthdate": "24/03/1969",
-                "unique_id": "NB09876"
             }
         ],
         "total_round": 4
@@ -57,6 +51,43 @@
                 "firstname": "Mbappé",
                 "birthdate": "10/08/2001",
                 "unique_id": "OY67854"
+            },
+            {
+                "name": "Dark",
+                "firstname": "Vador",
+                "birthdate": "11/02/2005",
+                "unique_id": "DV50022"
+            }
+        ],
+        "total_round": 4
+    },
+    {
+        "t_id": "699cafc2",
+        "name": "super_slam",
+        "location": "Alençon",
+        "start_date": "15/04/2024",
+        "end_date": "16/06/2024",
+        "description": "Les meilleurs joueurs de l'Orne sur Sarthe",
+        "current_round": 0,
+        "rounds": [],
+        "registered_players": [],
+        "total_round": 4
+    },
+    {
+        "t_id": "1dba5023",
+        "name": "big_tour",
+        "location": "Vire",
+        "start_date": "15/04/2024",
+        "end_date": "16/04/2024",
+        "description": "Dancing Queen",
+        "current_round": 0,
+        "rounds": [],
+        "registered_players": [
+            {
+                "name": "Skywalker",
+                "firstname": "Luc",
+                "birthdate": "12/01/1999",
+                "unique_id": "LS99987"
             }
         ],
         "total_round": 4

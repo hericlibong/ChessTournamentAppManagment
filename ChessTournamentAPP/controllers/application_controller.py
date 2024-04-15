@@ -56,12 +56,48 @@ class ApplicationController:
             elif choice == '2':
                 self.display_players()
             elif choice == '3':
-                pass  # Modifier un joueur (fonctionnalité à développer)
-            elif choice == '4':  # Retour au menu principal
+                self.remove_player_from_platform()  # Modifier un joueur (fonctionnalité à développer)
+            elif choice == '4':
+                self.remove_player_from_tournament()    
+            elif choice == '5':  # Retour au menu principal
                 break
             else:
-                print("Invalid choice, please try again.")
+                print("Choix invalide, veuillez réessayer.")
 
+    def remove_player_from_platform(self):
+        self.display_players()
+        player_id = input("Entrez l'ID du joueur à supprimer complètement : ")
+        player_to_remove = next((player for player in self.players if str(player.unique_id) == player_id), None)
+        if player_to_remove:
+            self.players.remove(player_to_remove)
+            # Retirer le joueur de tous les tournois
+            for tournament in self.tournaments:
+                if player_to_remove in tournament.registered_players:
+                    tournament.remove_player(player_to_remove)
+            self.save_data()
+            print(f"Le joueur {player_to_remove} a été retiré de la plateforme et de tous les tournois.")
+        else:
+            print("Joueur non trouvé.")
+
+    
+    def remove_player_from_tournament(self):
+        selected_tournament = PlayerView.display_tournaments_for_selection(self.tournaments)
+        if selected_tournament:
+            PlayerView.display_players(selected_tournament.registered_players)
+            player_id = input("Entrez l'ID du joueur à retirer de ce tournoi : ")
+            player_to_remove = next((player for player in selected_tournament.registered_players if str(player.unique_id) == player_id), None)
+            if player_to_remove:
+                #selected_tournament.remove_player(player_to_remove)
+                selected_tournament.registered_players.remove(player_to_remove)
+                self.save_data()
+                print(f"Le joueur {player_to_remove} a été retiré du tournoi {selected_tournament.name} ")
+            else:
+                print("Joueur non trouvé dans ce tournoi =")
+        else:
+            print("Aucune action effectuée, tournoi non trouvé ou non spécifié.")
+
+    
+    
     def save_data(self):
         save_tournaments(self.tournaments)
         save_players(self.players)  # Sauvegarde les joueurs

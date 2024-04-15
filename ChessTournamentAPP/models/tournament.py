@@ -2,6 +2,7 @@
 
 from datetime import datetime
 import uuid
+from .round import Round
 
 class Tournament:
     """Creation de tournois"""
@@ -25,7 +26,9 @@ class Tournament:
         self.rounds = rounds if rounds is not None else []  # Liste de tours effectués pendant un tournoi
         self.registered_players = registered_players if registered_players is not None else []  # Initialise avec la valeur fournie ou une liste videe
         self.total_round = total_round  # 4 par défaut mais peut être ajusté
+        
 
+    ## Sérialisation des données ##
 
     def to_dict(self):
         """Sérialise l'objet Tournament pour la sauvegarde en JSON."""
@@ -42,7 +45,8 @@ class Tournament:
             "total_round": self.total_round
         }
     
-
+    
+    ### Gestion des joueurs ###
 
     def register_player(self, player):
         """ Ajoute un joueur au tournoi"""
@@ -60,3 +64,38 @@ class Tournament:
             print(f"{player} a été retiré du tournoi '{self.name}'.")
         else:
             print(f"{player} n'est pas inscrit au tournoi '{self.name}'.")
+
+    
+    
+    ## Gestion des Rounds ##
+
+    def add_round(self, round_name, start_time = None):
+        """ Ajoute un nouveau round au tournoi"""   
+        new_round = Round(name=round_name, start_time=start_time)
+        self.rounds.append(new_round)
+        start_status = f"starting at {start_time}" if start_time else "not started"
+        print(f"Round '{round_name}' added to the tournament '{self.name}', {start_status}.")
+
+
+    def start_round(self, round_name):
+        """Démarre un round spécifié par son nom en définissant le start_time à maintenant si ce n'est pas déjà fait."""
+        for round in self.rounds:
+            if round.name == round_name and round.start_time is None:
+                round.start_time = datetime.now()
+                print(f"Round '{round_name}' has started.")
+                break
+        else:
+            print(f"No round named '{round_name}' found or it's already started.")
+
+
+    def end_round(self, round_name):
+        """Termine un round spécifié par son nom en définissant le end_time à maintenant et en marquant le round comme complet."""
+        for round in self.rounds:
+            if round.name == round_name and not round.is_complete:
+                round.end_time = datetime.now()
+                round.is_complete = True
+                print(f"Round '{round_name}' has ended.")
+                break
+        else:
+            print(f"No round named '{round_name}' found or it's already completed.")
+

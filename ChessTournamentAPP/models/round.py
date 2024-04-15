@@ -18,27 +18,28 @@ class Round:
 
 
     def add_match(self, player1:Player, player2:Player, results: Tuple[float, float] = (0, 0)):
-        """Ajoute un match au round avec les joueurs et les résultats spécifiés"""
-        match = Match(players=(player1, player2), results=results)
-        if not self.is_complete:
-            self.matches.append(match)
-            print(f"Le match entre {player1.firstname} {player1.name} and {player2.firstname} {player2.name} a été ajouté au round '{self.name}")
-        else:
-            print("Cannot add match to a completed round")
+        """Ajoute un match au round avec les joueurs et les résultats spécifiés si le round n'est pas complet"""
+        if self.is_complete:
+            print("Le round est complet. On ne peut pas ajouter ce match.")
+            return
+        new_match = Match(players=(player1, player2), results=results)
+        self.matches.append(new_match)
+        print(f"Le match entre {player1.firstname} {player1.name} and {player2.firstname} {player2.name} a été ajouté au round '{self.name}")
+        
+
+    def update_match_result(self, match_index, new_results):
+        """Mise à jour des résultats d'un match spécifique dans le round."""
+        if self.is_complete:
+            print(f"Cannot update match results. Round '{self.name}' is already complete.")
+            return
+
+        if match_index < 0 or match_index >= len(self.matches):
+            print("Invalid match index. Please provide a correct index.")
+            return
+
+        # Mise à jour des résultats du match
+        self.matches[match_index].set_results(new_results)
+        print(f"Results updated for match {match_index + 1} in round '{self.name}'.")
 
     
-
-    # def add_match(self, match):
-    #     """Ajoute un match à la liste des matchs du tour."""
-    #     if not self.is_complete:
-    #         self.matches.append(match)
-    #     else:
-    #         print("Impossible d'ajouter un match à un tour complet")
-
-
-    # # Ajouté en guise de test
-    # def complete_round(self):
-    #     self.is_complete = True
-    #     self.end_time = datetime.now()
-
     

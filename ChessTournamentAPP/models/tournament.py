@@ -69,12 +69,20 @@ class Tournament:
     
     ## Gestion des Rounds ##
 
-    def add_round(self, round_name, start_time = None):
-        """ Ajoute un nouveau round au tournoi"""   
+
+    def is_active(self):
+        """Vérifie si le tournoi est actif."""
+        return self.current_round < self.total_round and self.end_date > datetime.now()
+
+    def add_round(self, round_name, start_time=None):
+        """ Ajoute un nouveau round au tournoi si le tournoi est actif"""
+        if not self.is_active():
+            print("Le round ne peut pas être ajouté. Le Tournoi n'est pas actif.")
+            return
         new_round = Round(name=round_name, start_time=start_time)
         self.rounds.append(new_round)
-        start_status = f"starting at {start_time}" if start_time else "not started"
-        print(f"Round '{round_name}' added to the tournament '{self.name}', {start_status}.")
+        #start_status = f"starting at {start_time}" if start_time else "not started"
+        print(f"Le Round '{round_name}' a été ajouté au tournament '{self.name}'.")
 
 
     def start_round(self, round_name):

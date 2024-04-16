@@ -40,15 +40,17 @@ class PlayerView:
         return name, firstname, birthdate, u_id
     
 
+
     @staticmethod
     def display_players(players):
-        """Affiche les joueurs enregistrés"""
+        """Affiche les joueurs enregistrés triés par nom."""
         if not players:
             print("Aucun joueur n'est enregistré.")
         else:
             print("Liste des joueurs enregistrés :")
-            for player in players:
-                print(f"ID: {player.unique_id}, Nom: {player.name}, Prénom: {player.firstname}, Date de naissance: {player.birthdate.strftime('%d/%m/%Y')}")
+            sorted_players = sorted(players, key=lambda x: (x.name, x.firstname))
+            for player in sorted_players:
+                print(f"{player.name} {player.firstname}, {player.birthdate.strftime('%d/%m/%Y')} (ID: {player.unique_id})")
 
 
 

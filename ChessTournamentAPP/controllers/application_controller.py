@@ -4,6 +4,7 @@ from datetime import datetime
 from views.menu_view import MenuView
 from views.tournament_views import TournamentView
 from views.player_views import PlayerView
+from views.round_views import RoundView
 from models.tournament import Tournament
 from models.player import Player
 from util.data_manager import load_tournaments, save_tournaments, load_players, save_players
@@ -24,9 +25,7 @@ class ApplicationController:
             elif choice == '2':
                 self.manage_players()
             elif choice == '3':
-                self.associate_player_to_tournament()  # Cette méthode reste à implémenter
-            elif choice == '4':
-                print("Exiting Application")
+                print("Quitter l'Application")
                 self.save_data()  # Sauvegarde les données avant de quitter
                 break
             else:
@@ -39,14 +38,42 @@ class ApplicationController:
                 self.create_tournament()
             elif choice == '2':
                 self.display_tournaments()
-            elif choice == '3':
-                pass  # Charger un tournoi existant (fonctionnalité à développer)
             elif choice == '4':
                 self.update_tournament()
             elif choice == '5':  # Retour au menu principal
                 break
             else:
                 print("Invalid choice, please try again.")
+
+    def manage_rounds(self):
+        #tournament = self.select_tournament()
+        tournament = RoundView.display_tournaments_for_selection(self.tournaments)
+        if tournament:
+            while True:  # Ajouter une boucle pour permettre plusieurs opérations
+                choice = MenuView.display_round_menu()
+                if choice == '1':
+                    round_details = RoundView.create_round()
+                    tournament.add_round(*round_details)
+                elif choice == '2':
+                    RoundView.start_round(tournament)
+                elif choice == '3':
+                    RoundView.end_round(tournament)
+                elif choice == '4':
+                    break  # Correctement placé dans une boucle, cela permet de retourner au menu précédent
+                else:
+                    print("Choix invalide, veuillez réessayer.")
+        else:
+            print("Aucun tournoi sélectionné ou invalide.")
+
+
+
+    
+    # def select_tournament(self):
+    #     # Cette méthode peut être utilisée pour sélectionner un tournoi pour la gestion des rounds
+    #     TournamentView.disp_tournaments(self.tournaments)
+    #     t_id = input("Entrez l'ID du tournoi pour la gestion des rounds : ")
+    #     return next((t for t in self.tournaments if t.t_id == t_id), None)
+    
 
     def manage_players(self):
         while True:
@@ -56,45 +83,13 @@ class ApplicationController:
             elif choice == '2':
                 self.display_players()
             elif choice == '3':
-                self.remove_player_from_platform()  # Modifier un joueur (fonctionnalité à développer)
-            elif choice == '4':
-                self.remove_player_from_tournament()    
-            elif choice == '5':  # Retour au menu principal
+                self.associate_player_to_tournament()   
+            elif choice == '4':  # Retour au menu principal
                 break
             else:
                 print("Choix invalide, veuillez réessayer.")
 
-    def remove_player_from_platform(self):
-        self.display_players()
-        player_id = input("Entrez l'ID du joueur à supprimer complètement : ")
-        player_to_remove = next((player for player in self.players if str(player.unique_id) == player_id), None)
-        if player_to_remove:
-            self.players.remove(player_to_remove)
-            # Retirer le joueur de tous les tournois
-            for tournament in self.tournaments:
-                if player_to_remove in tournament.registered_players:
-                    tournament.remove_player(player_to_remove)
-            self.save_data()
-            print(f"Le joueur {player_to_remove} a été retiré de la plateforme et de tous les tournois.")
-        else:
-            print("Joueur non trouvé.")
-
     
-    def remove_player_from_tournament(self):
-        selected_tournament = PlayerView.display_tournaments_for_selection(self.tournaments)
-        if selected_tournament:
-            PlayerView.display_players(selected_tournament.registered_players)
-            player_id = input("Entrez l'ID du joueur à retirer de ce tournoi : ")
-            player_to_remove = next((player for player in selected_tournament.registered_players if str(player.unique_id) == player_id), None)
-            if player_to_remove:
-                #selected_tournament.remove_player(player_to_remove)
-                selected_tournament.registered_players.remove(player_to_remove)
-                self.save_data()
-                print(f"Le joueur {player_to_remove} a été retiré du tournoi {selected_tournament.name} ")
-            else:
-                print("Joueur non trouvé dans ce tournoi =")
-        else:
-            print("Aucune action effectuée, tournoi non trouvé ou non spécifié.")
 
     
     

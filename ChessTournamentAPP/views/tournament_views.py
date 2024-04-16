@@ -31,6 +31,7 @@ class TournamentView:
             print("Aucun tournoi disponible.")
         else:
             for tournament in tournaments:
+                print(f"Le Tournoi a {tournament.current_round}commencé(s)")
                 print(f"Tournoi: {tournament.name} - Lieu: {tournament.location}")
                 print(f"Dates: Du {tournament.start_date.strftime('%d/%m/%Y')} au {tournament.end_date.strftime('%d/%m/%Y')}")
                 print(f"{len(tournament.registered_players)} Joueurs inscrits:")
@@ -45,15 +46,19 @@ class TournamentView:
 
 
 
-    @staticmethod
-    def display_tournaments_with_players(tournaments):
-        """Affiche les tournois et leurs joueurs inscrits."""
-        for tournament in tournaments:
-            print(f"\nTournoi: {tournament.name} - Lieu: {tournament.location}")
-            if tournament.registered_players:
-                print("Joueurs inscrits :")
-                for player in tournament.registered_players:
-                    print(f"- {player.name} {player.firstname}")
-            else:
-                print("Aucun joueur inscrit pour le moment.")
+
+    
+
+
+    # @staticmethod
+    # def display_tournaments_with_players(tournaments):
+    #     """Affiche les tournois et leurs joueurs inscrits."""
+    #     for tournament in tournaments:
+    #         print(f"\nTournoi: {tournament.name} - Lieu: {tournament.location}")
+    #         if tournament.registered_players:
+    #             print("Joueurs inscrits :")
+    #             for player in tournament.registered_players:
+    #                 print(f"- {player.name} {player.firstname}")
+    #         else:
+    #             print("Aucun joueur inscrit pour le moment.")
 

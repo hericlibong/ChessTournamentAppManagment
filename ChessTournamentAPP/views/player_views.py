@@ -57,11 +57,7 @@ class PlayerView:
     def display_tournaments_for_selection(tournaments):
         """
         Affiche la liste de tournois disponibles pour permettre à l'utilisateur de sélectionner celui auquel il souhaite ajouter un joueur.
-        
-        Cette méthode imprime chaque tournoi avec un numéro d'ordre pour faciliter la sélection par l'utilisateur.
-        L'utilisateur est invité à entrer le numéro correspondant au tournoi de son choix.
-        Si la sélection est valide (un numéro correspondant à un tournoi existant), le tournoi sélectionné est retourné.
-        En cas de sélection invalide (un choix hors de la plage ou une entrée non numérique), l'utilisateur est informé de l'erreur et invité à réessayer.
+
 
         """
 

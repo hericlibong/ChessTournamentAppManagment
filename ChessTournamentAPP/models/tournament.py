@@ -57,13 +57,13 @@ class Tournament:
             print(f"{player.firstname} {player.name} est déjà inscrit(e) à ce tournoi.")
     
 
-    def remove_player(self, player):
-        """Retire un joueur de la liste des joueurs inscrits au tournoi, s'il y est."""
-        if player in self.register_player:
-            self.register_player.remove(player)
-            print(f"{player} a été retiré du tournoi '{self.name}'.")
-        else:
-            print(f"{player} n'est pas inscrit au tournoi '{self.name}'.")
+    # def remove_player(self, player):
+    #     """Retire un joueur de la liste des joueurs inscrits au tournoi, s'il y est."""
+    #     if player in self.register_player:
+    #         self.register_player.remove(player)
+    #         print(f"{player} a été retiré du tournoi '{self.name}'.")
+    #     else:
+    #         print(f"{player} n'est pas inscrit au tournoi '{self.name}'.")
 
     
     
@@ -87,6 +87,10 @@ class Tournament:
 
     def start_round(self, round_name):
         """Démarre un round spécifié par son nom en définissant le start_time à maintenant si ce n'est pas déjà fait."""
+        if not self.is_active():
+            print(f"Impossible de démarrer un round. Le tournoi '{self.name}' n'est pas actif")
+            return
+        
         for round in self.rounds:
             if round.name == round_name and round.start_time is None:
                 round.start_time = datetime.now()
@@ -98,6 +102,9 @@ class Tournament:
 
     def end_round(self, round_name):
         """Termine un round spécifié par son nom en définissant le end_time à maintenant et en marquant le round comme complet."""
+        if not self.is_active():
+            print(f"Impossible de terminer le round. Le tournoi '{self.name}' n'est pas actif")
+            return
         for round in self.rounds:
             if round.name == round_name and not round.is_complete:
                 round.end_time = datetime.now()

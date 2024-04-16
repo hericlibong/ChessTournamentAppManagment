@@ -8,10 +8,9 @@ class MenuView:
     def display_main_menu():
         """Affiche les options du menu principal """
         print("\nMenu principal :")
-        print("1. Gérer les tournois")
-        print("2. Gérer les joueurs")
-        print("3. Associer un joueur à un tournoi")
-        print("4. Quitter l'application")
+        print("1. Voir les tournois")
+        print("2. Voir les joueurs")
+        print("3. Quitter l'application")
         choice = input("Entrez le choix : ")
         return choice
     
@@ -21,10 +20,9 @@ class MenuView:
         """ Affiche le menu de gestion des tournois """
         print("\nGestion des Tournois :")
         print("1. Créer un Nouveau Tournoi")
-        print("2. Voir les Tournois existants")
-        print("3. Charger un Tournoi existant")
-        print("4. Modifier un Tournoi")
-        print("5. Retour")
+        print("2. Voir la liste Tournois")
+        print("3. Editer un Tournoi")
+        print("5. Retour au menu principal")
         choice = input("Entrez votre choix : ")
         return choice
     
@@ -32,9 +30,20 @@ class MenuView:
     def display_player_menu():
         print("\nGestion des Joueurs :")
         print("1. Ajouter un Nouveau Joueur")
-        print("2. Voir les Joueurs Existant")
-        print("3. Supprimer un Joueur")
-        print("4. Supprimer un joueur d'un tournoi")
-        print("5. Retour au menu principal")
+        print("2. Voir la liste des Joueurs")
+        print("3. inscrire un joueur à un tournoi")
+        print("4. Retour au menu principal")
         choice = input("Entrez votre choix : ")
         return choice
+    
+
+
+    # @staticmethod
+    # def display_round_menu():
+    #     """Affiche le menu des options pour les rounds."""
+    #     print("\nGestion des Rounds :")
+    #     print("1. Ajouter un Round")
+    #     print("2. Démarrer un Round")
+    #     print("3. Terminer un Round")
+    #     print("4. Retour")
+    #     return input("Choisissez une option : ")

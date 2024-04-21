@@ -3,6 +3,7 @@
 from datetime import datetime
 import uuid
 from .round import Round
+import random
 
 class Tournament:
     """Creation de tournois"""
@@ -26,7 +27,7 @@ class Tournament:
         self.rounds = rounds if rounds is not None else []  # Liste de tours effectués pendant un tournoi
         self.registered_players = registered_players if registered_players is not None else []  # Initialise avec la valeur fournie ou une liste videe
         self.total_round = total_round  # 4 par défaut mais peut être ajusté
-        
+        self.current_matches = set()
 
     ## Sérialisation des données ##
 
@@ -46,33 +47,66 @@ class Tournament:
         }
     
     
+    def is_active(self):
+        """Vérifie si le tournoi est actif"""
+        return self.current_round < self.total_round and self.end_date > datetime.now()
+
+
+
+    def start_tournament(self):
+        """Démarre le tournoi après avoir vérifié tous les prérequis."""
+        if self.start_date > datetime.now():
+            print("Le tournoi est prévu pour une date future et ne peut pas encore commencer.")
+            return
+        if len(self.registered_players) < 5:
+            print("Pas assez de joueurs pour démarrer le tournoi (minimum 5 joueurs requis).")
+            return
+        print(f"Démarrage du tournoi '{self.name}' avec {len(self.registered_players)} joueurs.")
+        self.shuffle_and_create_rounds()
+        print(f"Le tournoi '{self.name}' a commencé avec succès.")
+
+
+
+    def shuffle_and_create_rounds(self):
+        """Mélange les joueurs et prépare les rounds basés sur le nombre de joueurs."""
+        random.shuffle(self.registered_players)
+        print("Joueurs mélangés pour le premier round.")
+        # Générer les rounds et matches selon les règles définies
+        self.generate_matches()
+
+    def generate_matches(self):
+        """Génère des matches pour chaque round en utilisant un système évitant les répétitions."""
+        num_rounds = min(self.total_round, len(self.registered_players) - 1)
+        for round_index in range(num_rounds):
+            new_round = Round(name=f"Round {round_index + 1}")
+            self.rounds.append(new_round)
+            self.create_matches_for_round(new_round, self.current_matches)
+
+    def create_matches_for_round(self, round, current_matches):
+        """Crée des matches pour le round donné tout en évitant les doublons."""
+        # Implémentation du système suisse ou tirage aléatoire avec vérification des doublons
+        pass  # Détail de la logique à implémenter
+    
+    
     ### Gestion des joueurs ###
 
     def register_player(self, player):
-        """ Ajoute un joueur au tournoi"""
+        """ Ajoute un joueur au tournoi si le tournoi est actif"""
+        if not self.is_active():
+            print(f"Le tournoi '{self.name}' n'est pas actif ou est déjà terminé. ")
+            return
         if player not in self.registered_players:
             self.registered_players.append(player)
             print(f"{player.firstname} {player.name} a été ajouté(e) au tournoi '{self.name}'.")
         else:
             print(f"{player.firstname} {player.name} est déjà inscrit(e) à ce tournoi.")
     
-
-    # def remove_player(self, player):
-    #     """Retire un joueur de la liste des joueurs inscrits au tournoi, s'il y est."""
-    #     if player in self.register_player:
-    #         self.register_player.remove(player)
-    #         print(f"{player} a été retiré du tournoi '{self.name}'.")
-    #     else:
-    #         print(f"{player} n'est pas inscrit au tournoi '{self.name}'.")
-
     
     
     ## Gestion des Rounds ##
 
 
-    def is_active(self):
-        """Vérifie si le tournoi est actif."""
-        return self.current_round < self.total_round and self.end_date > datetime.now()
+    
 
     def add_round(self, round_name, start_time=None):
         """ Ajoute un nouveau round au tournoi si le tournoi est actif"""

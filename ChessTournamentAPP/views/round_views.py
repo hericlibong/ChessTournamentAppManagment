@@ -46,13 +46,20 @@ class RoundView:
         except IndexError:
             print("Numéro de round invalide.")
 
+    # @staticmethod
+    # def display_rounds(tournament):
+    #     """Affiche tous les rounds d'un tournoi avec leur état actuel."""
+    #     print("\nListe des Rounds :")
+    #     for index, round in enumerate(tournament.rounds):
+    #         status = "Non commencé" if not round.start_time else "Terminé" if round.is_complete else "En cours"
+    #         print(f"{index + 1}. Round: {round.name}, Statut: {status}")
+
     @staticmethod
     def display_rounds(tournament):
-        """Affiche tous les rounds d'un tournoi avec leur état actuel."""
         print("\nListe des Rounds :")
-        for index, round in enumerate(tournament.rounds):
-            status = "Non commencé" if not round.start_time else "Terminé" if round.is_complete else "En cours"
-            print(f"{index + 1}. Round: {round.name}, Statut: {status}")
+        for index, rnd in enumerate(tournament.rounds):
+            status = "Non commencé" if not rnd.start_time else "Terminé" if rnd.is_complete else "En cours"
+            print(f"{index + 1}. Round: {rnd.name}, Statut: {status}")
 
 
 

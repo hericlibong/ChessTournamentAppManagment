@@ -26,6 +26,12 @@
                 "firstname": "Johnson",
                 "birthdate": "17/06/1987",
                 "unique_id": "OJ98345"
+            },
+            {
+                "name": "Riner",
+                "firstname": "Teddy",
+                "birthdate": "24/03/1969",
+                "unique_id": "NB09876"
             }
         ],
         "total_round": 4
@@ -39,68 +45,197 @@
         "description": "Le meilleur des échecs en Normandie",
         "current_round": 0,
         "rounds": [],
-        "registered_players": [
-            {
-                "name": "Usain",
-                "firstname": "Bolt",
-                "birthdate": "24/03/1969",
-                "unique_id": "AK54321"
-            },
-            {
-                "name": "Kylian",
-                "firstname": "Mbappé",
-                "birthdate": "10/08/2001",
-                "unique_id": "OY67854"
-            },
-            {
-                "name": "Dark",
-                "firstname": "Vador",
-                "birthdate": "11/02/2005",
-                "unique_id": "DV50022"
-            }
-        ],
-        "total_round": 4
-    },
-    {
-        "t_id": "699cafc2",
-        "name": "super_slam",
-        "location": "Alençon",
-        "start_date": "15/04/2024",
-        "end_date": "16/06/2024",
-        "description": "Les meilleurs joueurs de l'Orne sur Sarthe",
-        "current_round": 0,
-        "rounds": [],
         "registered_players": [],
         "total_round": 4
     },
     {
-        "t_id": "1dba5023",
-        "name": "big_tour",
-        "location": "Vire",
-        "start_date": "15/04/2024",
-        "end_date": "16/04/2024",
-        "description": "Dancing Queen",
+        "t_id": "e40e4218",
+        "name": "DK_CHESS",
+        "location": "dakar",
+        "start_date": "20/04/2024",
+        "end_date": "21/04/2024",
+        "description": "dakar échecs",
         "current_round": 0,
-        "rounds": [],
+        "rounds": [
+            {
+                "name": "Round 1",
+                "start_time": "2024-04-20 23:37",
+                "end_time": null,
+                "is_complete": false,
+                "matches": []
+            },
+            {
+                "name": "Round 2",
+                "start_time": "2024-04-20 23:37",
+                "end_time": null,
+                "is_complete": false,
+                "matches": []
+            },
+            {
+                "name": "Round 3",
+                "start_time": "2024-04-20 23:37",
+                "end_time": null,
+                "is_complete": false,
+                "matches": []
+            },
+            {
+                "name": "Round 4",
+                "start_time": "2024-04-20 23:37",
+                "end_time": null,
+                "is_complete": false,
+                "matches": []
+            },
+            {
+                "name": "Round 1",
+                "start_time": "2024-04-21 00:40",
+                "end_time": null,
+                "is_complete": false,
+                "matches": []
+            },
+            {
+                "name": "Round 2",
+                "start_time": "2024-04-21 00:40",
+                "end_time": null,
+                "is_complete": false,
+                "matches": []
+            },
+            {
+                "name": "Round 3",
+                "start_time": "2024-04-21 00:40",
+                "end_time": null,
+                "is_complete": false,
+                "matches": []
+            },
+            {
+                "name": "Round 4",
+                "start_time": "2024-04-21 00:40",
+                "end_time": null,
+                "is_complete": false,
+                "matches": []
+            }
+        ],
         "registered_players": [
             {
                 "name": "Skywalker",
                 "firstname": "Luc",
                 "birthdate": "12/01/1999",
                 "unique_id": "LS99987"
+            },
+            {
+                "name": "Solo",
+                "firstname": "Yann",
+                "birthdate": "06/07/1977",
+                "unique_id": "YS77912"
+            },
+            {
+                "name": "Pérec",
+                "firstname": "Marie-Josée",
+                "birthdate": "24/03/1970",
+                "unique_id": "MP09876"
+            },
+            {
+                "name": "Li",
+                "firstname": "Peng",
+                "birthdate": "24/03/1969",
+                "unique_id": "LP24031"
+            },
+            {
+                "name": "Usain",
+                "firstname": "Bolt",
+                "birthdate": "24/03/1969",
+                "unique_id": "AK54321"
             }
         ],
         "total_round": 4
     },
     {
-        "t_id": "de1c6326",
-        "name": "Chess_Game",
-        "location": "Paris",
-        "start_date": "17/04/2024",
-        "end_date": "18/04/2024",
-        "description": "International Rumble",
+        "t_id": "00360d9b",
+        "name": "Alençon_chess",
+        "location": "Alençon",
+        "start_date": "21/04/2024",
+        "end_date": "22/04/2024",
+        "description": "Alençon échecs",
         "current_round": 0,
         "rounds": [],
+        "registered_players": [
+            {
+                "name": "Benzema",
+                "firstname": "Karim",
+                "birthdate": "22/09/1998",
+                "unique_id": "KB09875"
+            },
+            {
+                "name": "Dark",
+                "firstname": "Vador",
+                "birthdate": "11/02/2005",
+                "unique_id": "DV50022"
+            },
+            {
+                "name": "Usain",
+                "firstname": "Bolt",
+                "birthdate": "24/03/1969",
+                "unique_id": "AK54321"
+            },
+            {
+                "name": "Skywalker",
+                "firstname": "Luc",
+                "birthdate": "12/01/1999",
+                "unique_id": "LS99987"
+            },
+            {
+                "name": "Solo",
+                "firstname": "Yann",
+                "birthdate": "06/07/1977",
+                "unique_id": "YS77912"
+            }
+        ],
+        "total_round": 4
+    },
+    {
+        "t_id": "80feeb36",
+        "name": "test",
+        "location": "NY",
+        "start_date": "21/04/2024",
+        "end_date": "22/04/2024",
+        "description": "echec tournoi",
+        "current_round": 0,
+        "rounds": [
+            {
+                "name": "Round 1",
+                "start_time": "2024-04-21 02:15",
+                "end_time": "2024-04-21 02:17",
+                "is_complete": true,
+                "matches": []
+            },
+            {
+                "name": "Round 2",
+                "start_time": "2024-04-21 02:15",
+                "end_time": null,
+                "is_complete": false,
+                "matches": []
+            },
+            {
+                "name": "Round 3",
+                "start_time": "2024-04-21 02:15",
+                "end_time": null,
+                "is_complete": false,
+                "matches": []
+            },
+            {
+                "name": "Round 4",
+                "start_time": "2024-04-21 02:15",
+                "end_time": null,
+                "is_complete": false,
+                "matches": []
+            },
+            {
+                "name": "round 1",
+                "start_time": "2024-04-21 02:15",
+                "end_time": null,
+                "is_complete": false,
+                "matches": []
+            }
+        ],
         "registered_players": [
             {
                 "name": "Usain",
@@ -109,16 +244,16 @@
                 "unique_id": "AK54321"
             },
             {
-                "name": "Kylian",
-                "firstname": "Mbappé",
-                "birthdate": "10/08/2001",
-                "unique_id": "OY67854"
+                "name": "Harit",
+                "firstname": "Amin",
+                "birthdate": "23/08/2000",
+                "unique_id": "AH07896"
             },
             {
-                "name": "Majic",
-                "firstname": "Johnson",
-                "birthdate": "17/06/1987",
-                "unique_id": "OJ98345"
+                "name": "Benzema",
+                "firstname": "Karim",
+                "birthdate": "22/09/1998",
+                "unique_id": "KB09875"
             },
             {
                 "name": "Riner",

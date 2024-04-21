@@ -45,20 +45,29 @@ class TournamentView:
 
 
 
+    @staticmethod
+    def select_tournament(tournaments):
+        """
+        Affiche la liste de tournois disponibles pour permettre à l'utilisateur de sélectionner celui auquel il souhaite ajouter un joueur.
 
 
-    
+        """
+
+        print("Charger un tournoi :")
+        for index, tournament in enumerate(tournaments, start=1):
+            print(f"{index}. {tournament.name} - Lieu : {tournament.location}, Dates : {tournament.start_date.strftime('%d/%m/%Y')} à {tournament.end_date.strftime('%d/%m/%Y')}")
+        choice = input("Entrez le numéro du tournoi : ")
+        try:
+            selected_index = int(choice) - 1
+            if 0 <= selected_index < len(tournaments):
+                return tournaments[selected_index]
+            else:
+                print("Sélection invalide. Veuillez réessayer.")
+        except ValueError:
+            print("Veuillez entrer un nombre valide.")
+        return None
 
 
-    # @staticmethod
-    # def display_tournaments_with_players(tournaments):
-    #     """Affiche les tournois et leurs joueurs inscrits."""
-    #     for tournament in tournaments:
-    #         print(f"\nTournoi: {tournament.name} - Lieu: {tournament.location}")
-    #         if tournament.registered_players:
-    #             print("Joueurs inscrits :")
-    #             for player in tournament.registered_players:
-    #                 print(f"- {player.name} {player.firstname}")
-    #         else:
-    #             print("Aucun joueur inscrit pour le moment.")
+
+
 

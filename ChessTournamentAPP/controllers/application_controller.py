@@ -37,42 +37,67 @@ class ApplicationController:
             if choice == '1':
                 self.create_tournament()
             elif choice == '2':
-                self.display_tournaments()
-            elif choice == '4':
                 self.update_tournament()
-            elif choice == '5':  # Retour au menu principal
+            elif choice == '3':
+                self.load_tournament()
+            elif choice == '4':
+                self.start_tournament()
+            elif choice == '5':
+                self.display_tournaments()
+            elif choice == '6':
+                tournament = TournamentView.select_tournament(self.tournaments)
+                if tournament:
+                    self.manage_rounds(tournament)
+                else :
+                    print("Aucun tournoi sélectionné")
+            elif choice == '7':  # Retour au menu principal
                 break
             else:
+    
                 print("Invalid choice, please try again.")
 
-    def manage_rounds(self):
-        #tournament = self.select_tournament()
-        tournament = RoundView.display_tournaments_for_selection(self.tournaments)
+
+
+   
+
+    def start_tournament(self):
+        tournament = TournamentView.select_tournament(self.tournaments)
         if tournament:
-            while True:  # Ajouter une boucle pour permettre plusieurs opérations
-                choice = MenuView.display_round_menu()
-                if choice == '1':
-                    round_details = RoundView.create_round()
-                    tournament.add_round(*round_details)
-                elif choice == '2':
-                    RoundView.start_round(tournament)
-                elif choice == '3':
-                    RoundView.end_round(tournament)
-                elif choice == '4':
-                    break  # Correctement placé dans une boucle, cela permet de retourner au menu précédent
-                else:
-                    print("Choix invalide, veuillez réessayer.")
+            tournament.start_tournament()  # La méthode start_tournament de Tournament gère toutes les vérifications
         else:
-            print("Aucun tournoi sélectionné ou invalide.")
+            print("Aucun tournoi sélectionné ou tournoi invalide.")
+
+
+
+
+
+
+
+    def manage_rounds(self, tournament):
+        while True:
+            choice = MenuView.display_round_menu()
+            if choice == '1':
+                round_details = RoundView.create_round()
+                tournament.add_round(*round_details)
+            elif choice == '2':
+                RoundView.start_round(tournament)
+            elif choice == '3':
+                RoundView.end_round(tournament)
+            elif choice == '4':
+                break  # Correctement placé dans une boucle, cela permet de retourner au menu précédent
+            else:
+                print("Choix invalide, veuillez réessayer.")
+
+
+    
+
+
+
 
 
 
     
-    # def select_tournament(self):
-    #     # Cette méthode peut être utilisée pour sélectionner un tournoi pour la gestion des rounds
-    #     TournamentView.disp_tournaments(self.tournaments)
-    #     t_id = input("Entrez l'ID du tournoi pour la gestion des rounds : ")
-    #     return next((t for t in self.tournaments if t.t_id == t_id), None)
+  
     
 
     def manage_players(self):
@@ -94,7 +119,7 @@ class ApplicationController:
     
     
     def save_data(self):
-        save_tournaments(self.tournaments)
+        save_tournaments(self.tournaments) # Sauvegarde les tournois
         save_players(self.players)  # Sauvegarde les joueurs
 
     # Ici, ajoute les méthodes create_tournament, display_tournaments, add_player, display_players, etc.
@@ -107,6 +132,29 @@ class ApplicationController:
         self.save_data()
         print(f"Tournament '{new_tournament.name}' has been successfully created.")
 
+
+    def load_tournament(self):
+        tournament = TournamentView.select_tournament(self.tournaments)
+        if tournament:
+            print(f"\nTournoi chargé : '{tournament.name}'")
+            print(f"Lieu : {tournament.location}")
+            print(f"Description : {tournament.description}")
+            print(f"Date de début : {tournament.start_date.strftime('%d/%m/%Y')}")
+            print(f"Date de fin : {tournament.end_date.strftime('%d/%m/%Y')}")
+            print(f"Nombre total de rounds prévus : {tournament.total_round}")
+            print(f"Rounds actuellement complétés : {len(tournament.rounds)}")
+            print(f"Nombre de joueurs inscrits : {len(tournament.registered_players)}\n")
+            if tournament.registered_players:
+                    for player in tournament.registered_players:
+                        print(f"- {player.firstname} {player.name} (ID: {player.unique_id})")
+            else:
+                    print("- En attente de joueurs.")
+            # Ajouter ici d'autres informations si nécessaire
+            # Ici, vous pouvez appeler d'autres méthodes pour gérer ce tournoi, comme éditer ses détails ou gérer ses rounds.
+        else:
+            print("Aucun tournoi sélectionné ou sélection invalide.")
+    
+    
     def display_tournaments(self):
         """ Afficher le tournois disponibles  """
         TournamentView.disp_tournaments(self.tournaments)
@@ -127,6 +175,8 @@ class ApplicationController:
 
     def associate_player_to_tournament(self):
         """ Associer un joueur à un tournoi"""
+        # Filtrer seulement les tournois actifs
+        #active_tournaments = [t for t in self.tournaments if t.is_active()]
         selected_tournament = PlayerView.display_tournaments_for_selection(self.tournaments)
         if selected_tournament:
             PlayerView.display_players(self.players)
@@ -144,13 +194,10 @@ class ApplicationController:
 
 
     
-    
+
     def update_tournament(self):
         """ Modifier les tournois"""
-        TournamentView.display_tournaments(self.tournaments)
-        t_id = input("Entrez l'ID du tournoi à modifier : ")
-        tournament = next((t for t in self.tournaments if t.t_id == t_id), None)
-        
+        tournament = RoundView.display_tournaments_for_selection(self.tournaments)  # Utilisez la méthode de sélection des tournois
         if tournament:
             print("Quel attribut voulez-vous modifier ?")
             print("1. Nom")
@@ -183,5 +230,3 @@ class ApplicationController:
             print("Le tournoi a été mis à jour.")
         else:
             print("Tournoi non trouvé.")
-
- 

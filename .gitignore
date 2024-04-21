@@ -3,3 +3,4 @@ specifications_techniques/
 training_code.py
 _pycache_/
 .vscode/
+tests/

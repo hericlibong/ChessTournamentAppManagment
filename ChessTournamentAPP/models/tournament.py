@@ -3,6 +3,7 @@
 from datetime import datetime
 import uuid
 from .round import Round
+from .match import Match
 import random
 
 class Tournament:
@@ -19,15 +20,25 @@ class Tournament:
         self.name = name 
         self.name = name
         self.location = location
-        # Conversion directe des chaînes de dates en objets datetime, sans validation avancée
-        self.start_date = datetime.strptime(start_date, "%d/%m/%Y")
-        self.end_date = datetime.strptime(end_date, "%d/%m/%Y")
+        # Conversion directe des chaînes de dates en objets datetime, sans validation avancé
+        
         self.description = description
         self.current_round =  current_round  # Commence à zéro, indiquant qu'aucun round n'a encore été joué
         self.rounds = rounds if rounds is not None else []  # Liste de tours effectués pendant un tournoi
         self.registered_players = registered_players if registered_players is not None else []  # Initialise avec la valeur fournie ou une liste videe
         self.total_round = total_round  # 4 par défaut mais peut être ajusté
         self.current_matches = set()
+        # Vérifie si start_date est une instance de datetime, sinon convertit de str
+        if isinstance(start_date, datetime):
+            self.start_date = start_date
+        else:
+            self.start_date = datetime.strptime(start_date, "%d/%m/%Y")
+        
+        # Vérifie si end_date est une instance de datetime, sinon convertit de str
+        if isinstance(end_date, datetime):
+            self.end_date = end_date
+        else:
+            self.end_date = datetime.strptime(end_date, "%d/%m/%Y")
 
     ## Sérialisation des données ##
 
@@ -75,17 +86,26 @@ class Tournament:
         self.generate_matches()
 
     def generate_matches(self):
-        """Génère des matches pour chaque round en utilisant un système évitant les répétitions."""
-        num_rounds = min(self.total_round, len(self.registered_players) - 1)
-        for round_index in range(num_rounds):
-            new_round = Round(name=f"Round {round_index + 1}")
-            self.rounds.append(new_round)
-            self.create_matches_for_round(new_round, self.current_matches)
+        """Génère des matches pour chaque round en utilisant la classe Match."""
+        # Assurez-vous que les joueurs sont mélangés et les matchs bien générés
+        random.shuffle(self.registered_players)
+        current_round = Round(name=f"Round {len(self.rounds) + 1}")
+        for i in range(0, len(self.registered_players) - 1, 2):
+            player1 = self.registered_players[i]
+            player2 = self.registered_players[i + 1]
+            match = Match(players=(player1, player2))
+            current_round.matches.append(match)
+        self.rounds.append(current_round)
 
-    def create_matches_for_round(self, round, current_matches):
-        """Crée des matches pour le round donné tout en évitant les doublons."""
-        # Implémentation du système suisse ou tirage aléatoire avec vérification des doublons
-        pass  # Détail de la logique à implémenter
+
+    
+
+    def update_scores(self, round_index, match_index, score1, score2):
+        """Met à jour les scores pour un match spécifique dans un round donné."""
+        match = self.rounds[round_index].matches[match_index]
+        match.set_results((score1, score2))
+        
+
     
     
     ### Gestion des joueurs ###

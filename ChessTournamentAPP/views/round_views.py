@@ -16,43 +16,42 @@ class RoundView:
                 print("Format de date invalide, le round commencera immédiatement.") # Réfléchir sur cette option
         return round_name, start_time
 
+
+
     @staticmethod
     def start_round(tournament):
         """Permet à l'utilisateur de démarrer un round spécifié."""
         RoundView.display_rounds(tournament)
         round_index = int(input("Entrez le numéro du round à démarrer : ")) - 1
-        try:
-            selected_round = tournament.rounds[round_index]
-            if not selected_round.start_time:
-                tournament.start_round(selected_round.name)
-                print(f"Round '{selected_round.name}' a commencé.")
-            else:
-                print("Ce round a déjà été démarré.")
-        except IndexError:
+        if round_index < 0 or round_index >= len(tournament.rounds):
             print("Numéro de round invalide.")
+            return
+        selected_round = tournament.rounds[round_index]
+        if selected_round.start_time is None:
+            tournament.start_round(selected_round.name)
+            print(f"Round '{selected_round.name}' a commencé.")
+        else:
+            print("Ce round a déjà été démarré.")
 
     @staticmethod
     def end_round(tournament):
         """Permet à l'utilisateur de terminer un round spécifié."""
         RoundView.display_rounds(tournament)
         round_index = int(input("Entrez le numéro du round à terminer : ")) - 1
-        try:
-            selected_round = tournament.rounds[round_index]
-            if selected_round.start_time and not selected_round.is_complete:
-                tournament.end_round(selected_round.name)
-                print(f"Round '{selected_round.name}' a été terminé.")
-            else:
-                print("Ce round ne peut pas être terminé (non commencé ou déjà terminé).")
-        except IndexError:
+        if round_index < 0 or round_index >= len(tournament.rounds):
             print("Numéro de round invalide.")
-
-    # @staticmethod
-    # def display_rounds(tournament):
-    #     """Affiche tous les rounds d'un tournoi avec leur état actuel."""
-    #     print("\nListe des Rounds :")
-    #     for index, round in enumerate(tournament.rounds):
-    #         status = "Non commencé" if not round.start_time else "Terminé" if round.is_complete else "En cours"
-    #         print(f"{index + 1}. Round: {round.name}, Statut: {status}")
+            return
+        selected_round = tournament.rounds[round_index]
+        if selected_round.start_time and not selected_round.is_complete:
+            for match in selected_round.matches:
+                print(f"Match entre {match.players[0].name} et {match.players[1].name}")
+                result = input("Entrez le résultat (1-0, 0-1, 0.5-0.5) : ")
+                match.set_results(tuple(map(float, result.split('-'))))
+            tournament.end_round(selected_round.name)
+            print(f"Round '{selected_round.name}' a été terminé.")
+        else:
+            print("Ce round ne peut pas être terminé (non commencé ou déjà terminé).")
+    
 
     @staticmethod
     def display_rounds(tournament):
@@ -62,20 +61,10 @@ class RoundView:
             print(f"{index + 1}. Round: {rnd.name}, Statut: {status}")
 
 
-
-
-    
-
-
     @staticmethod
     def display_tournaments_for_selection(tournaments):
         """
         Affiche la liste de tournois disponibles pour permettre à l'utilisateur de sélectionner celui auquel il souhaite ajouter un joueur.
-        
-        Cette méthode imprime chaque tournoi avec un numéro d'ordre pour faciliter la sélection par l'utilisateur.
-        L'utilisateur est invité à entrer le numéro correspondant au tournoi de son choix.
-        Si la sélection est valide (un numéro correspondant à un tournoi existant), le tournoi sélectionné est retourné.
-        En cas de sélection invalide (un choix hors de la plage ou une entrée non numérique), l'utilisateur est informé de l'erreur et invité à réessayer.
 
         """
 

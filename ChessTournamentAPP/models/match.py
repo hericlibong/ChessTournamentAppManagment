@@ -12,6 +12,20 @@ class Match:
         self.is_complete = False
 
 
+    def set_results(self, result: str):
+        """Définit les résultats du match en fonction d'un code de résultat."""
+        if not self.is_complete:
+            if result == '1':
+                self.results = (1, 0)  # Victoire pour le joueur 1
+            elif result == '2':
+                self.results = (0, 1)  # Victoire pour le joueur 2
+            elif result == '0':
+                self.results = (0.5, 0.5)  # Match nul
+            self.is_complete = True
+        else:
+            print("Le résultat ne peut pas être modifié; le match est déjà terminé.")
+
+
 
     def to_dict(self):
         """Sérialise l'objet Match pour la sauvegarde en JSON."""
@@ -19,7 +33,6 @@ class Match:
             'players': [player.unique_id for player in self.players],
             'results': self.results
         }
-    
     
 
     def set_results(self, results: Tuple[float, float]):

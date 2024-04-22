@@ -1,53 +1,3 @@
-# from datetime import datetime
-# from typing import List, Tuple
-# from .match import Match
-# from .player import Player
-
-# class Round:
-#     """Représentation d'un tour dans un tournoi d'échecs."""
-#     def __init__(self, name: str, start_time: datetime = None, end_time: datetime = None, is_complete:bool = False):
-#         self.name = name
-#         self.start_time = start_time if start_time else datetime.now()
-#         self.end_time = end_time
-#         self.matches = []
-#         self.is_complete = is_complete
-
-#     def to_dict(self):
-#         return {
-#             'name': self.name,
-#             'start_time': self.start_time.strftime('%Y-%m-%d %H:%M') if self.start_time else None,
-#             'end_time': self.end_time.strftime('%Y-%m-%d %H:%M') if self.end_time else None,
-#             'is_complete': self.is_complete,
-#             'matches': [match.to_dict() for match in self.matches]
-#         }
-
-#     def add_match(self, player1, player2):
-#         """Adds a match to the round if not already present and the round is not complete."""
-#         if self.is_complete:
-#             print("Cannot add matches to a completed round.")
-#             return
-
-#         # Check for existing matches to prevent duplicates
-#         player_pair = frozenset({player1, player2})
-#         existing_pairs = {frozenset({match.players[0], match.players[1]}) for match in self.matches}
-
-#         if player_pair not in existing_pairs:
-#             match = Match(players=(player1, player2))
-#             self.matches.append(match)
-#             print(f"Match between {player1.name} and {player2.name} added to {self.name}.")
-#         else:
-#             print("Match not added to avoid duplication.")
-
-#     def update_match_result(self, match_index, result):
-#         """Updates the result of a specific match."""
-#         if self.is_complete or match_index >= len(self.matches):
-#             print("Cannot update match results for this round.")
-#             return
-
-#         self.matches[match_index].set_results(result)
-#         print(f"Results updated for match {match_index + 1} in round '{self.name}'.")
-
-# models/round.py
 
 from datetime import datetime
 from typing import List, Tuple
@@ -57,10 +7,20 @@ from .player import Player
 class Round:
     def __init__(self, name: str, start_time: datetime = None, end_time: datetime = None, is_complete:bool = False, matches=None):
         self.name = name
-        self.start_time = start_time if start_time else datetime.now()
-        self.end_time = end_time
+        # self.start_time = start_time if start_time else datetime.now()
+        # self.end_time = end_time
+        if isinstance(start_time, datetime):
+            self.start_time = start_time
+        else:
+            self.start_time = datetime.strptime(start_time, "%Y-%m-%d %H:%M") if start_time else None
+
+        if isinstance(end_time, datetime):
+            self.end_time = end_time
+        else:
+            self.end_time = datetime.strptime(end_time, "%Y-%m-%d %H:%M") if end_time else None
         self.is_complete = is_complete
-        self.matches = [Match(**match) for match in matches] if matches else []
+        #self.matches = [Match(**match) for match in matches] if matches else []
+        self.matches = matches if matches else []
 
     def to_dict(self):
         return {

@@ -1,271 +1,567 @@
 [
     {
-        "t_id": "a86035a8",
-        "name": "grand_slam",
-        "location": "Paris",
-        "start_date": "11/04/2024",
-        "end_date": "12/04/2024",
-        "description": "le meilleur des échecs sur la Seine",
-        "current_round": 0,
-        "rounds": [],
-        "registered_players": [
-            {
-                "name": "Usain",
-                "firstname": "Bolt",
-                "birthdate": "24/03/1969",
-                "unique_id": "AK54321"
-            },
-            {
-                "name": "Kylian",
-                "firstname": "Mbappé",
-                "birthdate": "10/08/2001",
-                "unique_id": "OY67854"
-            },
-            {
-                "name": "Majic",
-                "firstname": "Johnson",
-                "birthdate": "17/06/1987",
-                "unique_id": "OJ98345"
-            },
-            {
-                "name": "Riner",
-                "firstname": "Teddy",
-                "birthdate": "24/03/1969",
-                "unique_id": "NB09876"
-            }
-        ],
-        "total_round": 4
-    },
-    {
-        "t_id": "aeb9cdf0",
-        "name": "little_slam",
-        "location": "Caen",
-        "start_date": "12/04/2024",
-        "end_date": "13/04/2024",
-        "description": "Le meilleur des échecs en Normandie",
-        "current_round": 0,
-        "rounds": [],
-        "registered_players": [],
-        "total_round": 4
-    },
-    {
-        "t_id": "e40e4218",
-        "name": "DK_CHESS",
-        "location": "dakar",
-        "start_date": "20/04/2024",
-        "end_date": "21/04/2024",
-        "description": "dakar échecs",
+        "t_id": "6aa3c4b5",
+        "name": "Marseille_chess",
+        "location": "Marseille",
+        "start_date": "22/04/2024",
+        "end_date": "23/04/2024",
+        "description": "Marseille des échecs",
         "current_round": 0,
         "rounds": [
             {
                 "name": "Round 1",
-                "start_time": "2024-04-20 23:37",
-                "end_time": null,
-                "is_complete": false,
-                "matches": []
+                "start_time": "2024-04-22 10:07",
+                "end_time": "2024-04-22 10:09",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "CP25042",
+                            "BD23031"
+                        ],
+                        "results": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "EI19031",
+                            "BS06102"
+                        ],
+                        "results": [
+                            0,
+                            0
+                        ]
+                    }
+                ]
             },
             {
                 "name": "Round 2",
-                "start_time": "2024-04-20 23:37",
-                "end_time": null,
-                "is_complete": false,
-                "matches": []
-            },
-            {
-                "name": "Round 3",
-                "start_time": "2024-04-20 23:37",
-                "end_time": null,
-                "is_complete": false,
-                "matches": []
-            },
-            {
-                "name": "Round 4",
-                "start_time": "2024-04-20 23:37",
-                "end_time": null,
-                "is_complete": false,
-                "matches": []
-            },
-            {
-                "name": "Round 1",
-                "start_time": "2024-04-21 00:40",
-                "end_time": null,
-                "is_complete": false,
-                "matches": []
-            },
-            {
-                "name": "Round 2",
-                "start_time": "2024-04-21 00:40",
-                "end_time": null,
-                "is_complete": false,
-                "matches": []
-            },
-            {
-                "name": "Round 3",
-                "start_time": "2024-04-21 00:40",
-                "end_time": null,
-                "is_complete": false,
-                "matches": []
-            },
-            {
-                "name": "Round 4",
-                "start_time": "2024-04-21 00:40",
-                "end_time": null,
-                "is_complete": false,
-                "matches": []
-            }
-        ],
-        "registered_players": [
-            {
-                "name": "Skywalker",
-                "firstname": "Luc",
-                "birthdate": "12/01/1999",
-                "unique_id": "LS99987"
-            },
-            {
-                "name": "Solo",
-                "firstname": "Yann",
-                "birthdate": "06/07/1977",
-                "unique_id": "YS77912"
-            },
-            {
-                "name": "Pérec",
-                "firstname": "Marie-Josée",
-                "birthdate": "24/03/1970",
-                "unique_id": "MP09876"
-            },
-            {
-                "name": "Li",
-                "firstname": "Peng",
-                "birthdate": "24/03/1969",
-                "unique_id": "LP24031"
-            },
-            {
-                "name": "Usain",
-                "firstname": "Bolt",
-                "birthdate": "24/03/1969",
-                "unique_id": "AK54321"
-            }
-        ],
-        "total_round": 4
-    },
-    {
-        "t_id": "00360d9b",
-        "name": "Alençon_chess",
-        "location": "Alençon",
-        "start_date": "21/04/2024",
-        "end_date": "22/04/2024",
-        "description": "Alençon échecs",
-        "current_round": 0,
-        "rounds": [],
-        "registered_players": [
-            {
-                "name": "Benzema",
-                "firstname": "Karim",
-                "birthdate": "22/09/1998",
-                "unique_id": "KB09875"
-            },
-            {
-                "name": "Dark",
-                "firstname": "Vador",
-                "birthdate": "11/02/2005",
-                "unique_id": "DV50022"
-            },
-            {
-                "name": "Usain",
-                "firstname": "Bolt",
-                "birthdate": "24/03/1969",
-                "unique_id": "AK54321"
-            },
-            {
-                "name": "Skywalker",
-                "firstname": "Luc",
-                "birthdate": "12/01/1999",
-                "unique_id": "LS99987"
-            },
-            {
-                "name": "Solo",
-                "firstname": "Yann",
-                "birthdate": "06/07/1977",
-                "unique_id": "YS77912"
-            }
-        ],
-        "total_round": 4
-    },
-    {
-        "t_id": "80feeb36",
-        "name": "test",
-        "location": "NY",
-        "start_date": "21/04/2024",
-        "end_date": "22/04/2024",
-        "description": "echec tournoi",
-        "current_round": 0,
-        "rounds": [
-            {
-                "name": "Round 1",
-                "start_time": "2024-04-21 02:15",
-                "end_time": "2024-04-21 02:17",
+                "start_time": "2024-04-22 10:09",
+                "end_time": "2024-04-22 10:09",
                 "is_complete": true,
                 "matches": []
             },
             {
-                "name": "Round 2",
-                "start_time": "2024-04-21 02:15",
-                "end_time": null,
-                "is_complete": false,
-                "matches": []
-            },
-            {
                 "name": "Round 3",
-                "start_time": "2024-04-21 02:15",
-                "end_time": null,
-                "is_complete": false,
-                "matches": []
-            },
-            {
-                "name": "Round 4",
-                "start_time": "2024-04-21 02:15",
-                "end_time": null,
-                "is_complete": false,
-                "matches": []
-            },
-            {
-                "name": "round 1",
-                "start_time": "2024-04-21 02:15",
-                "end_time": null,
-                "is_complete": false,
+                "start_time": "2024-04-22 11:46",
+                "end_time": "2024-04-22 11:47",
+                "is_complete": true,
                 "matches": []
             }
         ],
         "registered_players": [
             {
-                "name": "Usain",
-                "firstname": "Bolt",
+                "name": "Penia",
+                "firstname": "Christine",
+                "birthdate": "25/04/2001",
+                "unique_id": "CP25042"
+            },
+            {
+                "name": "Bedia",
+                "firstname": "Ramzy",
                 "birthdate": "24/03/1969",
-                "unique_id": "AK54321"
+                "unique_id": "BD23031"
             },
             {
-                "name": "Harit",
-                "firstname": "Amin",
-                "birthdate": "23/08/2000",
-                "unique_id": "AH07896"
+                "name": "Elba",
+                "firstname": "Idriss",
+                "birthdate": "19/03/1958",
+                "unique_id": "EI19031"
             },
             {
-                "name": "Benzema",
-                "firstname": "Karim",
-                "birthdate": "22/09/1998",
-                "unique_id": "KB09875"
+                "name": "Brakia",
+                "firstname": "Salia",
+                "birthdate": "06/10/2000",
+                "unique_id": "BS06102"
             },
             {
-                "name": "Riner",
-                "firstname": "Teddy",
+                "name": "Tudor",
+                "firstname": "Eric",
+                "birthdate": "24/03/1968",
+                "unique_id": "ET24039"
+            }
+        ],
+        "total_round": 4
+    },
+    {
+        "t_id": "0befb980",
+        "name": "Yaoundé_chess_time",
+        "location": "Yaoundé",
+        "start_date": "22/04/2024",
+        "end_date": "23/04/2024",
+        "description": "Yaoundé échecs Cameroon",
+        "current_round": 0,
+        "rounds": [
+            {
+                "name": "Round 1",
+                "start_time": "2024-04-22 12:01",
+                "end_time": "2024-04-22 12:01",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "CP25042",
+                            "BD23031"
+                        ],
+                        "results": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "EI19031",
+                            "ET24039"
+                        ],
+                        "results": [
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Round 2",
+                "start_time": "2024-04-22 12:01",
+                "end_time": "2024-04-22 12:01",
+                "is_complete": true,
+                "matches": []
+            },
+            {
+                "name": "Round 4",
+                "start_time": "2024-04-22 15:19",
+                "end_time": "2024-04-22 15:19",
+                "is_complete": true,
+                "matches": []
+            }
+        ],
+        "registered_players": [
+            {
+                "name": "Penia",
+                "firstname": "Christine",
+                "birthdate": "25/04/2001",
+                "unique_id": "CP25042"
+            },
+            {
+                "name": "Bedia",
+                "firstname": "Ramzy",
                 "birthdate": "24/03/1969",
-                "unique_id": "NB09876"
+                "unique_id": "BD23031"
             },
             {
-                "name": "Dark",
-                "firstname": "Vador",
-                "birthdate": "11/02/2005",
-                "unique_id": "DV50022"
+                "name": "Elba",
+                "firstname": "Idriss",
+                "birthdate": "19/03/1958",
+                "unique_id": "EI19031"
+            },
+            {
+                "name": "Tudor",
+                "firstname": "Eric",
+                "birthdate": "24/03/1968",
+                "unique_id": "ET24039"
+            },
+            {
+                "name": "Brakia",
+                "firstname": "Salia",
+                "birthdate": "06/10/2000",
+                "unique_id": "BS06102"
+            }
+        ],
+        "total_round": 4
+    },
+    {
+        "t_id": "a7fdf0d9",
+        "name": "Bamako Chess Tournament",
+        "location": "Bamako",
+        "start_date": "22/04/2024",
+        "end_date": "23/04/2024",
+        "description": "Les échecs au Soleil",
+        "current_round": 0,
+        "rounds": [
+            {
+                "name": "Round 1",
+                "start_time": "2024-04-22 15:29",
+                "end_time": "2024-04-22 15:31",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "ET24039",
+                            "BD23031"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "BS06102",
+                            "CP25042"
+                        ],
+                        "results": [
+                            0.5,
+                            0.5
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Round 2",
+                "start_time": "2024-04-22 15:34",
+                "end_time": "2024-04-22 15:34",
+                "is_complete": true,
+                "matches": []
+            }
+        ],
+        "registered_players": [
+            {
+                "name": "Tudor",
+                "firstname": "Eric",
+                "birthdate": "24/03/1968",
+                "unique_id": "ET24039"
+            },
+            {
+                "name": "Bedia",
+                "firstname": "Ramzy",
+                "birthdate": "24/03/1969",
+                "unique_id": "BD23031"
+            },
+            {
+                "name": "Brakia",
+                "firstname": "Salia",
+                "birthdate": "06/10/2000",
+                "unique_id": "BS06102"
+            },
+            {
+                "name": "Penia",
+                "firstname": "Christine",
+                "birthdate": "25/04/2001",
+                "unique_id": "CP25042"
+            },
+            {
+                "name": "Elba",
+                "firstname": "Idriss",
+                "birthdate": "19/03/1958",
+                "unique_id": "EI19031"
+            }
+        ],
+        "total_round": 4
+    },
+    {
+        "t_id": "55d07c89",
+        "name": "ABIDJAN_CHESS_TOURNAMENT",
+        "location": "Abidjan",
+        "start_date": "22/04/2024",
+        "end_date": "23/04/2024",
+        "description": "Echecs Abidjan",
+        "current_round": 0,
+        "rounds": [
+            {
+                "name": "Round 1",
+                "start_time": "2024-04-22 16:52",
+                "end_time": "2024-04-22 16:53",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "CP25042",
+                            "BS06102"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "EI19031",
+                            "ET24039"
+                        ],
+                        "results": [
+                            0.5,
+                            0.5
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Round 2",
+                "start_time": "2024-04-22 16:54",
+                "end_time": "2024-04-22 16:54",
+                "is_complete": true,
+                "matches": []
+            }
+        ],
+        "registered_players": [
+            {
+                "name": "Penia",
+                "firstname": "Christine",
+                "birthdate": "25/04/2001",
+                "unique_id": "CP25042"
+            },
+            {
+                "name": "Brakia",
+                "firstname": "Salia",
+                "birthdate": "06/10/2000",
+                "unique_id": "BS06102"
+            },
+            {
+                "name": "Elba",
+                "firstname": "Idriss",
+                "birthdate": "19/03/1958",
+                "unique_id": "EI19031"
+            },
+            {
+                "name": "Tudor",
+                "firstname": "Eric",
+                "birthdate": "24/03/1968",
+                "unique_id": "ET24039"
+            },
+            {
+                "name": "Bedia",
+                "firstname": "Ramzy",
+                "birthdate": "24/03/1969",
+                "unique_id": "BD23031"
+            }
+        ],
+        "total_round": 4
+    },
+    {
+        "t_id": "bfca5031",
+        "name": "Douala Chess Game",
+        "location": "Douala",
+        "start_date": "22/04/2024",
+        "end_date": "23/04/2024",
+        "description": "Cameroon rumble",
+        "current_round": 0,
+        "rounds": [
+            {
+                "name": "Round 1",
+                "start_time": "2024-04-22 18:08",
+                "end_time": "2024-04-22 18:09",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "CP25042",
+                            "BS06102"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "ET24039",
+                            "BD23031"
+                        ],
+                        "results": [
+                            0.5,
+                            0.5
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Round 2",
+                "start_time": "2024-04-22 18:09",
+                "end_time": "2024-04-22 18:09",
+                "is_complete": true,
+                "matches": []
+            }
+        ],
+        "registered_players": [
+            {
+                "name": "Penia",
+                "firstname": "Christine",
+                "birthdate": "25/04/2001",
+                "unique_id": "CP25042"
+            },
+            {
+                "name": "Brakia",
+                "firstname": "Salia",
+                "birthdate": "06/10/2000",
+                "unique_id": "BS06102"
+            },
+            {
+                "name": "Tudor",
+                "firstname": "Eric",
+                "birthdate": "24/03/1968",
+                "unique_id": "ET24039"
+            },
+            {
+                "name": "Bedia",
+                "firstname": "Ramzy",
+                "birthdate": "24/03/1969",
+                "unique_id": "BD23031"
+            },
+            {
+                "name": "Elba",
+                "firstname": "Idriss",
+                "birthdate": "19/03/1958",
+                "unique_id": "EI19031"
+            }
+        ],
+        "total_round": 4
+    },
+    {
+        "t_id": "73d29426",
+        "name": "NAIROBI_CHESS",
+        "location": "Nairobi",
+        "start_date": "22/01/2024",
+        "end_date": "23/04/2024",
+        "description": "Nairobi chess game",
+        "current_round": 0,
+        "rounds": [],
+        "registered_players": [
+            {
+                "name": "Penia",
+                "firstname": "Christine",
+                "birthdate": "25/04/2001",
+                "unique_id": "CP25042"
+            },
+            {
+                "name": "Brakia",
+                "firstname": "Salia",
+                "birthdate": "06/10/2000",
+                "unique_id": "BS06102"
+            },
+            {
+                "name": "Elba",
+                "firstname": "Idriss",
+                "birthdate": "19/03/1958",
+                "unique_id": "EI19031"
+            },
+            {
+                "name": "Tudor",
+                "firstname": "Eric",
+                "birthdate": "24/03/1968",
+                "unique_id": "ET24039"
+            },
+            {
+                "name": "Bedia",
+                "firstname": "Ramzy",
+                "birthdate": "24/03/1969",
+                "unique_id": "BD23031"
+            }
+        ],
+        "total_round": 4
+    },
+    {
+        "t_id": "e029b635",
+        "name": "Pretoria",
+        "location": "Pretoria af.sud",
+        "start_date": "22/04/2024",
+        "end_date": "23/04/2024",
+        "description": "chess pretoria",
+        "current_round": 0,
+        "rounds": [],
+        "registered_players": [
+            {
+                "name": "Penia",
+                "firstname": "Christine",
+                "birthdate": "25/04/2001",
+                "unique_id": "CP25042"
+            },
+            {
+                "name": "Brakia",
+                "firstname": "Salia",
+                "birthdate": "06/10/2000",
+                "unique_id": "BS06102"
+            },
+            {
+                "name": "Elba",
+                "firstname": "Idriss",
+                "birthdate": "19/03/1958",
+                "unique_id": "EI19031"
+            },
+            {
+                "name": "Tudor",
+                "firstname": "Eric",
+                "birthdate": "24/03/1968",
+                "unique_id": "ET24039"
+            },
+            {
+                "name": "Bedia",
+                "firstname": "Ramzy",
+                "birthdate": "24/03/1969",
+                "unique_id": "BD23031"
+            }
+        ],
+        "total_round": 4
+    },
+    {
+        "t_id": "069d8f7a",
+        "name": "CONAKRY",
+        "location": "CONAKRY GUINEE",
+        "start_date": "22/04/2024",
+        "end_date": "23/04/2024",
+        "description": "guinée chess game",
+        "current_round": 0,
+        "rounds": [
+            {
+                "name": "Round 1",
+                "start_time": "2024-04-22 22:23",
+                "end_time": "2024-04-22 22:24",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "CP25042",
+                            "ET24039"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "BD23031",
+                            "BS06102"
+                        ],
+                        "results": [
+                            0.5,
+                            0.5
+                        ]
+                    }
+                ]
+            }
+        ],
+        "registered_players": [
+            {
+                "name": "Penia",
+                "firstname": "Christine",
+                "birthdate": "25/04/2001",
+                "unique_id": "CP25042"
+            },
+            {
+                "name": "Tudor",
+                "firstname": "Eric",
+                "birthdate": "24/03/1968",
+                "unique_id": "ET24039"
+            },
+            {
+                "name": "Bedia",
+                "firstname": "Ramzy",
+                "birthdate": "24/03/1969",
+                "unique_id": "BD23031"
+            },
+            {
+                "name": "Brakia",
+                "firstname": "Salia",
+                "birthdate": "06/10/2000",
+                "unique_id": "BS06102"
+            },
+            {
+                "name": "Elba",
+                "firstname": "Idriss",
+                "birthdate": "19/03/1958",
+                "unique_id": "EI19031"
             }
         ],
         "total_round": 4

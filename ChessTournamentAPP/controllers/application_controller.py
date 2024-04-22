@@ -70,9 +70,6 @@ class ApplicationController:
 
 
 
-
-
-
     def manage_rounds(self, tournament):
         while True:
             choice = MenuView.display_round_menu()
@@ -83,22 +80,12 @@ class ApplicationController:
                 RoundView.start_round(tournament)
             elif choice == '3':
                 RoundView.end_round(tournament)
+                
             elif choice == '4':
                 break  # Correctement placé dans une boucle, cela permet de retourner au menu précédent
             else:
                 print("Choix invalide, veuillez réessayer.")
 
-
-    
-
-
-
-
-
-
-    
-  
-    
 
     def manage_players(self):
         while True:

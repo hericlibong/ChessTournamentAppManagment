@@ -565,5 +565,105 @@
             }
         ],
         "total_round": 4
+    },
+    {
+        "t_id": "d9c76b1e",
+        "name": "Cotonou Chess Game",
+        "location": "Cotonou - Bénin",
+        "start_date": "23/04/2024",
+        "end_date": "24/04/2024",
+        "description": "Echecs A Cotonou",
+        "current_round": 0,
+        "rounds": [
+            {
+                "name": "Round 1",
+                "start_time": "2024-04-23 00:36",
+                "end_time": "2024-04-23 00:36",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "ET24039",
+                            "CP25042"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "BD23031",
+                            "BS06102"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Round 2",
+                "start_time": "2024-04-23 00:37",
+                "end_time": "2024-04-23 00:37",
+                "is_complete": true,
+                "matches": []
+            },
+            {
+                "name": "Round 3",
+                "start_time": "2024-04-23 00:39",
+                "end_time": "2024-04-23 00:39",
+                "is_complete": true,
+                "matches": []
+            },
+            {
+                "name": "Round 4",
+                "start_time": "2024-04-23 00:40",
+                "end_time": "2024-04-23 00:40",
+                "is_complete": true,
+                "matches": []
+            },
+            {
+                "name": "Round 5",
+                "start_time": "2024-04-23 00:42",
+                "end_time": "2024-04-23 00:42",
+                "is_complete": true,
+                "matches": []
+            }
+        ],
+        "registered_players": [
+            {
+                "name": "Tudor",
+                "firstname": "Eric",
+                "birthdate": "24/03/1968",
+                "unique_id": "ET24039"
+            },
+            {
+                "name": "Penia",
+                "firstname": "Christine",
+                "birthdate": "25/04/2001",
+                "unique_id": "CP25042"
+            },
+            {
+                "name": "Bedia",
+                "firstname": "Ramzy",
+                "birthdate": "24/03/1969",
+                "unique_id": "BD23031"
+            },
+            {
+                "name": "Brakia",
+                "firstname": "Salia",
+                "birthdate": "06/10/2000",
+                "unique_id": "BS06102"
+            },
+            {
+                "name": "Elba",
+                "firstname": "Idriss",
+                "birthdate": "19/03/1958",
+                "unique_id": "EI19031"
+            }
+        ],
+        "total_round": 4
     }
 ]

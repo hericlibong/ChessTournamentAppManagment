@@ -6,6 +6,7 @@ from .round import Round
 from .match import Match
 import random
 
+
 class Tournament:
     """Creation de tournois"""
     def __init__(self, name: str, location: str, description: str, start_date: str, end_date: str, 
@@ -39,6 +40,9 @@ class Tournament:
             self.end_date = end_date
         else:
             self.end_date = datetime.strptime(end_date, "%d/%m/%Y")
+
+
+
 
     ## Sérialisation des données ##
 
@@ -98,8 +102,6 @@ class Tournament:
         self.rounds.append(current_round)
 
 
-    
-
     def update_scores(self, round_index, match_index, score1, score2):
         """Met à jour les scores pour un match spécifique dans un round donné."""
         match = self.rounds[round_index].matches[match_index]
@@ -124,9 +126,6 @@ class Tournament:
     
     
     ## Gestion des Rounds ##
-
-
-    
 
     def add_round(self, round_name, start_time=None):
         """ Ajoute un nouveau round au tournoi si le tournoi est actif"""

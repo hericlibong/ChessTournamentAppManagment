@@ -3,30 +3,56 @@
         "name": "Bedia",
         "firstname": "Ramzy",
         "birthdate": "24/03/1969",
-        "unique_id": "BD23031"
+        "unique_id": "BD23031",
+        "past_opponents": []
     },
     {
         "name": "Tudor",
         "firstname": "Eric",
         "birthdate": "24/03/1968",
-        "unique_id": "ET24039"
+        "unique_id": "ET24039",
+        "past_opponents": []
     },
     {
         "name": "Elba",
         "firstname": "Idriss",
         "birthdate": "19/03/1958",
-        "unique_id": "EI19031"
+        "unique_id": "EI19031",
+        "past_opponents": []
     },
     {
         "name": "Penia",
         "firstname": "Christine",
         "birthdate": "25/04/2001",
-        "unique_id": "CP25042"
+        "unique_id": "CP25042",
+        "past_opponents": []
     },
     {
         "name": "Brakia",
         "firstname": "Salia",
         "birthdate": "06/10/2000",
-        "unique_id": "BS06102"
+        "unique_id": "BS06102",
+        "past_opponents": []
+    },
+    {
+        "name": "Jarry",
+        "firstname": "Alfred",
+        "birthdate": "24/06/1975",
+        "unique_id": "JA09874",
+        "past_opponents": []
+    },
+    {
+        "name": "Auster",
+        "firstname": "Paul",
+        "birthdate": "07/10/1987",
+        "unique_id": "AP07101",
+        "past_opponents": []
+    },
+    {
+        "name": "Libong",
+        "firstname": "Heric",
+        "birthdate": "24/03/1969",
+        "unique_id": "HL24031",
+        "past_opponents": []
     }
 ]

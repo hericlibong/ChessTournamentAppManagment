@@ -56,31 +56,36 @@
                 "name": "Penia",
                 "firstname": "Christine",
                 "birthdate": "25/04/2001",
-                "unique_id": "CP25042"
+                "unique_id": "CP25042",
+                "past_opponents": []
             },
             {
                 "name": "Bedia",
                 "firstname": "Ramzy",
                 "birthdate": "24/03/1969",
-                "unique_id": "BD23031"
+                "unique_id": "BD23031",
+                "past_opponents": []
             },
             {
                 "name": "Elba",
                 "firstname": "Idriss",
                 "birthdate": "19/03/1958",
-                "unique_id": "EI19031"
+                "unique_id": "EI19031",
+                "past_opponents": []
             },
             {
                 "name": "Brakia",
                 "firstname": "Salia",
                 "birthdate": "06/10/2000",
-                "unique_id": "BS06102"
+                "unique_id": "BS06102",
+                "past_opponents": []
             },
             {
                 "name": "Tudor",
                 "firstname": "Eric",
                 "birthdate": "24/03/1968",
-                "unique_id": "ET24039"
+                "unique_id": "ET24039",
+                "past_opponents": []
             }
         ],
         "total_round": 4
@@ -142,31 +147,36 @@
                 "name": "Penia",
                 "firstname": "Christine",
                 "birthdate": "25/04/2001",
-                "unique_id": "CP25042"
+                "unique_id": "CP25042",
+                "past_opponents": []
             },
             {
                 "name": "Bedia",
                 "firstname": "Ramzy",
                 "birthdate": "24/03/1969",
-                "unique_id": "BD23031"
+                "unique_id": "BD23031",
+                "past_opponents": []
             },
             {
                 "name": "Elba",
                 "firstname": "Idriss",
                 "birthdate": "19/03/1958",
-                "unique_id": "EI19031"
+                "unique_id": "EI19031",
+                "past_opponents": []
             },
             {
                 "name": "Tudor",
                 "firstname": "Eric",
                 "birthdate": "24/03/1968",
-                "unique_id": "ET24039"
+                "unique_id": "ET24039",
+                "past_opponents": []
             },
             {
                 "name": "Brakia",
                 "firstname": "Salia",
                 "birthdate": "06/10/2000",
-                "unique_id": "BS06102"
+                "unique_id": "BS06102",
+                "past_opponents": []
             }
         ],
         "total_round": 4
@@ -221,31 +231,36 @@
                 "name": "Tudor",
                 "firstname": "Eric",
                 "birthdate": "24/03/1968",
-                "unique_id": "ET24039"
+                "unique_id": "ET24039",
+                "past_opponents": []
             },
             {
                 "name": "Bedia",
                 "firstname": "Ramzy",
                 "birthdate": "24/03/1969",
-                "unique_id": "BD23031"
+                "unique_id": "BD23031",
+                "past_opponents": []
             },
             {
                 "name": "Brakia",
                 "firstname": "Salia",
                 "birthdate": "06/10/2000",
-                "unique_id": "BS06102"
+                "unique_id": "BS06102",
+                "past_opponents": []
             },
             {
                 "name": "Penia",
                 "firstname": "Christine",
                 "birthdate": "25/04/2001",
-                "unique_id": "CP25042"
+                "unique_id": "CP25042",
+                "past_opponents": []
             },
             {
                 "name": "Elba",
                 "firstname": "Idriss",
                 "birthdate": "19/03/1958",
-                "unique_id": "EI19031"
+                "unique_id": "EI19031",
+                "past_opponents": []
             }
         ],
         "total_round": 4
@@ -300,31 +315,36 @@
                 "name": "Penia",
                 "firstname": "Christine",
                 "birthdate": "25/04/2001",
-                "unique_id": "CP25042"
+                "unique_id": "CP25042",
+                "past_opponents": []
             },
             {
                 "name": "Brakia",
                 "firstname": "Salia",
                 "birthdate": "06/10/2000",
-                "unique_id": "BS06102"
+                "unique_id": "BS06102",
+                "past_opponents": []
             },
             {
                 "name": "Elba",
                 "firstname": "Idriss",
                 "birthdate": "19/03/1958",
-                "unique_id": "EI19031"
+                "unique_id": "EI19031",
+                "past_opponents": []
             },
             {
                 "name": "Tudor",
                 "firstname": "Eric",
                 "birthdate": "24/03/1968",
-                "unique_id": "ET24039"
+                "unique_id": "ET24039",
+                "past_opponents": []
             },
             {
                 "name": "Bedia",
                 "firstname": "Ramzy",
                 "birthdate": "24/03/1969",
-                "unique_id": "BD23031"
+                "unique_id": "BD23031",
+                "past_opponents": []
             }
         ],
         "total_round": 4
@@ -379,31 +399,36 @@
                 "name": "Penia",
                 "firstname": "Christine",
                 "birthdate": "25/04/2001",
-                "unique_id": "CP25042"
+                "unique_id": "CP25042",
+                "past_opponents": []
             },
             {
                 "name": "Brakia",
                 "firstname": "Salia",
                 "birthdate": "06/10/2000",
-                "unique_id": "BS06102"
+                "unique_id": "BS06102",
+                "past_opponents": []
             },
             {
                 "name": "Tudor",
                 "firstname": "Eric",
                 "birthdate": "24/03/1968",
-                "unique_id": "ET24039"
+                "unique_id": "ET24039",
+                "past_opponents": []
             },
             {
                 "name": "Bedia",
                 "firstname": "Ramzy",
                 "birthdate": "24/03/1969",
-                "unique_id": "BD23031"
+                "unique_id": "BD23031",
+                "past_opponents": []
             },
             {
                 "name": "Elba",
                 "firstname": "Idriss",
                 "birthdate": "19/03/1958",
-                "unique_id": "EI19031"
+                "unique_id": "EI19031",
+                "past_opponents": []
             }
         ],
         "total_round": 4
@@ -422,31 +447,36 @@
                 "name": "Penia",
                 "firstname": "Christine",
                 "birthdate": "25/04/2001",
-                "unique_id": "CP25042"
+                "unique_id": "CP25042",
+                "past_opponents": []
             },
             {
                 "name": "Brakia",
                 "firstname": "Salia",
                 "birthdate": "06/10/2000",
-                "unique_id": "BS06102"
+                "unique_id": "BS06102",
+                "past_opponents": []
             },
             {
                 "name": "Elba",
                 "firstname": "Idriss",
                 "birthdate": "19/03/1958",
-                "unique_id": "EI19031"
+                "unique_id": "EI19031",
+                "past_opponents": []
             },
             {
                 "name": "Tudor",
                 "firstname": "Eric",
                 "birthdate": "24/03/1968",
-                "unique_id": "ET24039"
+                "unique_id": "ET24039",
+                "past_opponents": []
             },
             {
                 "name": "Bedia",
                 "firstname": "Ramzy",
                 "birthdate": "24/03/1969",
-                "unique_id": "BD23031"
+                "unique_id": "BD23031",
+                "past_opponents": []
             }
         ],
         "total_round": 4
@@ -465,31 +495,36 @@
                 "name": "Penia",
                 "firstname": "Christine",
                 "birthdate": "25/04/2001",
-                "unique_id": "CP25042"
+                "unique_id": "CP25042",
+                "past_opponents": []
             },
             {
                 "name": "Brakia",
                 "firstname": "Salia",
                 "birthdate": "06/10/2000",
-                "unique_id": "BS06102"
+                "unique_id": "BS06102",
+                "past_opponents": []
             },
             {
                 "name": "Elba",
                 "firstname": "Idriss",
                 "birthdate": "19/03/1958",
-                "unique_id": "EI19031"
+                "unique_id": "EI19031",
+                "past_opponents": []
             },
             {
                 "name": "Tudor",
                 "firstname": "Eric",
                 "birthdate": "24/03/1968",
-                "unique_id": "ET24039"
+                "unique_id": "ET24039",
+                "past_opponents": []
             },
             {
                 "name": "Bedia",
                 "firstname": "Ramzy",
                 "birthdate": "24/03/1969",
-                "unique_id": "BD23031"
+                "unique_id": "BD23031",
+                "past_opponents": []
             }
         ],
         "total_round": 4
@@ -537,31 +572,36 @@
                 "name": "Penia",
                 "firstname": "Christine",
                 "birthdate": "25/04/2001",
-                "unique_id": "CP25042"
+                "unique_id": "CP25042",
+                "past_opponents": []
             },
             {
                 "name": "Tudor",
                 "firstname": "Eric",
                 "birthdate": "24/03/1968",
-                "unique_id": "ET24039"
+                "unique_id": "ET24039",
+                "past_opponents": []
             },
             {
                 "name": "Bedia",
                 "firstname": "Ramzy",
                 "birthdate": "24/03/1969",
-                "unique_id": "BD23031"
+                "unique_id": "BD23031",
+                "past_opponents": []
             },
             {
                 "name": "Brakia",
                 "firstname": "Salia",
                 "birthdate": "06/10/2000",
-                "unique_id": "BS06102"
+                "unique_id": "BS06102",
+                "past_opponents": []
             },
             {
                 "name": "Elba",
                 "firstname": "Idriss",
                 "birthdate": "19/03/1958",
-                "unique_id": "EI19031"
+                "unique_id": "EI19031",
+                "past_opponents": []
             }
         ],
         "total_round": 4
@@ -637,31 +677,1133 @@
                 "name": "Tudor",
                 "firstname": "Eric",
                 "birthdate": "24/03/1968",
-                "unique_id": "ET24039"
+                "unique_id": "ET24039",
+                "past_opponents": []
             },
             {
                 "name": "Penia",
                 "firstname": "Christine",
                 "birthdate": "25/04/2001",
-                "unique_id": "CP25042"
+                "unique_id": "CP25042",
+                "past_opponents": []
             },
             {
                 "name": "Bedia",
                 "firstname": "Ramzy",
                 "birthdate": "24/03/1969",
-                "unique_id": "BD23031"
+                "unique_id": "BD23031",
+                "past_opponents": []
             },
             {
                 "name": "Brakia",
                 "firstname": "Salia",
                 "birthdate": "06/10/2000",
-                "unique_id": "BS06102"
+                "unique_id": "BS06102",
+                "past_opponents": []
             },
             {
                 "name": "Elba",
                 "firstname": "Idriss",
                 "birthdate": "19/03/1958",
-                "unique_id": "EI19031"
+                "unique_id": "EI19031",
+                "past_opponents": []
+            }
+        ],
+        "total_round": 4
+    },
+    {
+        "t_id": "558fe6d4",
+        "name": "Lomé",
+        "location": "Lomé - Togo",
+        "start_date": "23/04/2024",
+        "end_date": "24/04/2024",
+        "description": "Lomé - Togo - Chess",
+        "current_round": 2,
+        "rounds": [
+            {
+                "name": "Round 1",
+                "start_time": "2024-04-23 11:00",
+                "end_time": "2024-04-23 11:01",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "CP25042",
+                            "BS06102"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "EI19031",
+                            "ET24039"
+                        ],
+                        "results": [
+                            0.5,
+                            0.5
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Round 2",
+                "start_time": "2024-04-23 11:01",
+                "end_time": "2024-04-23 11:02",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "BD23031",
+                            "EI19031"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "BS06102",
+                            "ET24039"
+                        ],
+                        "results": [
+                            0.0,
+                            1.0
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Round 3",
+                "start_time": "2024-04-23 11:03",
+                "end_time": "2024-04-23 11:04",
+                "is_complete": true,
+                "matches": []
+            }
+        ],
+        "registered_players": [
+            {
+                "name": "Bedia",
+                "firstname": "Ramzy",
+                "birthdate": "24/03/1969",
+                "unique_id": "BD23031",
+                "past_opponents": [
+                    "EI19031"
+                ]
+            },
+            {
+                "name": "Elba",
+                "firstname": "Idriss",
+                "birthdate": "19/03/1958",
+                "unique_id": "EI19031",
+                "past_opponents": [
+                    "BD23031",
+                    "ET24039"
+                ]
+            },
+            {
+                "name": "Brakia",
+                "firstname": "Salia",
+                "birthdate": "06/10/2000",
+                "unique_id": "BS06102",
+                "past_opponents": [
+                    "CP25042",
+                    "ET24039"
+                ]
+            },
+            {
+                "name": "Tudor",
+                "firstname": "Eric",
+                "birthdate": "24/03/1968",
+                "unique_id": "ET24039",
+                "past_opponents": [
+                    "BS06102",
+                    "EI19031"
+                ]
+            },
+            {
+                "name": "Penia",
+                "firstname": "Christine",
+                "birthdate": "25/04/2001",
+                "unique_id": "CP25042",
+                "past_opponents": [
+                    "BS06102"
+                ]
+            }
+        ],
+        "total_round": 4
+    },
+    {
+        "t_id": "3e1f119c",
+        "name": "BrazzaChess",
+        "location": "Brazzaville",
+        "start_date": "23/04/2024",
+        "end_date": "24/04/2024",
+        "description": "Chess in Brazzaville",
+        "current_round": 0,
+        "rounds": [
+            {
+                "name": "Round 1",
+                "start_time": "2024-04-23 14:37",
+                "end_time": "2024-04-23 14:39",
+                "is_complete": true,
+                "matches": []
+            },
+            {
+                "name": "Round 2",
+                "start_time": "2024-04-23 14:39",
+                "end_time": "2024-04-23 14:40",
+                "is_complete": true,
+                "matches": []
+            },
+            {
+                "name": "Round 3",
+                "start_time": null,
+                "end_time": null,
+                "is_complete": false,
+                "matches": []
+            },
+            {
+                "name": "Round 4",
+                "start_time": null,
+                "end_time": null,
+                "is_complete": false,
+                "matches": []
+            },
+            {
+                "name": "Round 5",
+                "start_time": null,
+                "end_time": null,
+                "is_complete": false,
+                "matches": []
+            },
+            {
+                "name": "Round 6",
+                "start_time": null,
+                "end_time": null,
+                "is_complete": false,
+                "matches": []
+            },
+            {
+                "name": "Round 7",
+                "start_time": null,
+                "end_time": null,
+                "is_complete": false,
+                "matches": []
+            }
+        ],
+        "registered_players": [
+            {
+                "name": "Bedia",
+                "firstname": "Ramzy",
+                "birthdate": "24/03/1969",
+                "unique_id": "BD23031",
+                "past_opponents": []
+            },
+            {
+                "name": "Brakia",
+                "firstname": "Salia",
+                "birthdate": "06/10/2000",
+                "unique_id": "BS06102",
+                "past_opponents": []
+            },
+            {
+                "name": "Elba",
+                "firstname": "Idriss",
+                "birthdate": "19/03/1958",
+                "unique_id": "EI19031",
+                "past_opponents": []
+            },
+            {
+                "name": "Jarry",
+                "firstname": "Alfred",
+                "birthdate": "24/06/1975",
+                "unique_id": "JA09874",
+                "past_opponents": []
+            },
+            {
+                "name": "Penia",
+                "firstname": "Christine",
+                "birthdate": "25/04/2001",
+                "unique_id": "CP25042",
+                "past_opponents": []
+            },
+            {
+                "name": "Tudor",
+                "firstname": "Eric",
+                "birthdate": "24/03/1968",
+                "unique_id": "ET24039",
+                "past_opponents": []
+            },
+            {
+                "name": "Auster",
+                "firstname": "Paul",
+                "birthdate": "07/10/1987",
+                "unique_id": "AP07101",
+                "past_opponents": []
+            }
+        ],
+        "total_round": 4
+    },
+    {
+        "t_id": "c70c11cb",
+        "name": "Bangui_chess",
+        "location": "Bangui",
+        "start_date": "23/04/2024",
+        "end_date": "24/04/2024",
+        "description": "Bangui chess bang",
+        "current_round": 0,
+        "rounds": [],
+        "registered_players": [
+            {
+                "name": "Auster",
+                "firstname": "Paul",
+                "birthdate": "07/10/1987",
+                "unique_id": "AP07101",
+                "past_opponents": []
+            },
+            {
+                "name": "Bedia",
+                "firstname": "Ramzy",
+                "birthdate": "24/03/1969",
+                "unique_id": "BD23031",
+                "past_opponents": []
+            },
+            {
+                "name": "Brakia",
+                "firstname": "Salia",
+                "birthdate": "06/10/2000",
+                "unique_id": "BS06102",
+                "past_opponents": []
+            },
+            {
+                "name": "Elba",
+                "firstname": "Idriss",
+                "birthdate": "19/03/1958",
+                "unique_id": "EI19031",
+                "past_opponents": []
+            },
+            {
+                "name": "Jarry",
+                "firstname": "Alfred",
+                "birthdate": "24/06/1975",
+                "unique_id": "JA09874",
+                "past_opponents": []
+            },
+            {
+                "name": "Penia",
+                "firstname": "Christine",
+                "birthdate": "25/04/2001",
+                "unique_id": "CP25042",
+                "past_opponents": []
+            },
+            {
+                "name": "Tudor",
+                "firstname": "Eric",
+                "birthdate": "24/03/1968",
+                "unique_id": "ET24039",
+                "past_opponents": []
+            },
+            {
+                "name": "Libong",
+                "firstname": "Heric",
+                "birthdate": "24/03/1969",
+                "unique_id": "HL24031",
+                "past_opponents": []
+            }
+        ],
+        "total_round": 4
+    },
+    {
+        "t_id": "dff0bd34",
+        "name": "Ouaga",
+        "location": "Burkina",
+        "start_date": "23/04/2024",
+        "end_date": "24/04/2024",
+        "description": "chess_ouaga",
+        "current_round": 0,
+        "rounds": [
+            {
+                "name": "Round 1",
+                "start_time": "2024-04-23 15:58",
+                "end_time": "2024-04-23 16:00",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "BD23031",
+                            "CP25042"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "BS06102",
+                            "HL24031"
+                        ],
+                        "results": [
+                            0.0,
+                            1.0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "EI19031",
+                            "ET24039"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "AP07101",
+                            "JA09874"
+                        ],
+                        "results": [
+                            0.0,
+                            1.0
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Round 2",
+                "start_time": "2024-04-23 15:59",
+                "end_time": "2024-04-23 16:04",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "BD23031",
+                            "CP25042"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "BS06102",
+                            "HL24031"
+                        ],
+                        "results": [
+                            0.5,
+                            0.5
+                        ]
+                    },
+                    {
+                        "players": [
+                            "EI19031",
+                            "ET24039"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "AP07101",
+                            "JA09874"
+                        ],
+                        "results": [
+                            0.0,
+                            1.0
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Round 3",
+                "start_time": "2024-04-23 16:03",
+                "end_time": null,
+                "is_complete": false,
+                "matches": [
+                    {
+                        "players": [
+                            "BD23031",
+                            "CP25042"
+                        ],
+                        "results": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "BS06102",
+                            "HL24031"
+                        ],
+                        "results": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "EI19031",
+                            "ET24039"
+                        ],
+                        "results": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "AP07101",
+                            "JA09874"
+                        ],
+                        "results": [
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Round 4",
+                "start_time": null,
+                "end_time": null,
+                "is_complete": false,
+                "matches": [
+                    {
+                        "players": [
+                            "BD23031",
+                            "CP25042"
+                        ],
+                        "results": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "BS06102",
+                            "HL24031"
+                        ],
+                        "results": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "EI19031",
+                            "ET24039"
+                        ],
+                        "results": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "AP07101",
+                            "JA09874"
+                        ],
+                        "results": [
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Round 5",
+                "start_time": null,
+                "end_time": null,
+                "is_complete": false,
+                "matches": [
+                    {
+                        "players": [
+                            "BD23031",
+                            "CP25042"
+                        ],
+                        "results": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "BS06102",
+                            "HL24031"
+                        ],
+                        "results": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "EI19031",
+                            "ET24039"
+                        ],
+                        "results": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "AP07101",
+                            "JA09874"
+                        ],
+                        "results": [
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Round 6",
+                "start_time": null,
+                "end_time": null,
+                "is_complete": false,
+                "matches": [
+                    {
+                        "players": [
+                            "BD23031",
+                            "CP25042"
+                        ],
+                        "results": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "BS06102",
+                            "HL24031"
+                        ],
+                        "results": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "EI19031",
+                            "ET24039"
+                        ],
+                        "results": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "AP07101",
+                            "JA09874"
+                        ],
+                        "results": [
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Round 7",
+                "start_time": null,
+                "end_time": null,
+                "is_complete": false,
+                "matches": [
+                    {
+                        "players": [
+                            "BD23031",
+                            "CP25042"
+                        ],
+                        "results": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "BS06102",
+                            "HL24031"
+                        ],
+                        "results": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "EI19031",
+                            "ET24039"
+                        ],
+                        "results": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "AP07101",
+                            "JA09874"
+                        ],
+                        "results": [
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "",
+                "start_time": null,
+                "end_time": null,
+                "is_complete": false,
+                "matches": []
+            }
+        ],
+        "registered_players": [
+            {
+                "name": "Bedia",
+                "firstname": "Ramzy",
+                "birthdate": "24/03/1969",
+                "unique_id": "BD23031",
+                "past_opponents": []
+            },
+            {
+                "name": "Penia",
+                "firstname": "Christine",
+                "birthdate": "25/04/2001",
+                "unique_id": "CP25042",
+                "past_opponents": []
+            },
+            {
+                "name": "Brakia",
+                "firstname": "Salia",
+                "birthdate": "06/10/2000",
+                "unique_id": "BS06102",
+                "past_opponents": []
+            },
+            {
+                "name": "Libong",
+                "firstname": "Heric",
+                "birthdate": "24/03/1969",
+                "unique_id": "HL24031",
+                "past_opponents": []
+            },
+            {
+                "name": "Elba",
+                "firstname": "Idriss",
+                "birthdate": "19/03/1958",
+                "unique_id": "EI19031",
+                "past_opponents": []
+            },
+            {
+                "name": "Tudor",
+                "firstname": "Eric",
+                "birthdate": "24/03/1968",
+                "unique_id": "ET24039",
+                "past_opponents": []
+            },
+            {
+                "name": "Auster",
+                "firstname": "Paul",
+                "birthdate": "07/10/1987",
+                "unique_id": "AP07101",
+                "past_opponents": []
+            },
+            {
+                "name": "Jarry",
+                "firstname": "Alfred",
+                "birthdate": "24/06/1975",
+                "unique_id": "JA09874",
+                "past_opponents": []
+            }
+        ],
+        "total_round": 4
+    },
+    {
+        "t_id": "d152c0b0",
+        "name": "Libreville",
+        "location": "Libreville - Gabon",
+        "start_date": "23/04/2024",
+        "end_date": "24/04/2024",
+        "description": "Libreville_Chess",
+        "current_round": 0,
+        "rounds": [
+            {
+                "name": "Round 1",
+                "start_time": "2024-04-23 17:06",
+                "end_time": "2024-04-23 17:08",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "JA09874",
+                            "ET24039"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "EI19031",
+                            "AP07101"
+                        ],
+                        "results": [
+                            0.0,
+                            1.0
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Round 2",
+                "start_time": "2024-04-23 17:09",
+                "end_time": "2024-04-23 17:09",
+                "is_complete": true,
+                "matches": []
+            },
+            {
+                "name": "Round 3",
+                "start_time": "2024-04-23 17:10",
+                "end_time": "2024-04-23 17:11",
+                "is_complete": true,
+                "matches": []
+            }
+        ],
+        "registered_players": [
+            {
+                "name": "Jarry",
+                "firstname": "Alfred",
+                "birthdate": "24/06/1975",
+                "unique_id": "JA09874",
+                "past_opponents": []
+            },
+            {
+                "name": "Tudor",
+                "firstname": "Eric",
+                "birthdate": "24/03/1968",
+                "unique_id": "ET24039",
+                "past_opponents": []
+            },
+            {
+                "name": "Elba",
+                "firstname": "Idriss",
+                "birthdate": "19/03/1958",
+                "unique_id": "EI19031",
+                "past_opponents": []
+            },
+            {
+                "name": "Auster",
+                "firstname": "Paul",
+                "birthdate": "07/10/1987",
+                "unique_id": "AP07101",
+                "past_opponents": []
+            }
+        ],
+        "total_round": 4
+    },
+    {
+        "t_id": "87e02c99",
+        "name": "Nairobi",
+        "location": "Kenya",
+        "start_date": "23/04/2024",
+        "end_date": "24/04/2024",
+        "description": "Chess Kenya",
+        "current_round": 0,
+        "rounds": [
+            {
+                "name": "Round 1",
+                "start_time": "2024-04-23 17:15",
+                "end_time": "2024-04-23 17:18",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "ET24039",
+                            "HL24031"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "CP25042",
+                            "JA09874"
+                        ],
+                        "results": [
+                            0.0,
+                            1.0
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Round 2",
+                "start_time": null,
+                "end_time": null,
+                "is_complete": false,
+                "matches": []
+            },
+            {
+                "name": "Round 3",
+                "start_time": null,
+                "end_time": null,
+                "is_complete": false,
+                "matches": []
+            }
+        ],
+        "registered_players": [
+            {
+                "name": "Tudor",
+                "firstname": "Eric",
+                "birthdate": "24/03/1968",
+                "unique_id": "ET24039",
+                "past_opponents": []
+            },
+            {
+                "name": "Libong",
+                "firstname": "Heric",
+                "birthdate": "24/03/1969",
+                "unique_id": "HL24031",
+                "past_opponents": []
+            },
+            {
+                "name": "Penia",
+                "firstname": "Christine",
+                "birthdate": "25/04/2001",
+                "unique_id": "CP25042",
+                "past_opponents": []
+            },
+            {
+                "name": "Jarry",
+                "firstname": "Alfred",
+                "birthdate": "24/06/1975",
+                "unique_id": "JA09874",
+                "past_opponents": []
+            }
+        ],
+        "total_round": 4
+    },
+    {
+        "t_id": "4ec57f59",
+        "name": "kin",
+        "location": "kinshasa",
+        "start_date": "23/04/2024",
+        "end_date": "24/04/2024",
+        "description": "rdc_chess",
+        "current_round": 0,
+        "rounds": [
+            {
+                "name": "Round 1",
+                "start_time": "2024-04-23 17:56",
+                "end_time": "2024-04-23 19:03",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "AP07101",
+                            "EI19031"
+                        ],
+                        "results": [
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "BS06102",
+                            "HL24031"
+                        ],
+                        "results": [
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Round 2",
+                "start_time": null,
+                "end_time": null,
+                "is_complete": false,
+                "matches": []
+            },
+            {
+                "name": "Round 3",
+                "start_time": null,
+                "end_time": null,
+                "is_complete": false,
+                "matches": []
+            }
+        ],
+        "registered_players": [
+            {
+                "name": "Auster",
+                "firstname": "Paul",
+                "birthdate": "07/10/1987",
+                "unique_id": "AP07101",
+                "past_opponents": []
+            },
+            {
+                "name": "Elba",
+                "firstname": "Idriss",
+                "birthdate": "19/03/1958",
+                "unique_id": "EI19031",
+                "past_opponents": []
+            },
+            {
+                "name": "Brakia",
+                "firstname": "Salia",
+                "birthdate": "06/10/2000",
+                "unique_id": "BS06102",
+                "past_opponents": []
+            },
+            {
+                "name": "Libong",
+                "firstname": "Heric",
+                "birthdate": "24/03/1969",
+                "unique_id": "HL24031",
+                "past_opponents": []
+            }
+        ],
+        "total_round": 4
+    },
+    {
+        "t_id": "d85672c3",
+        "name": "LAGOS",
+        "location": "NIGERIA",
+        "start_date": "23/04/2024",
+        "end_date": "24/04/2024",
+        "description": "LAGOS_CHESS",
+        "current_round": 0,
+        "rounds": [
+            {
+                "name": "Round 1",
+                "start_time": "2024-04-23 21:04",
+                "end_time": null,
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "HL24031",
+                            "EI19031"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "JA09874",
+                            "CP25042"
+                        ],
+                        "results": [
+                            0.0,
+                            1.0
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Round 2",
+                "start_time": "2024-04-23 21:05",
+                "end_time": null,
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "EI19031",
+                            "JA09874"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "CP25042",
+                            "HL24031"
+                        ],
+                        "results": [
+                            0.5,
+                            0.5
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Round 3",
+                "start_time": "2024-04-23 21:06",
+                "end_time": null,
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "CP25042",
+                            "EI19031"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "JA09874",
+                            "HL24031"
+                        ],
+                        "results": [
+                            0.5,
+                            0.5
+                        ]
+                    }
+                ]
+            }
+        ],
+        "registered_players": [
+            {
+                "name": "Penia",
+                "firstname": "Christine",
+                "birthdate": "25/04/2001",
+                "unique_id": "CP25042",
+                "past_opponents": []
+            },
+            {
+                "name": "Elba",
+                "firstname": "Idriss",
+                "birthdate": "19/03/1958",
+                "unique_id": "EI19031",
+                "past_opponents": []
+            },
+            {
+                "name": "Jarry",
+                "firstname": "Alfred",
+                "birthdate": "24/06/1975",
+                "unique_id": "JA09874",
+                "past_opponents": []
+            },
+            {
+                "name": "Libong",
+                "firstname": "Heric",
+                "birthdate": "24/03/1969",
+                "unique_id": "HL24031",
+                "past_opponents": []
             }
         ],
         "total_round": 4

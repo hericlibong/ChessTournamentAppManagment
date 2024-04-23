@@ -6,14 +6,13 @@ from datetime import datetime
 
 class Player:
     """Création de joueurs"""
-    def __init__(self, name:str, firstname:str, birthdate:str, unique_id:str):
+    def __init__(self, name:str, firstname:str, birthdate:str, unique_id:str, past_opponents=None):
         """ Initialise le nom (name), le prénom (firstname), la date de naissance (birthdate), et l'id du joueur (unique_id) """
         self.name = name
         self.firstname = firstname
         self.birthdate = self.validate_birthdate(birthdate)
-        #self.birthdate = datetime.strptime(birthdate, "%d/%m/%Y")
         self.unique_id = self.validate_unique_id(unique_id)
-
+        self.past_opponents = set(past_opponents) if past_opponents else set()
         
     
     def validate_birthdate(self, birthdate_str):
@@ -38,8 +37,16 @@ class Player:
             "name": self.name,
             "firstname": self.firstname,
             "birthdate": self.birthdate.strftime("%d/%m/%Y"),
-            "unique_id": self.unique_id
+            "unique_id": self.unique_id,
+            "past_opponents":list(self.past_opponents)
         }
+    
+    
+    
+    # Utilise cette méthode pour ajouter un adversaire à l'ensemble après chaque match
+    def add_past_opponent(self, opponent_id):
+        """Ajoute un adversaire à l'ensemble des adversaires déjà rencontrés"""
+        self.past_opponents.add(opponent_id)
     
     def __str__(self):
         # Représentation informelle, pour l'affichage à l'utilisateur

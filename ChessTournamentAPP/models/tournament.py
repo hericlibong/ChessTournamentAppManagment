@@ -4,6 +4,7 @@ from datetime import datetime
 import uuid
 from .round import Round
 from .match import Match
+from .player import Player
 import random
 
 
@@ -66,20 +67,27 @@ class Tournament:
         """Vérifie si le tournoi est actif"""
         return self.current_round < self.total_round and self.end_date > datetime.now()
 
+    
+    def initialize_rounds(self):
+        """Initialise les rounds basés sur le nombre de joueurs inscrits."""
+        number_of_rounds = len(self.registered_players) - 1 if len(self.registered_players) % 2 == 0 else len(self.registered_players)
+        self.rounds = [Round(name=f"Round {i + 1}") for i in range(number_of_rounds)]
 
 
     def start_tournament(self):
-        """Démarre le tournoi après avoir vérifié tous les prérequis."""
-        if self.start_date > datetime.now():
-            print("Le tournoi est prévu pour une date future et ne peut pas encore commencer.")
+        if len(self.registered_players) < 2:
+            print("Not enough players to start the tournament.")
             return
-        if len(self.registered_players) < 5:
-            print("Pas assez de joueurs pour démarrer le tournoi (minimum 5 joueurs requis).")
-            return
-        print(f"Démarrage du tournoi '{self.name}' avec {len(self.registered_players)} joueurs.")
-        self.shuffle_and_create_rounds()
-        print(f"Le tournoi '{self.name}' a commencé avec succès.")
 
+       
+        self.initialize_rounds()
+        self.generate_matches()  # Générer les matches après avoir créé les rounds
+
+        if self.rounds:
+            self.rounds[0].start_time = datetime.now()  # Démarrer le premier round
+            print(f"Tournament '{self.name}' started with {len(self.registered_players)} players and {len(self.rounds)} rounds.")
+        else:
+            print("Failed to initialize rounds properly.")
 
 
     def shuffle_and_create_rounds(self):
@@ -89,17 +97,37 @@ class Tournament:
         # Générer les rounds et matches selon les règles définies
         self.generate_matches()
 
+
+   
+
     def generate_matches(self):
-        """Génère des matches pour chaque round en utilisant la classe Match."""
-        # Assurez-vous que les joueurs sont mélangés et les matchs bien générés
-        random.shuffle(self.registered_players)
-        current_round = Round(name=f"Round {len(self.rounds) + 1}")
-        for i in range(0, len(self.registered_players) - 1, 2):
-            player1 = self.registered_players[i]
-            player2 = self.registered_players[i + 1]
-            match = Match(players=(player1, player2))
-            current_round.matches.append(match)
-        self.rounds.append(current_round)
+        # On assume que self.registered_players est toujours non vide
+        for round in self.rounds:
+            random.shuffle(self.registered_players)  # Mélanger les joueurs à chaque round
+            it = iter(self.registered_players)
+            round.matches = []  # Réinitialiser les matches pour le round
+
+            while True:
+                try:
+                    player1 = next(it)
+                    player2 = next(it)
+                    match = Match(players=(player1, player2))
+                    round.matches.append(match)
+                except StopIteration:
+                    break  # Si le nombre de joueurs est impair, le dernier joueur reste sans match ce round
+
+
+    
+
+    def add_player(self, player):
+        """Ajoute un joueur au tournoi."""
+        if player not in self.registered_players:
+            self.registered_players.append(player)
+            print(f"Player {player.firstname} {player.lastname} added to the tournament.")
+        else:
+            print("Player already registered in the tournament.")
+
+
 
 
     def update_scores(self, round_index, match_index, score1, score2):
@@ -143,27 +171,56 @@ class Tournament:
         if not self.is_active():
             print(f"Impossible de démarrer un round. Le tournoi '{self.name}' n'est pas actif")
             return
-        
-        for round in self.rounds:
-            if round.name == round_name and round.start_time is None:
-                round.start_time = datetime.now()
-                print(f"Round '{round_name}' has started.")
-                break
+
+        previous_round_completed = True  # On suppose que le premier round peut toujours démarrer
+        for index, round in enumerate(self.rounds):
+            if round.name == round_name:
+                # Vérifie si le round précédent est terminé avant de démarrer celui-ci
+                if index > 0:  # Il y a un round avant celui-ci
+                    previous_round_completed = self.rounds[index - 1].is_complete
+
+                if not previous_round_completed:
+                    print(f"Cannot start {round_name}. Previous round not completed.")
+                    return
+
+                if round.start_time is None:
+                    round.start_time = datetime.now()
+                    print(f"Round '{round_name}' has started.")
+                    return
+                else:
+                    print(f"Round '{round_name}' has already started.")
+                    return
         else:
-            print(f"No round named '{round_name}' found or it's already started.")
+            print(f"No round named '{round_name}' found.")
+
+
+
 
 
     def end_round(self, round_name):
-        """Termine un round spécifié par son nom en définissant le end_time à maintenant et en marquant le round comme complet."""
-        if not self.is_active():
-            print(f"Impossible de terminer le round. Le tournoi '{self.name}' n'est pas actif")
-            return
         for round in self.rounds:
-            if round.name == round_name and not round.is_complete:
+            if round.name == round_name:
+                if round.is_complete:
+                    print(f"Round '{round_name}' has already been completed.")
+                    return
+
                 round.end_time = datetime.now()
                 round.is_complete = True
-                print(f"Round '{round_name}' has ended.")
-                break
+                for match in round.matches:
+                    print(f"Match between {match.players[0].firstname} {match.players[0].name} and {match.players[1].firstname} {match.players[1].name}")
+                    result = input("Enter the result (1-0, 0-1, 0.5-0.5): ")
+                    match.set_results(result)
+                
+                print(f"Round '{round.name}' has been completed.")
+                return
         else:
-            print(f"No round named '{round_name}' found or it's already completed.")
+            print(f"No round named '{round_name}' found.")
+
+
+
+
+
+
+
+
 

@@ -7,8 +7,6 @@ from .player import Player
 class Round:
     def __init__(self, name: str, start_time: datetime = None, end_time: datetime = None, is_complete:bool = False, matches=None):
         self.name = name
-        # self.start_time = start_time if start_time else datetime.now()
-        # self.end_time = end_time
         if isinstance(start_time, datetime):
             self.start_time = start_time
         else:
@@ -19,7 +17,6 @@ class Round:
         else:
             self.end_time = datetime.strptime(end_time, "%Y-%m-%d %H:%M") if end_time else None
         self.is_complete = is_complete
-        #self.matches = [Match(**match) for match in matches] if matches else []
         self.matches = matches if matches else []
 
     def to_dict(self):
@@ -30,16 +27,34 @@ class Round:
             'is_complete': self.is_complete,
             'matches': [match.to_dict() for match in self.matches]
         }
+    
+
 
     def add_match(self, player1, player2, current_matches, results=(0, 0)):
         if not self.is_complete and (player1, player2) not in current_matches and (player2, player1) not in current_matches:
-            match = Match(players=(player1, player2), results=results)
-            self.matches.append(match)
-            current_matches.add((player1, player2))
-            current_matches.add((player2, player1))
-            print(f"Match entre {player1.firstname} {player1.name} et {player2.firstname} {player2.name} ajouté à {self.name}.")
+            if player2.unique_id not in player1.past_opponents:
+                match = Match(players=(player1, player2), results=results)
+                self.matches.append(match)
+                current_matches.add((player1, player2))
+                current_matches.add((player2, player1))
+                # Mise à jour des adversaires passés
+                player1.add_past_opponent(player2.unique_id)
+                player2.add_past_opponent(player1.unique_id)
+                print(f"Match entre {player1.firstname} {player1.name} et {player2.firstname} {player2.name} ajouté à {self.name}.")
+            else:
+                print(f"Match entre {player1.firstname} {player1.name} et {player2.firstname} {player2.name} non ajouté car ils ont déjà joué ensemble.")
         else:
             print("Match non ajouté pour éviter les répétitions ou car le round est complet.")
+
+    # def add_match(self, player1, player2, current_matches, results=(0, 0)):
+    #     if not self.is_complete and (player1, player2) not in current_matches and (player2, player1) not in current_matches:
+    #         match = Match(players=(player1, player2), results=results)
+    #         self.matches.append(match)
+    #         current_matches.add((player1, player2))
+    #         current_matches.add((player2, player1))
+    #         print(f"Match entre {player1.firstname} {player1.name} et {player2.firstname} {player2.name} ajouté à {self.name}.")
+    #     else:
+    #         print("Match non ajouté pour éviter les répétitions ou car le round est complet.")
 
     def update_match_result(self, match_index, new_results):
         if self.is_complete:

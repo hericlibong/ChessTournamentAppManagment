@@ -100,8 +100,8 @@
                 "birthdate": "24/03/1968",
                 "unique_id": "ET24039",
                 "past_opponents": [
-                    "EH24041",
                     "JA09874",
+                    "EH24041",
                     "JC14061"
                 ]
             },
@@ -111,8 +111,8 @@
                 "birthdate": "24/06/1975",
                 "unique_id": "JA09874",
                 "past_opponents": [
-                    "EH24041",
                     "ET24039",
+                    "EH24041",
                     "JC14061"
                 ]
             },
@@ -122,8 +122,8 @@
                 "birthdate": "24/04/1965",
                 "unique_id": "EH24041",
                 "past_opponents": [
-                    "ET24039",
                     "JA09874",
+                    "ET24039",
                     "JC14061"
                 ]
             },
@@ -133,9 +133,9 @@
                 "birthdate": "14/06/1964",
                 "unique_id": "JC14061",
                 "past_opponents": [
-                    "EH24041",
+                    "JA09874",
                     "ET24039",
-                    "JA09874"
+                    "EH24041"
                 ]
             }
         ],
@@ -222,8 +222,8 @@
                 "birthdate": "24/06/1975",
                 "unique_id": "JA09874",
                 "past_opponents": [
-                    "ET24039",
-                    "HL24061"
+                    "HL24061",
+                    "ET24039"
                 ]
             },
             {
@@ -232,8 +232,204 @@
                 "birthdate": "24/06/1969",
                 "unique_id": "HL24061",
                 "past_opponents": [
-                    "ET24039",
+                    "JA09874",
+                    "ET24039"
+                ]
+            }
+        ],
+        "total_round": 3
+    },
+    {
+        "t_id": "0deafa3f",
+        "name": "Abidjan",
+        "location": "Abidjan - CI",
+        "start_date": "25/04/2024",
+        "end_date": "26/04/2024",
+        "description": "Abidjan-CI-Chess",
+        "current_round": 0,
+        "rounds": [
+            {
+                "name": "Round 1",
+                "start_time": "2024-04-25 15:50",
+                "end_time": null,
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "JA09874",
+                            "CP25042"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Round 2",
+                "start_time": "2024-04-25 15:52",
+                "end_time": null,
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "JA09874",
+                            "HL24031"
+                        ],
+                        "results": [
+                            0.5,
+                            0.5
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Round 3",
+                "start_time": "2024-04-25 15:52",
+                "end_time": null,
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "CP25042",
+                            "HL24031"
+                        ],
+                        "results": [
+                            0.0,
+                            1.0
+                        ]
+                    }
+                ]
+            }
+        ],
+        "registered_players": [
+            {
+                "name": "Libong",
+                "firstname": "Heric",
+                "birthdate": "24/03/1969",
+                "unique_id": "HL24031",
+                "past_opponents": [
+                    "JA09874",
+                    "CP25042"
+                ]
+            },
+            {
+                "name": "Jarry",
+                "firstname": "Alfred",
+                "birthdate": "24/06/1975",
+                "unique_id": "JA09874",
+                "past_opponents": [
+                    "HL24031",
+                    "CP25042"
+                ]
+            },
+            {
+                "name": "Penia",
+                "firstname": "Christine",
+                "birthdate": "25/04/2001",
+                "unique_id": "CP25042",
+                "past_opponents": [
+                    "HL24031",
                     "JA09874"
+                ]
+            }
+        ],
+        "total_round": 3
+    },
+    {
+        "t_id": "b4289776",
+        "name": "Romandie",
+        "location": "Romandie - Suisse",
+        "start_date": "25/04/2024",
+        "end_date": "26/04/2024",
+        "description": "Romandie Chess",
+        "current_round": 0,
+        "rounds": [
+            {
+                "name": "Round 1",
+                "start_time": "2024-04-25 18:22",
+                "end_time": null,
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "JC14061",
+                            "EI19031"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Round 2",
+                "start_time": "2024-04-25 18:23",
+                "end_time": null,
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "EH24041",
+                            "EI19031"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Round 3",
+                "start_time": "2024-04-25 18:24",
+                "end_time": null,
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "EH24041",
+                            "JC14061"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    }
+                ]
+            }
+        ],
+        "registered_players": [
+            {
+                "name": "Coffe",
+                "firstname": "John",
+                "birthdate": "14/06/1964",
+                "unique_id": "JC14061",
+                "past_opponents": [
+                    "EI19031",
+                    "EH24041"
+                ]
+            },
+            {
+                "name": "Harris",
+                "firstname": "Ed",
+                "birthdate": "24/04/1965",
+                "unique_id": "EH24041",
+                "past_opponents": [
+                    "EI19031",
+                    "JC14061"
+                ]
+            },
+            {
+                "name": "Elba",
+                "firstname": "Idriss",
+                "birthdate": "19/03/1958",
+                "unique_id": "EI19031",
+                "past_opponents": [
+                    "EH24041",
+                    "JC14061"
                 ]
             }
         ],

@@ -12,7 +12,13 @@ from models.match import Match
 def save_tournaments(tournaments, filename="data/tournaments.json"):
     os.makedirs(os.path.dirname(filename), exist_ok=True)
     with open(filename, 'w', encoding='utf-8') as file:
-        json.dump([tournament.to_dict() for tournament in tournaments], file, ensure_ascii=False, indent=4)
+        json.dump([tournament.to_dict() for tournament in tournaments], file, ensure_ascii=False, indent=4, default=my_datetime_handler)
+
+
+def my_datetime_handler(x):
+    if isinstance(x, datetime):
+        return x.strftime('%Y-%m-%d %H:%M')
+    raise TypeError("Unknown type")        
 
 
 def load_tournaments(filename="data/tournaments.json"):

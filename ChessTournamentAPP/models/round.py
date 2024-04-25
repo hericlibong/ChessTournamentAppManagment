@@ -7,17 +7,52 @@ from .player import Player
 class Round:
     def __init__(self, name: str, start_time: datetime = None, end_time: datetime = None, is_complete:bool = False, matches=None):
         self.name = name
-        if isinstance(start_time, datetime):
-            self.start_time = start_time
-        else:
-            self.start_time = datetime.strptime(start_time, "%Y-%m-%d %H:%M") if start_time else None
-
-        if isinstance(end_time, datetime):
-            self.end_time = end_time
-        else:
-            self.end_time = datetime.strptime(end_time, "%Y-%m-%d %H:%M") if end_time else None
         self.is_complete = is_complete
         self.matches = matches if matches else []
+        self.start_time = self.convert_str_to_datetime(start_time)
+        self.end_time = self.convert_str_to_datetime(end_time)
+
+    
+    
+    def convert_str_to_datetime(self, date_str):
+        """Converts a string to a datetime object, handling format errors."""
+        if isinstance(date_str, datetime):
+            return date_str  # Return the datetime object if it's already a datetime
+        elif isinstance(date_str, str):
+            try:
+                return datetime.strptime(date_str, "%Y-%m-%d %H:%M")
+            except ValueError:
+                print(f"Invalid format for date: {date_str}. Expected 'YYYY-MM-DD HH:MM'.")
+        return None
+
+
+    def add_match(self, player1, player2, current_matches, results=(0, 0)):
+        """Attempts to add a match to the round if it meets all conditions."""
+        if self.can_add_match(player1, player2, current_matches):
+            match = Match(players=(player1, player2), results=results)
+            self.matches.append(match)
+            self.update_match_tracking(current_matches, player1, player2)
+            print(f"Match between {player1.firstname} {player1.name} and {player2.firstname} {player2.name} added to {self.name}.")
+        else:
+            print(f"Match not added to avoid duplicates or because the round is complete.")
+    
+    
+    
+    def can_add_match(self, player1, player2, current_matches):
+        """Checks if a match can be added based on various conditions."""
+        return (
+            not self.is_complete and
+            (player1, player2) not in current_matches and
+            (player2, player1) not in current_matches and
+            player2.unique_id not in player1.past_opponents
+        )
+
+    def update_match_tracking(self, current_matches, player1, player2):
+        """Updates tracking of matches and opponents."""
+        current_matches.add((player1, player2))
+        current_matches.add((player2, player1))
+        player1.add_past_opponent(player2.unique_id)
+        player2.add_past_opponent(player1.unique_id)
 
     def to_dict(self):
         return {
@@ -28,25 +63,15 @@ class Round:
             'matches': [match.to_dict() for match in self.matches]
         }
     
-
-
-    def add_match(self, player1, player2, current_matches, results=(0, 0)):
-        if not self.is_complete and (player1, player2) not in current_matches and (player2, player1) not in current_matches:
-            if player2.unique_id not in player1.past_opponents:
-                match = Match(players=(player1, player2), results=results)
-                self.matches.append(match)
-                current_matches.add((player1, player2))
-                current_matches.add((player2, player1))
-                # Mise à jour des adversaires passés
-                player1.add_past_opponent(player2.unique_id)
-                player2.add_past_opponent(player1.unique_id)
-                print(f"Match entre {player1.firstname} {player1.name} et {player2.firstname} {player2.name} ajouté à {self.name}.")
-            else:
-                print(f"Match entre {player1.firstname} {player1.name} et {player2.firstname} {player2.name} non ajouté car ils ont déjà joué ensemble.")
+    def end_round(self):
+        """Marque le round comme complet et enregistre l'heure de fin."""
+        if not self.is_complete:
+            self.end_time = datetime.now()
+            self.is_complete = True
+            print(f"Round '{self.name}' has ended. End Time: {self.end_time}")
         else:
-            print("Match non ajouté pour éviter les répétitions ou car le round est complet.")
-
-   
+            print(f"Round '{self.name}' has already been completed at {self.end_time}.")
+    
 
     def update_match_result(self, match_index, new_results):
         if self.is_complete:
@@ -58,12 +83,5 @@ class Round:
         self.matches[match_index].set_results(new_results)
         print(f"Results updated for match {match_index + 1} in round '{self.name}'.")
 
-    def end_round(self):
-        """Marque le round comme complet et enregistre l'heure de fin."""
-        if not self.is_complete:
-            self.end_time = datetime.now()
-            self.is_complete = True
-            print(f"Round '{self.name}' has ended. End Time: {self.end_time}")
-        else:
-            print(f"Round '{self.name}' has already been completed at {self.end_time}.")
+    
     

@@ -25,7 +25,12 @@
         "firstname": "Christine",
         "birthdate": "25/04/2001",
         "unique_id": "CP25042",
-        "past_opponents": []
+        "past_opponents": [
+            "AP07101",
+            "ET24039",
+            "JA09874",
+            "HL24031"
+        ]
     },
     {
         "name": "Brakia",
@@ -39,20 +44,49 @@
         "firstname": "Alfred",
         "birthdate": "24/06/1975",
         "unique_id": "JA09874",
-        "past_opponents": []
+        "past_opponents": [
+            "CP25042",
+            "ET24039"
+        ]
     },
     {
         "name": "Auster",
         "firstname": "Paul",
         "birthdate": "07/10/1987",
         "unique_id": "AP07101",
-        "past_opponents": []
+        "past_opponents": [
+            "CP25042",
+            "HL24031"
+        ]
     },
     {
         "name": "Libong",
         "firstname": "Heric",
         "birthdate": "24/03/1969",
         "unique_id": "HL24031",
-        "past_opponents": []
+        "past_opponents": [
+            "AP07101",
+            "ET24039",
+            "EI19031",
+            "CP25042"
+        ]
+    },
+    {
+        "name": "Harris",
+        "firstname": "Ed",
+        "birthdate": "24/04/1965",
+        "unique_id": "EH24041",
+        "past_opponents": [
+            "JC14061"
+        ]
+    },
+    {
+        "name": "Coffe",
+        "firstname": "John",
+        "birthdate": "14/06/1964",
+        "unique_id": "JC14061",
+        "past_opponents": [
+            "EH24041"
+        ]
     }
 ]

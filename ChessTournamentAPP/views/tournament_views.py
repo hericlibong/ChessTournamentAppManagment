@@ -1,5 +1,8 @@
 # tournament_views.py
 
+from .player_views import PlayerView
+from models.tournament import Tournament
+
 class TournamentView:
 
     @staticmethod
@@ -18,6 +21,36 @@ class TournamentView:
         total_round = int(total_round)  # Convertit la saisie en entier
 
         return  name, location, description, start_date, end_date, total_round
+
+
+
+    # @staticmethod
+    # def create_tournament():
+    #     """ Crée et initialise immédiatement les options pour le tournoi. """
+    #     details = TournamentView.input_tournament_details()
+    #     new_tournament = Tournament(*details)
+    #     print(f"Tournament '{new_tournament.name}' has been successfully created.")
+    #     # Proposer immédiatement d'ajouter des joueurs ou de démarrer le tournoi
+    #     print("1. Inscrire des joueurs")
+    #     print("2. Démarrer le tournoi")
+    #     print("3. Retour au menu principal")
+    #     choice = input("Que souhaitez-vous faire ensuite ? ")
+    #     if choice == '1':
+    #         PlayerView.display_tournaments_for_selection()
+    #     elif choice == '2':
+    #         new_tournament.start_tournament()
+    #     return new_tournament
+
+    # @staticmethod
+    # def input_tournament_details():
+    #     name = input("Entrez le nom du tournoi : ")
+    #     location = input("Entrez le lieu du tournoi : ")
+    #     description = input("Entrez une description : ")
+    #     start_date = input("Entrez la date de début (DD/MM/YYYY) : ")
+    #     end_date = input("Entrez la date de fin (DD/MM/YYYY) : ")
+    #     total_round = input("Entrez le nombre total de rounds (laissez vide pour la valeur par défaut de 4) : ") or 4
+    #     total_round = int(total_round)
+    #     return name, location, description, start_date, end_date, total_round
     
 
 

@@ -46,15 +46,7 @@ class Round:
         else:
             print("Match non ajouté pour éviter les répétitions ou car le round est complet.")
 
-    # def add_match(self, player1, player2, current_matches, results=(0, 0)):
-    #     if not self.is_complete and (player1, player2) not in current_matches and (player2, player1) not in current_matches:
-    #         match = Match(players=(player1, player2), results=results)
-    #         self.matches.append(match)
-    #         current_matches.add((player1, player2))
-    #         current_matches.add((player2, player1))
-    #         print(f"Match entre {player1.firstname} {player1.name} et {player2.firstname} {player2.name} ajouté à {self.name}.")
-    #     else:
-    #         print("Match non ajouté pour éviter les répétitions ou car le round est complet.")
+   
 
     def update_match_result(self, match_index, new_results):
         if self.is_complete:
@@ -66,5 +58,12 @@ class Round:
         self.matches[match_index].set_results(new_results)
         print(f"Results updated for match {match_index + 1} in round '{self.name}'.")
 
-    
+    def end_round(self):
+        """Marque le round comme complet et enregistre l'heure de fin."""
+        if not self.is_complete:
+            self.end_time = datetime.now()
+            self.is_complete = True
+            print(f"Round '{self.name}' has ended. End Time: {self.end_time}")
+        else:
+            print(f"Round '{self.name}' has already been completed at {self.end_time}.")
     

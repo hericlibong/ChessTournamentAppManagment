@@ -2,7 +2,7 @@
 
 from datetime import datetime
 import uuid
-from .round import Round
+from models.round import Round
 from .match import Match
 from .player import Player
 import random
@@ -69,9 +69,25 @@ class Tournament:
 
     
     def initialize_rounds(self):
-        """Initialise les rounds basés sur le nombre de joueurs inscrits."""
+        """
+        Initialise les rounds basés sur le nombre de joueurs inscrits.
+        Si le nombre de joueurs est pair, crée un nombre de rounds égal à ce nombre moins un.
+        Si le nombre de joueurs est impair, crée autant de rounds que de joueurs.
+        Cela garantit qu'un tournoi avec un nombre impair de joueurs permettra à chaque joueur de passer un round sans jouer.
+        """
+        # Calcul du nombre de rounds en fonction du nombre de joueurs:
+        # Si le nombre de joueurs est pair, le nombre de rounds est le nombre de joueurs moins un.
+        # Si impair, le nombre de rounds est égal au nombre total de joueurs.
         number_of_rounds = len(self.registered_players) - 1 if len(self.registered_players) % 2 == 0 else len(self.registered_players)
+
+        # Création des objets Round en utilisant une compréhension de liste:
+        # Pour chaque round calculé, on crée un objet Round avec un nom indiquant son numéro.
         self.rounds = [Round(name=f"Round {i + 1}") for i in range(number_of_rounds)]
+
+        # Mise à jour de l'attribut total_round avec le nombre de rounds créés.
+        # Cela reflète le nombre total de rounds qui seront joués dans le tournoi.
+        self.total_round = number_of_rounds
+
 
 
     def start_tournament(self):
@@ -100,21 +116,51 @@ class Tournament:
 
    
 
-    def generate_matches(self):
-        # On assume que self.registered_players est toujours non vide
-        for round in self.rounds:
-            random.shuffle(self.registered_players)  # Mélanger les joueurs à chaque round
-            it = iter(self.registered_players)
-            round.matches = []  # Réinitialiser les matches pour le round
+    # def generate_matches(self):
+    #     # On assume que self.registered_players est toujours non vide
+    #     for round in self.rounds:
+    #         random.shuffle(self.registered_players)  # Mélanger les joueurs à chaque round
+    #         it = iter(self.registered_players)
+    #         round.matches = []  # Réinitialiser les matches pour le round
 
-            while True:
-                try:
-                    player1 = next(it)
-                    player2 = next(it)
-                    match = Match(players=(player1, player2))
-                    round.matches.append(match)
-                except StopIteration:
-                    break  # Si le nombre de joueurs est impair, le dernier joueur reste sans match ce round
+    #         while True:
+    #             try:
+    #                 player1 = next(it)
+    #                 player2 = next(it)
+    #                 match = Match(players=(player1, player2))
+    #                 round.matches.append(match)
+    #             except StopIteration:
+    #                 break  # Si le nombre de joueurs est impair, le dernier joueur reste sans match ce round
+
+
+    def generate_matches(self):
+        for round in self.rounds:
+            players = self.registered_players[:]
+            random.shuffle(players)  # Mélanger les joueurs pour chaque round
+            matches = []
+            it = iter(players)
+
+            while len(players) > 1:
+                player1 = players.pop(0)
+                # Recherche du premier joueur disponible qui n'a pas encore joué contre player1
+                player2 = next((p for p in players if p.unique_id not in player1.past_opponents), None)
+                
+                if player2:
+                    matches.append(Match(players=(player1, player2)))
+                    player1.past_opponents.add(player2.unique_id)  # Utilisation de add() pour un set
+                    player2.past_opponents.add(player1.unique_id)  # Utilisation de add() pour un set
+                    players.remove(player2)
+                else:
+                    # Si aucun joueur n'est trouvé (cas improbable sauf configuration très spécifique), replacer player1
+                    players.append(player1)
+
+            # Si un joueur reste sans adversaire, il 'saute' ce round (pause)
+            if len(players) == 1:
+                print(f"{players[0].name} skips this round.")
+
+            round.matches.extend(matches)  # Ajouter les matches générés au round actuel
+
+
 
 
     
@@ -166,6 +212,7 @@ class Tournament:
         print(f"Le Round '{round_name}' a été ajouté au tournament '{self.name}'.")
 
 
+
     def start_round(self, round_name):
         """Démarre un round spécifié par son nom en définissant le start_time à maintenant si ce n'est pas déjà fait."""
         if not self.is_active():
@@ -195,26 +242,70 @@ class Tournament:
 
 
 
-
-
     def end_round(self, round_name):
+        """Recherche le round spécifié et déclenche la fin de ce round."""
         for round in self.rounds:
             if round.name == round_name:
-                if round.is_complete:
-                    print(f"Round '{round_name}' has already been completed.")
-                    return
-
-                round.end_time = datetime.now()
-                round.is_complete = True
-                for match in round.matches:
-                    print(f"Match between {match.players[0].firstname} {match.players[0].name} and {match.players[1].firstname} {match.players[1].name}")
-                    result = input("Enter the result (1-0, 0-1, 0.5-0.5): ")
-                    match.set_results(result)
-                
-                print(f"Round '{round.name}' has been completed.")
+                round.end_round()
                 return
         else:
             print(f"No round named '{round_name}' found.")
+
+    # def end_round(self, round_name):
+    #     """Termine un round spécifié par son nom en définissant le end_time à maintenant et en marquant le round comme complet."""
+    #     for round in self.rounds:
+    #         if round.name == round_name:
+    #             if  round.is_complete:
+    #                 round.end_time = datetime.now()  # Enregistrer l'heure de fin dès la fin du round
+    #                 round.is_complete = True
+    #                 print(f"Round '{round_name}' has ended. End Time: {round.end_time}")
+    #                 return
+    #             else:
+    #                 print(f"Round '{round_name}' has already been completed at {round.end_time}.")
+    #                 return
+    #     else:
+    #         print(f"No round named '{round_name}' found.")
+    # def end_round(self, round_name):
+    #     for round in self.rounds:
+    #         if round.name == round_name:
+    #             if round.is_complete:
+    #                 print(f"Round '{round_name}' has already been completed.")
+    #                 return
+
+    #             for match in round.matches:
+    #                 # Assurez-vous que tous les matchs ont été complétés avant de terminer le round
+    #                 if not match.is_complete:
+    #                     print(f"Match between {match.players[0].firstname} {match.players[0].name} and {match.players[1].firstname} {match.players[1].name} is not complete.")
+    #                     return
+
+    #             round.end_time = datetime.now()  # Définir l'heure de fin du round
+    #             round.is_complete = True
+    #             print(f"Round '{round.name}' has been completed.")
+    #     else:
+    #         print(f"No round named '{round_name}' found.")
+
+    
+
+
+    # def end_round(self, round_name):
+    #     for round in self.rounds:
+    #         if round.name == round_name:
+    #             if round.is_complete:
+    #                 round.end_time = datetime.now()
+    #                 print(f"Round '{round_name}' has already been completed.")
+    #                 return
+
+    #             #round.end_time = datetime.now()
+    #             round.is_complete = True
+    #             for match in round.matches:
+    #                 print(f"Match between {match.players[0].firstname} {match.players[0].name} and {match.players[1].firstname} {match.players[1].name}")
+    #                 result = input("Enter the result (1-0, 0-1, 0.5-0.5): ")
+    #                 match.set_results(result)
+                
+    #             print(f"Round '{round.name}' has been completed.")
+    #             return
+    #     else:
+    #         print(f"No round named '{round_name}' found.")
 
 
 

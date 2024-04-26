@@ -345,62 +345,7 @@
         "end_date": "26/04/2024",
         "description": "Romandie Chess",
         "current_round": 0,
-        "rounds": [
-            {
-                "name": "Round 1",
-                "start_time": "2024-04-25 18:22",
-                "end_time": null,
-                "is_complete": true,
-                "matches": [
-                    {
-                        "players": [
-                            "JC14061",
-                            "EI19031"
-                        ],
-                        "results": [
-                            1.0,
-                            0.0
-                        ]
-                    }
-                ]
-            },
-            {
-                "name": "Round 2",
-                "start_time": "2024-04-25 18:23",
-                "end_time": null,
-                "is_complete": true,
-                "matches": [
-                    {
-                        "players": [
-                            "EH24041",
-                            "EI19031"
-                        ],
-                        "results": [
-                            1.0,
-                            0.0
-                        ]
-                    }
-                ]
-            },
-            {
-                "name": "Round 3",
-                "start_time": "2024-04-25 18:24",
-                "end_time": null,
-                "is_complete": true,
-                "matches": [
-                    {
-                        "players": [
-                            "EH24041",
-                            "JC14061"
-                        ],
-                        "results": [
-                            1.0,
-                            0.0
-                        ]
-                    }
-                ]
-            }
-        ],
+        "rounds": [],
         "registered_players": [
             {
                 "name": "Coffe",
@@ -408,8 +353,7 @@
                 "birthdate": "14/06/1964",
                 "unique_id": "JC14061",
                 "past_opponents": [
-                    "EI19031",
-                    "EH24041"
+                    
                 ]
             },
             {
@@ -418,8 +362,7 @@
                 "birthdate": "24/04/1965",
                 "unique_id": "EH24041",
                 "past_opponents": [
-                    "EI19031",
-                    "JC14061"
+                   
                 ]
             },
             {
@@ -428,8 +371,7 @@
                 "birthdate": "19/03/1958",
                 "unique_id": "EI19031",
                 "past_opponents": [
-                    "EH24041",
-                    "JC14061"
+                    
                 ]
             }
         ],

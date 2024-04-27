@@ -6,6 +6,7 @@ from views.tournament_views import TournamentView
 from views.player_views import PlayerView
 from views.round_views import RoundView
 from models.tournament import Tournament
+from models.round import Round
 from models.player import Player
 from util.data_manager import load_tournaments, save_tournaments, load_players, save_players
 
@@ -80,6 +81,7 @@ class ApplicationController:
                 RoundView.start_round(tournament)
             elif choice == '3':
                 RoundView.end_round(tournament)
+                
                 
             elif choice == '4':
                 break  # Correctement placé dans une boucle, cela permet de retourner au menu précédent

@@ -4,14 +4,20 @@
         "firstname": "Ramzy",
         "birthdate": "24/03/1969",
         "unique_id": "BD23031",
-        "past_opponents": []
+        "past_opponents": [
+            "ET24039",
+            "EH24041"
+        ]
     },
     {
         "name": "Tudor",
         "firstname": "Eric",
         "birthdate": "24/03/1968",
         "unique_id": "ET24039",
-        "past_opponents": []
+        "past_opponents": [
+            "BD23031",
+            "EH24041"
+        ]
     },
     {
         "name": "Elba",
@@ -19,8 +25,8 @@
         "birthdate": "19/03/1958",
         "unique_id": "EI19031",
         "past_opponents": [
-            "JC14061",
-            "EH24041"
+            "EH24041",
+            "JC14061"
         ]
     },
     {
@@ -30,7 +36,7 @@
         "unique_id": "CP25042",
         "past_opponents": [
             "HL24031",
-            "EH24041"
+            "ET24039"
         ]
     },
     {
@@ -46,7 +52,7 @@
         "birthdate": "24/06/1975",
         "unique_id": "JA09874",
         "past_opponents": [
-            "CP25042",
+            "AP07101",
             "HL24031"
         ]
     },
@@ -56,8 +62,8 @@
         "birthdate": "07/10/1987",
         "unique_id": "AP07101",
         "past_opponents": [
-            "CP25042",
-            "HL24031"
+            "HL24031",
+            "JA09874"
         ]
     },
     {
@@ -66,7 +72,6 @@
         "birthdate": "24/03/1969",
         "unique_id": "HL24031",
         "past_opponents": [
-            "CP25042",
             "EH24041"
         ]
     },
@@ -76,7 +81,6 @@
         "birthdate": "24/04/1965",
         "unique_id": "EH24041",
         "past_opponents": [
-            "CP25042",
             "HL24031"
         ]
     },
@@ -85,9 +89,6 @@
         "firstname": "John",
         "birthdate": "14/06/1964",
         "unique_id": "JC14061",
-        "past_opponents": [
-            "EI19031",
-            "EH24041"
-        ]
+        "past_opponents": []
     }
 ]

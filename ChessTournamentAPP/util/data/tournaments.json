@@ -1,1 +1,52 @@
-Invalid JSON
+[
+    {
+        "t_id": "61f5afd0",
+        "name": "Porto",
+        "location": "Porto Portugal",
+        "start_date": "27/04/2024",
+        "end_date": "28/04/2024",
+        "description": "Chess Porto",
+        "current_round": 0,
+        "rounds": [
+            {
+                "name": "Round 1",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "EH24041",
+                            "HL24031"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    }
+                ],
+                "start_time": "2024-04-27 19:29",
+                "end_time": "2024-04-27 19:30"
+            }
+        ],
+        "registered_players": [
+            {
+                "name": "Libong",
+                "firstname": "Heric",
+                "birthdate": "24/03/1969",
+                "unique_id": "HL24031",
+                "past_opponents": [
+                    "EH24041"
+                ]
+            },
+            {
+                "name": "Harris",
+                "firstname": "Ed",
+                "birthdate": "24/04/1965",
+                "unique_id": "EH24041",
+                "past_opponents": [
+                    "HL24031"
+                ]
+            }
+        ],
+        "total_round": 1
+    }
+]

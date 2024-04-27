@@ -31,6 +31,10 @@ class RoundView:
         else:
             print("Ce round a déjà été démarré.")
 
+   
+
+
+
     @staticmethod
     def end_round(tournament):
         """Permet à l'utilisateur de terminer un round spécifié."""
@@ -46,9 +50,11 @@ class RoundView:
                 result = input("Entrez le résultat (1-0, 0-1, 0.5-0.5) : ")
                 match.set_results(tuple(map(float, result.split('-'))))
             selected_round.is_complete = True
-            print(f"Round '{selected_round.name}' a été terminé.")
+            selected_round.end_time = datetime.now()  # Définir l'heure de fin lors de la terminaison du round
+            print(f"Round '{selected_round.name}' terminé à {selected_round.end_time.strftime('%Y-%m-%d %H:%M')}.")
         else:
             print("Ce round ne peut pas être terminé (non commencé ou déjà terminé).")
+
     
     @staticmethod
     def display_rounds(tournament):

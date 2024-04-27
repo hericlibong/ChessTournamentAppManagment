@@ -5,24 +5,25 @@ from .match import Match
 from .player import Player
 
 class Round:
-    def __init__(self, name: str, start_time: datetime = None, end_time: datetime = None, is_complete:bool = False, matches=None):
+    def __init__(self, name: str, start_time: datetime = None,  end_time: datetime = None, is_complete:bool = False, matches=None):
         self.name = name
         self.is_complete = is_complete
         self.matches = matches if matches else []
         self.start_time = self.convert_str_to_datetime(start_time)
-        self.end_time = self.convert_str_to_datetime(end_time)
+        #self.end_time = self.convert_str_to_datetime(end_time)
+        self.end_time = None
+        
 
-    
-    
+
     def convert_str_to_datetime(self, date_str):
-        """Converts a string to a datetime object, handling format errors."""
         if isinstance(date_str, datetime):
-            return date_str  # Return the datetime object if it's already a datetime
+            return date_str
         elif isinstance(date_str, str):
             try:
                 return datetime.strptime(date_str, "%Y-%m-%d %H:%M")
             except ValueError:
                 print(f"Invalid format for date: {date_str}. Expected 'YYYY-MM-DD HH:MM'.")
+                return None
         return None
 
 
@@ -55,22 +56,23 @@ class Round:
         player2.add_past_opponent(player1.unique_id)
 
     def to_dict(self):
+        """ Converti l'objet Round en dictionnaire pour la sérialisation """
         return {
             'name': self.name,
+            'is_complete': self.is_complete,
+            'matches': [match.to_dict() for match in self.matches],
             'start_time': self.start_time.strftime('%Y-%m-%d %H:%M') if self.start_time else None,
             'end_time': self.end_time.strftime('%Y-%m-%d %H:%M') if self.end_time else None,
-            'is_complete': self.is_complete,
-            'matches': [match.to_dict() for match in self.matches]
+            
         }
     
-    def end_round(self):
-        """Marque le round comme complet et enregistre l'heure de fin."""
-        if not self.is_complete:
-            self.end_time = datetime.now()
-            self.is_complete = True
-            print(f"Round '{self.name}' has ended. End Time: {self.end_time}")
-        else:
-            print(f"Round '{self.name}' has already been completed at {self.end_time}.")
+    
+    # def end_round(self):
+    #     self.end_time = datetime.now()
+    #     self.is_complete = True
+    #     print(f"Round '{self.name}' has ended at {self.end_time}.")
+
+
     
 
     def update_match_result(self, match_index, new_results):

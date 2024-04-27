@@ -91,16 +91,29 @@ def build_tournament_from_data(data):
         registered_players=registered_players
     )
 
+
+# def build_round_from_data(round_data, player_dict):
+#     matches = [Match(players=(player_dict[match_data['players'][0]], player_dict[match_data['players'][1]]),
+#                      results=tuple(match_data['results'])) for match_data in round_data.get('matches', [])]
+#     return Round(
+#         name=round_data['name'],
+#         start_time=datetime.strptime(round_data['start_time'], '%Y-%m-%d %H:%M') if round_data.get('start_time') else None,
+#         end_time=datetime.strptime(round_data['end_time'], '%Y-%m-%d %H:%M') if round_data.get('end_time') else None,
+#         is_complete=round_data.get('is_complete', False),
+#         matches=matches
+#     )
+
 def build_round_from_data(round_data, player_dict):
     matches = [Match(players=(player_dict[match_data['players'][0]], player_dict[match_data['players'][1]]),
                      results=tuple(match_data['results'])) for match_data in round_data.get('matches', [])]
     return Round(
-        name=round_data['name'], 
+        name=round_data['name'],
         start_time=datetime.strptime(round_data['start_time'], '%Y-%m-%d %H:%M') if 'start_time' in round_data else None,
-        end_time=datetime.strptime(round_data['end_time'], '%Y-%m-%d %H:%M') if 'end_time' in round_data else None,
+        end_time=datetime.strptime(round_data['end_time'], '%Y-%m-%d %H:%M') if 'end_time' in round_data and round_data['end_time'] else None,
         is_complete=round_data.get('is_complete', False),
         matches=matches
     )
+
 
 def save_players(players, filename=PLAYERS_FILE):
     """

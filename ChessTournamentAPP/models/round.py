@@ -67,10 +67,10 @@ class Round:
         }
     
     
-    # def end_round(self):
-    #     self.end_time = datetime.now()
-    #     self.is_complete = True
-    #     print(f"Round '{self.name}' has ended at {self.end_time}.")
+    def end_round(self):
+        self.end_time = datetime.now()
+        self.is_complete = True
+        print(f"Round '{self.name}' has ended at {self.end_time}.")
 
 
     

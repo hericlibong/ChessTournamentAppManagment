@@ -5,8 +5,8 @@
         "birthdate": "24/03/1969",
         "unique_id": "BD23031",
         "past_opponents": [
-            "ET24039",
-            "EH24041"
+            "EH24041",
+            "ET24039"
         ]
     },
     {
@@ -15,8 +15,8 @@
         "birthdate": "24/03/1968",
         "unique_id": "ET24039",
         "past_opponents": [
-            "BD23031",
-            "EH24041"
+            "EH24041",
+            "BD23031"
         ]
     },
     {
@@ -24,10 +24,7 @@
         "firstname": "Idriss",
         "birthdate": "19/03/1958",
         "unique_id": "EI19031",
-        "past_opponents": [
-            "EH24041",
-            "JC14061"
-        ]
+        "past_opponents": []
     },
     {
         "name": "Penia",
@@ -35,8 +32,8 @@
         "birthdate": "25/04/2001",
         "unique_id": "CP25042",
         "past_opponents": [
-            "HL24031",
-            "ET24039"
+            "ET24039",
+            "HL24031"
         ]
     },
     {
@@ -62,8 +59,8 @@
         "birthdate": "07/10/1987",
         "unique_id": "AP07101",
         "past_opponents": [
-            "HL24031",
-            "JA09874"
+            "JA09874",
+            "HL24031"
         ]
     },
     {

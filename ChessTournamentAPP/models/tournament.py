@@ -133,43 +133,37 @@ class Tournament:
         """ Vérifie si le tournoi est toujours en cours. """
         return self.current_round < self.total_round and self.end_date > datetime.now()
 
-    def add_round(self, round_name, start_time=None):
-        if not self.is_active():
-            print("Le round ne peut pas être ajouté. Le Tournoi n'est pas actif.")
-            return
-        new_round = Round(name=round_name, start_time=start_time)
-        self.rounds.append(new_round)
-        print(f"Le Round '{round_name}' a été ajouté au tournament '{self.name}'.")
+    # def add_round(self, round_name, start_time=None):
+    #     if not self.is_active():
+    #         print("Le round ne peut pas être ajouté. Le Tournoi n'est pas actif.")
+    #         return
+    #     new_round = Round(name=round_name, start_time=start_time)
+    #     self.rounds.append(new_round)
+    #     print(f"Le Round '{round_name}' a été ajouté au tournament '{self.name}'.")
 
-    def start_round(self, round_name):
-        if not self.is_active():
-            print(f"Impossible de démarrer un round. Le tournoi '{self.name}' n'est pas actif")
-            return
-        previous_round_completed = True
-        for index, round in enumerate(self.rounds):
-            if round.name == round_name:
-                if index > 0:
-                    previous_round_completed = self.rounds[index - 1].is_complete
-                if not previous_round_completed:
-                    print(f"Cannot start {round_name}. Previous round not completed.")
-                    return
-                if round.start_time is None:
-                    round.start_time = datetime.now()
-                    print(f"Round '{round_name}' has started.")
-                    return
-                else:
-                    print(f"Round '{round_name}' has already started.")
-                    return
-        else:
-            print(f"No round named '{round_name}' found.")
-
-    # def end_round(self, round_name):
-    #     for round in self.rounds:
+    # def start_round(self, round_name):
+    #     if not self.is_active():
+    #         print(f"Impossible de démarrer un round. Le tournoi '{self.name}' n'est pas actif")
+    #         return
+    #     previous_round_completed = True
+    #     for index, round in enumerate(self.rounds):
     #         if round.name == round_name:
-    #             round.end_round()
-    #             return
+    #             if index > 0:
+    #                 previous_round_completed = self.rounds[index - 1].is_complete
+    #             if not previous_round_completed:
+    #                 print(f"Cannot start {round_name}. Previous round not completed.")
+    #                 return
+    #             if round.start_time is None:
+    #                 round.start_time = datetime.now()
+    #                 print(f"Round '{round_name}' has started.")
+    #                 return
+    #             else:
+    #                 print(f"Round '{round_name}' has already started.")
+    #                 return
     #     else:
     #         print(f"No round named '{round_name}' found.")
+
+
 
     # def end_round(self, round_name):
     #     """Recherche le round spécifié et déclenche la fin de ce round, enregistre l'heure de fin."""
@@ -187,17 +181,52 @@ class Tournament:
     #     if not found:
     #         print(f"No round named '{round_name}' found.")
 
-    
-    # def end_round(self, round_name):
-    #     """Termine un round spécifié par son nom."""
-    #     for round in self.rounds:
-    #         if round.name == round_name and not round.is_complete:
-    #             round.end_round()  # Appel à la méthode de Round
-    #             print(f"Round '{round_name}' est terminé.")
-    #             break
-    #     else:
-    #         print(f"No round named '{round_name}' found or it is already completed.")
 
+
+    
+
+
+    ### noouvelle ####
+
+    def add_round(self, round_name, start_time=None):
+        """Ajoute un nouveau round au tournoi si possible."""
+        if not self.is_active():
+            print("Le tournoi n'est pas actif.")
+            return
+        new_round = Round(name=round_name, start_time=start_time)
+        self.rounds.append(new_round)
+        print(f"Round '{round_name}' ajouté au tournoi '{self.name}'.")
+
+    
+    
+    def start_round(self, round_index):
+        """Démarre un round spécifié par son index."""
+        try:
+            round = self.rounds[round_index]
+            if round.start_time is None:
+                round.start_time = datetime.now()
+                print(f"Round '{round.name}' démarré.")
+            else:
+                print(f"Round '{round.name}' a déjà été démarré.")
+        except IndexError:
+            print("Index de round invalide.")
+
+    
+    
+    def end_round(self, round_index):
+        """Termine un round spécifié par son index."""
+        try:
+            round = self.rounds[round_index]
+            if not round.is_complete:
+                round.end_time = datetime.now()
+                round.is_complete = True
+                print(f"Round '{round.name}' terminé à {round.end_time}.")
+            else:
+                print(f"Round '{round.name}' est déjà terminé.")
+        except IndexError:
+            print("Index de round invalide.")
+
+  
 
 
 

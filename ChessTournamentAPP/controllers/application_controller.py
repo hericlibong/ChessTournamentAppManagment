@@ -71,38 +71,46 @@ class ApplicationController:
 
 
 
-    # def manage_rounds(self, tournament):
-    #     while True:
-    #         choice = MenuView.display_round_menu()
-    #         if choice == '1':
-    #             round_details = RoundView.create_round()
-    #             tournament.add_round(*round_details)
-    #         elif choice == '2':
-    #             RoundView.start_round(tournament)
-    #         elif choice == '3':
-    #             RoundView.end_round(tournament)
-                
-                
-    #         elif choice == '4':
-    #             break  # Correctement placé dans une boucle, cela permet de retourner au menu précédent
-    #         else:
-    #             print("Choix invalide, veuillez réessayer.")
+
 
 
     def manage_rounds(self, tournament):
         while True:
             choice = MenuView.display_round_menu()
-            if choice == '1':  # Ajouter un round
+            if choice == '1':
                 round_name = RoundView.create_round_info()
-                tournament.add_round(*round_name)
-            elif choice == '2':  # Démarrer un round
+                tournament.add_round(round_name)
+            elif choice == '2':
                 round_index = RoundView.select_round_to_start(tournament)
                 tournament.start_round(round_index)
-            elif choice == '3':  # Terminer un round
-                round_index = RoundView.select_round_to_end(tournament)
-                tournament.end_round(round_index)
-            elif choice == '4':  # Retour
+            elif choice == '3':
+                round_index, match_results = RoundView.get_round_results(tournament)
+                tournament.end_round(round_index, match_results)
+            elif choice == '4':
                 break
+
+
+    def manage_rounds(self, tournament):
+        while True:
+            choice = MenuView.display_round_menu()
+            if choice == '1':
+                round_name = RoundView.create_round_info()
+                tournament.add_round(round_name)
+            elif choice == '2':
+                round_index = RoundView.select_round_to_start(tournament)
+                tournament.start_round(round_index)
+            elif choice == '3':
+                 round_index = RoundView.select_round_to_end(tournament)
+                 if round_index is not None:
+                    for match in tournament.rounds[round_index].matches:
+                        print(match.display_match())
+                        match_results = RoundView.get_match_results()
+                        match.set_results(match_results)
+                    tournament.rounds[round_index].end_round()
+            elif choice == '4':
+                break
+
+   
 
 
     def manage_players(self):

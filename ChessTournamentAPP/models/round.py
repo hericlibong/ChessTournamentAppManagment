@@ -71,8 +71,6 @@ class Round:
         self.end_time = datetime.now()
         self.is_complete = True
         print(f"Round '{self.name}' has ended at {self.end_time}.")
-
-
     
 
     def update_match_result(self, match_index, new_results):

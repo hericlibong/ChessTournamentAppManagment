@@ -38,17 +38,6 @@ class Tournament:
             "total_round": self.total_round
         }
     
-
-    # def safe_strptime(self, date_str, date_format="%d/%m/%Y"):
-    #     """Safely converts date string to datetime object."""
-    #     if isinstance(date_str, str):
-    #         try:
-    #             return datetime.strptime(date_str, date_format)
-    #         except ValueError as e:
-    #             print(f"Erreur de format de date : {e}")
-    #     else:
-    #         print(f"Erreur de type: attendu str, reçu {type(date_str).__name__}")
-    #     return None
     
     def safe_strptime(self, date_str, date_format="%Y-%m-%d"):
         """ Essaie de convertir une chaîne en datetime, renvoie None si échec. """
@@ -58,9 +47,7 @@ class Tournament:
             print(f"Erreur de format de date: {date_str}, attendu {date_format}")
             return None
 
-    
-    # def is_active(self):
-    #     return self.current_round < self.total_round and self.end_date > datetime.now()
+
 
     def initialize_rounds(self):
         number_of_rounds = len(self.registered_players) - 1 if len(self.registered_players) % 2 == 0 else len(self.registered_players)
@@ -103,19 +90,6 @@ class Tournament:
         match = self.rounds[round_index].matches[match_index]
         match.set_results((score1, score2))
 
-    # def register_player(self, player, check_active=True):
-    #     """ Ajoute un joueur au tournoi. Vérifie si le tournoi est actif si spécifié. """
-    #     if check_active and not self.is_active():
-    #         print(f"Le tournoi '{self.name}' n'est pas actif ou est déjà terminé.")
-    #         return
-    #     if player not in self.registered_players:
-    #         player.past_opponents.clear()  # Réinitialiser les adversaires passés du joueur
-    #         self.registered_players.append(player)
-    #         print(f"{player.firstname} {player.name} a été ajouté(e) au tournoi '{self.name}'.")
-    #     else:
-    #         print(f"{player.firstname} {player.name} est déjà inscrit(e) à ce tournoi.")
-
-    # Les autres méthodes restent inchangées
 
     def register_player(self, player):
         """ Enregistre un joueur dans le tournoi si le tournoi est actif. """
@@ -133,60 +107,7 @@ class Tournament:
         """ Vérifie si le tournoi est toujours en cours. """
         return self.current_round < self.total_round and self.end_date > datetime.now()
 
-    # def add_round(self, round_name, start_time=None):
-    #     if not self.is_active():
-    #         print("Le round ne peut pas être ajouté. Le Tournoi n'est pas actif.")
-    #         return
-    #     new_round = Round(name=round_name, start_time=start_time)
-    #     self.rounds.append(new_round)
-    #     print(f"Le Round '{round_name}' a été ajouté au tournament '{self.name}'.")
 
-    # def start_round(self, round_name):
-    #     if not self.is_active():
-    #         print(f"Impossible de démarrer un round. Le tournoi '{self.name}' n'est pas actif")
-    #         return
-    #     previous_round_completed = True
-    #     for index, round in enumerate(self.rounds):
-    #         if round.name == round_name:
-    #             if index > 0:
-    #                 previous_round_completed = self.rounds[index - 1].is_complete
-    #             if not previous_round_completed:
-    #                 print(f"Cannot start {round_name}. Previous round not completed.")
-    #                 return
-    #             if round.start_time is None:
-    #                 round.start_time = datetime.now()
-    #                 print(f"Round '{round_name}' has started.")
-    #                 return
-    #             else:
-    #                 print(f"Round '{round_name}' has already started.")
-    #                 return
-    #     else:
-    #         print(f"No round named '{round_name}' found.")
-
-
-
-    # def end_round(self, round_name):
-    #     """Recherche le round spécifié et déclenche la fin de ce round, enregistre l'heure de fin."""
-    #     found = False
-    #     for round in self.rounds:
-    #         if round.name == round_name:
-    #             if round.is_complete:
-    #                 print(f"Round '{round_name}' has already been completed at {round.end_time}.")
-    #             else:
-    #                 round.end_time = datetime.now()  # Enregistrement de l'heure de fin
-    #                 round.is_complete = True
-    #                 print(f"Round '{round_name}' has ended. End Time: {round.end_time}")
-    #             found = True
-    #             break
-    #     if not found:
-    #         print(f"No round named '{round_name}' found.")
-
-
-
-    
-
-
-    ### noouvelle ####
 
     def add_round(self, round_name, start_time=None):
         """Ajoute un nouveau round au tournoi si possible."""
@@ -211,20 +132,19 @@ class Tournament:
         except IndexError:
             print("Index de round invalide.")
 
-    
-    
-    def end_round(self, round_index):
-        """Termine un round spécifié par son index."""
+    def end_round(self, round_index, match_results):
         try:
             round = self.rounds[round_index]
             if not round.is_complete:
+                for match, result in zip(round.matches, match_results):
+                    match.set_results(result)
                 round.end_time = datetime.now()
                 round.is_complete = True
-                print(f"Round '{round.name}' terminé à {round.end_time}.")
+                print(f"Round '{round.name}' has ended.")
             else:
-                print(f"Round '{round.name}' est déjà terminé.")
+                print(f"Round '{round.name}' has already been completed.")
         except IndexError:
-            print("Index de round invalide.")
+            print("Indx de round invalide")
 
   
 

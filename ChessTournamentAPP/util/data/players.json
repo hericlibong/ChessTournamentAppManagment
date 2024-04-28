@@ -15,8 +15,8 @@
         "birthdate": "24/03/1968",
         "unique_id": "ET24039",
         "past_opponents": [
-            "EH24041",
-            "BD23031"
+            "BD23031",
+            "EH24041"
         ]
     },
     {
@@ -32,8 +32,8 @@
         "birthdate": "25/04/2001",
         "unique_id": "CP25042",
         "past_opponents": [
-            "ET24039",
-            "HL24031"
+            "HL24031",
+            "ET24039"
         ]
     },
     {
@@ -49,8 +49,8 @@
         "birthdate": "24/06/1975",
         "unique_id": "JA09874",
         "past_opponents": [
-            "AP07101",
-            "HL24031"
+            "HL24031",
+            "AP07101"
         ]
     },
     {
@@ -58,10 +58,7 @@
         "firstname": "Paul",
         "birthdate": "07/10/1987",
         "unique_id": "AP07101",
-        "past_opponents": [
-            "JA09874",
-            "HL24031"
-        ]
+        "past_opponents": []
     },
     {
         "name": "Libong",

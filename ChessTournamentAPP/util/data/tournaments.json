@@ -80,8 +80,8 @@
                 "birthdate": "24/04/1965",
                 "unique_id": "EH24041",
                 "past_opponents": [
-                    "JC14061",
-                    "HL24031"
+                    "HL24031",
+                    "JC14061"
                 ]
             },
             {
@@ -90,8 +90,8 @@
                 "birthdate": "14/06/1964",
                 "unique_id": "JC14061",
                 "past_opponents": [
-                    "EH24041",
-                    "HL24031"
+                    "HL24031",
+                    "EH24041"
                 ]
             }
         ],
@@ -105,16 +105,94 @@
         "end_date": "29/04/2024",
         "description": "Echecs dans la ville Rose",
         "current_round": 0,
-        "rounds": [],
+        "rounds": [
+            {
+                "name": "Round 1",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "AP07101",
+                            "BS06102"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    }
+                ],
+                "start_time": "2024-04-28 16:27",
+                "end_time": "2024-04-28 16:27"
+            },
+            {
+                "name": "Round 2",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "EI19031",
+                            "AP07101"
+                        ],
+                        "results": [
+                            0.5,
+                            0.5
+                        ]
+                    }
+                ],
+                "start_time": "2024-04-28 16:27",
+                "end_time": "2024-04-28 16:29"
+            },
+            {
+                "name": "Round 3",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "BS06102",
+                            "EI19031"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    }
+                ],
+                "start_time": "2024-04-28 16:29",
+                "end_time": "2024-04-28 16:31"
+            }
+        ],
         "registered_players": [
             {
                 "name": "Elba",
                 "firstname": "Idriss",
                 "birthdate": "19/03/1958",
                 "unique_id": "EI19031",
-                "past_opponents": []
+                "past_opponents": [
+                    "BS06102",
+                    "AP07101"
+                ]
+            },
+            {
+                "name": "Auster",
+                "firstname": "Paul",
+                "birthdate": "07/10/1987",
+                "unique_id": "AP07101",
+                "past_opponents": [
+                    "EI19031",
+                    "BS06102"
+                ]
+            },
+            {
+                "name": "Brakia",
+                "firstname": "Salia",
+                "birthdate": "06/10/2000",
+                "unique_id": "BS06102",
+                "past_opponents": [
+                    "EI19031",
+                    "AP07101"
+                ]
             }
         ],
-        "total_round": 4
+        "total_round": 3
     }
 ]

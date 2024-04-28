@@ -17,6 +17,11 @@ class Match:
             'results': self.results
         }
     
+
+    def display_match(self):
+        """Retourne une chaîne de caractères décrivant les joueurs du match."""
+        return f"Match entre {self.players[0].firstname} {self.players[0].name} et {self.players[1].firstname} {self.players[1].name}"
+    
     def set_results(self, result):
         """
         Définit les résultats d'un match, avec validation pour s'assurer que les résultats sont dans un format correct.
@@ -43,6 +48,8 @@ class Match:
         self.results = (score1, score2)
         self.is_complete = True
 
+
+    
 
 
     

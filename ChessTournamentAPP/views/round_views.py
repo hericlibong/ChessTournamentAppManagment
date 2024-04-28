@@ -113,6 +113,13 @@ class RoundView:
         RoundView.display_rounds(tournament)
         round_index = int(input("Entrez le numéro du round à terminer : ")) - 1
         return round_index
+    
+    @staticmethod
+    def get_round_results(tournament):
+        """Demande à l'utilisateur de sélectionner un round à terminer."""
+        RoundView.display_rounds(tournament)
+        round_index = int(input("Entrez le numéro du round à terminer : ")) - 1
+        return round_index
 
     @staticmethod
     def display_rounds(tournament):
@@ -122,3 +129,20 @@ class RoundView:
             status = "Non commencé" if not rnd.start_time else "Terminé" if rnd.is_complete else "En cours"
             print(f"{index + 1}. Round: {rnd.name}, Statut: {status}")
 
+
+    # @staticmethod
+    # def get_match_results():
+    #     result = input("Entrez le résultat (1-0, 0-1, 0.5-0.5) : ")
+    #     return tuple(map(float, result.split('-')))
+
+    @staticmethod
+    def get_match_results():
+        result = input("Entrez le résultat (1-0, 0-1, 0.5-0.5) : ")
+        try:
+            results_tuple = tuple(map(float, result.split('-')))
+            if len(results_tuple) != 2 or not all(isinstance(num, float) for num in results_tuple):
+                raise ValueError
+            return results_tuple
+        except ValueError:
+            print("Format invalide. Veuillez entrer les résultats sous la forme 'score1-score2'.")
+            return None

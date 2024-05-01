@@ -27,6 +27,7 @@ class TournamentView:
 
     @staticmethod
     def disp_tournaments(tournaments):
+        """Affiche la liste de tournois de l'application"""
         table = PrettyTable()
         table.field_names = ["ID", "Nom", "Lieu", "Description", "Date de début", "Date de fin" ]
         table.align = "l"
@@ -73,6 +74,54 @@ class TournamentView:
         except ValueError:
             print("Veuillez entrer un nombre valide.")
         return None
+    
+
+   
+    @staticmethod
+    def display_all_tournament_details(tournament):
+        
+
+
+        # En-tête du tournoi
+        if tournament:
+            # Affichage des détails du tournoi
+            print("\nDétails du tournoi chargé :")
+            print(f"Nom du tournoi : {tournament.name}".upper())
+            print(f"Lieu : {tournament.location}")
+            print(f"Description : {tournament.description}")
+            print(f"Date de début : {tournament.start_date.strftime('%d/%m/%Y')}")
+            print(f"Date de fin : {tournament.end_date.strftime('%d/%m/%Y')}")
+            print(f"Nombre total de rounds prévus : {tournament.total_round}")
+            print(f"Rounds actuellement complétés : {len(tournament.rounds)}")
+            print(f"Nombre de joueurs inscrits : {len(tournament.registered_players)}\n")
+
+        # Tableau pour afficher les rounds et les matches
+        if tournament.rounds:
+            for round in tournament.rounds:
+                matches_table = PrettyTable()
+
+                # Il faudrait pouvoir afficher le round concerné
+                matches_table.field_names = ["Match #", "Nom P1", "Rang P1", "Score P1", "vs.", "Nom P2", "Rang P2", "Score P2"]
+                for index, match in enumerate(round.matches, start=1):
+                    matches_table.add_row([
+                        index,
+                        match.players[0].name,  # Assurez-vous que ces attributs existent
+                        "Rank P1",  # Remplacez par l'attribut réel si disponible
+                        match.results[0],
+                        "vs.",
+                        match.players[1].name,
+                        "Rank P2",  # Remplacez par l'attribut réel si disponible
+                        match.results[1]
+                    ])
+                print(matches_table.get_string(title=f"Round {round.name}"))
+
+
+
+
+
+
+
+    
 
 
 

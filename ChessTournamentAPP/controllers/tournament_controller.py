@@ -56,7 +56,10 @@ class TournamentController(BaseController):
         else:
             print("Aucun tournoi sélectionné ou tournoi invalide.")
 
+   
+
     def load_tournament(self):
+        """Charge les tournois de l'application"""
         tournament = TournamentView.select_tournament(self.tournaments)
         if tournament:
             # Affichage des détails du tournoi
@@ -91,13 +94,44 @@ class TournamentController(BaseController):
                 print(table)
             else:
                 print("Aucun joueur n'est inscrit dans le tournoi.")
+
+            if tournament.rounds:
+                for round in tournament.rounds:
+                    matches_table = PrettyTable()
+                    matches_table.field_names = ["Match #", "Nom P1", "Rang P1", "Score P1", "vs.", "Nom P2", "Rang P2", "Score P2"]
+
+                    for index, match in enumerate(round.matches, start=1):
+                        matches_table.add_row([
+                            index,
+                            match.players[0].name,
+                            "Rank P1",  # Remplacez par l'attribut réel si disponible
+                            match.results[0],
+                            "vs.",
+                            match.players[1].name,
+                            "Rank P2",  # Remplacez par l'attribut réel si disponible
+                            match.results[1]
+                        ])
+
+                    # Ajout de la date de début et de fin du round s'ils sont définis
+                    round_details = f"Round {round.name}"
+                    if hasattr(round, 'start_time') and round.start_time:
+                        round_details += f" - Début : {round.start_time.strftime('%d/%m/%Y %H:%M')}"
+                    if hasattr(round, 'end_time') and round.end_time:
+                        round_details += f" - Fin : {round.end_time.strftime('%d/%m/%Y %H:%M')}"
+
+                    
+                    print(matches_table.get_string(title=round_details))
+            else:
+                print("Aucun round joué")
+
         else:
             print("Aucun tournoi sélectionné ou sélection invalide.")
+
 
     
     
     def display_tournaments(self):
-        """ Afficher le tournois disponibles  """
+        """ Afficher les tournois disponibles  """
         TournamentView.disp_tournaments(self.tournaments)
 
     def update_tournament(self):

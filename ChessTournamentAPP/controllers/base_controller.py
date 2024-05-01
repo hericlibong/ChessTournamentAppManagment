@@ -2,12 +2,11 @@
 
 from util.data_manager import load_tournaments, save_tournaments, load_players, save_players
 
-class BaseController:
-    def __init__(self):
-        self.tournaments = load_tournaments()  
-        self.players = load_players()
 
+class BaseController:
+    tournaments = load_tournaments()  # Chargement statique des tournois
+    players = load_players()          # Chargement statique des joueurs
 
     def save_data(self):
-        save_tournaments(self.tournaments) # Sauvegarde les tournois
-        save_players(self.players)  # Sauvegarde les joueurs
+        save_tournaments(BaseController.tournaments)  # Sauvegarde des tournois
+        save_players(BaseController.players)  

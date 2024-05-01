@@ -9,6 +9,9 @@ from prettytable import PrettyTable
 from datetime import datetime
 
 class TournamentController(BaseController):
+    def __init__(self):
+        super().__init__()
+        self.round_controller = RoundController()
 
     def manage_tournaments(self):
         while True:
@@ -26,7 +29,7 @@ class TournamentController(BaseController):
             elif choice == '6':
                 tournament = TournamentView.select_tournament(self.tournaments)
                 if tournament:
-                    RoundController.manage_rounds(tournament)
+                    self.round_controller.manage_rounds(tournament)
                 else :
                     print("Aucun tournoi sélectionné")
             elif choice == '7':  # Retour au menu principal

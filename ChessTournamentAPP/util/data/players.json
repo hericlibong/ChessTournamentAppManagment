@@ -25,7 +25,10 @@
         "firstname": "Christine",
         "birthdate": "25/04/2001",
         "unique_id": "CP25042",
-        "past_opponents": []
+        "past_opponents": [
+            "CK10121",
+            "AR29071"
+        ]
     },
     {
         "name": "Brakia",
@@ -95,6 +98,19 @@
         "firstname": "Clark",
         "birthdate": "10/12/1956",
         "unique_id": "CK10121",
-        "past_opponents": []
+        "past_opponents": [
+            "AR29071",
+            "CP25042"
+        ]
+    },
+    {
+        "name": "Ramy",
+        "firstname": "Adil",
+        "birthdate": "29/07/1998",
+        "unique_id": "AR29071",
+        "past_opponents": [
+            "CK10121",
+            "CP25042"
+        ]
     }
 ]

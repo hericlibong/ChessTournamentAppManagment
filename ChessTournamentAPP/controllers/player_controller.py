@@ -26,7 +26,8 @@ class PlayerController(BaseController):
     
     
     def add_player(self):
-        player_details = PlayerView.create_player()
+        existing_ids = {player.unique_id for player in self.players}
+        player_details = PlayerView.create_player(existing_ids)
         new_player = Player(*player_details)
         self.players.append(new_player)
         self.save_data()

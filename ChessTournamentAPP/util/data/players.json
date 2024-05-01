@@ -4,20 +4,14 @@
         "firstname": "Ramzy",
         "birthdate": "24/03/1969",
         "unique_id": "BD23031",
-        "past_opponents": [
-            "EH24041",
-            "ET24039"
-        ]
+        "past_opponents": []
     },
     {
         "name": "Tudor",
         "firstname": "Eric",
         "birthdate": "24/03/1968",
         "unique_id": "ET24039",
-        "past_opponents": [
-            "BD23031",
-            "EH24041"
-        ]
+        "past_opponents": []
     },
     {
         "name": "Elba",
@@ -31,10 +25,7 @@
         "firstname": "Christine",
         "birthdate": "25/04/2001",
         "unique_id": "CP25042",
-        "past_opponents": [
-            "HL24031",
-            "ET24039"
-        ]
+        "past_opponents": []
     },
     {
         "name": "Brakia",
@@ -48,10 +39,7 @@
         "firstname": "Alfred",
         "birthdate": "24/06/1975",
         "unique_id": "JA09874",
-        "past_opponents": [
-            "HL24031",
-            "AP07101"
-        ]
+        "past_opponents": []
     },
     {
         "name": "Auster",
@@ -65,24 +53,48 @@
         "firstname": "Heric",
         "birthdate": "24/03/1969",
         "unique_id": "HL24031",
-        "past_opponents": [
-            "EH24041"
-        ]
+        "past_opponents": []
     },
     {
         "name": "Harris",
         "firstname": "Ed",
         "birthdate": "24/04/1965",
         "unique_id": "EH24041",
-        "past_opponents": [
-            "HL24031"
-        ]
+        "past_opponents": []
     },
     {
         "name": "Coffe",
         "firstname": "John",
         "birthdate": "14/06/1964",
         "unique_id": "JC14061",
+        "past_opponents": []
+    },
+    {
+        "name": "Joseph",
+        "firstname": "Henry",
+        "birthdate": "23/09/2000",
+        "unique_id": "JH23092",
+        "past_opponents": []
+    },
+    {
+        "name": "Parker",
+        "firstname": "Peter",
+        "birthdate": "25/02/1977",
+        "unique_id": "PP25021",
+        "past_opponents": []
+    },
+    {
+        "name": "Wayne",
+        "firstname": "Bruce",
+        "birthdate": "15/04/1968",
+        "unique_id": "BW15041",
+        "past_opponents": []
+    },
+    {
+        "name": "Kent",
+        "firstname": "Clark",
+        "birthdate": "10/12/1956",
+        "unique_id": "CK10121",
         "past_opponents": []
     }
 ]

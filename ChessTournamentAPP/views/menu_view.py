@@ -37,6 +37,8 @@ class MenuView:
         print("3. inscrire un joueur à un tournoi")
         print("4. Retour au menu principal")
         choice = input("Entrez votre choix : ")
+
+        print("--------------")
         return choice
     
 

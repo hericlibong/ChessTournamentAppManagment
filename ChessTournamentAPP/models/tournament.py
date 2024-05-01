@@ -12,7 +12,7 @@ import random
 class Tournament:
     """ Gestion de tournois d'échecs. """
     def __init__(self, name: str, location: str, description: str, start_date: str, end_date: str,
-                 total_round: int = 4, t_id: str = None, current_round: int = 0, rounds=None, registered_players=None):
+                 total_round :int = 20, t_id: str = None, current_round: int = 0, rounds=None, registered_players=None):
         self.t_id = t_id if t_id else str(uuid.uuid4())[:8]
         self.name = name
         self.location = location
@@ -21,7 +21,7 @@ class Tournament:
         self.rounds = rounds if rounds else []
         self.registered_players = registered_players if registered_players else []
         self.total_round = total_round
-        self.start_date = self.safe_strptime(start_date, "%d/%m/%Y"  )
+        self.start_date = self.safe_strptime(start_date, "%d/%m/%Y")
         self.end_date = self.safe_strptime(end_date, "%d/%m/%Y")
 
     def to_dict(self):
@@ -54,15 +54,30 @@ class Tournament:
         self.rounds = [Round(name=f"Round {i + 1}") for i in range(number_of_rounds)]
         self.total_round = number_of_rounds
 
+    # def start_tournament(self):
+    #     if len(self.registered_players) < 2:
+    #         print("Pas assez de joueurs pour commencer un tournoi.")
+    #         return
+    #     self.initialize_rounds()
+    #     self.generate_matches()
+    #     if self.rounds:
+    #         self.rounds[0].start_time = datetime.now()
+    #         print(f"Tournament '{self.name}' started with {len(self.registered_players)} players and {len(self.rounds)} rounds.")
+    #     else:
+    #         print("Failed to initialize rounds properly.")
+
+
     def start_tournament(self):
         if len(self.registered_players) < 2:
-            print("Not enough players to start the tournament.")
+            print("Pas assez de joueurs pour commencer un tournoi.")
             return
+        # Annuler le paramètre par défaut de total_round
+        self.total_round = len(self.registered_players) - 1 if len(self.registered_players) % 2 == 0 else len(self.registered_players)
         self.initialize_rounds()
         self.generate_matches()
         if self.rounds:
             self.rounds[0].start_time = datetime.now()
-            print(f"Tournament '{self.name}' started with {len(self.registered_players)} players and {len(self.rounds)} rounds.")
+            print(f"Tournament '{self.name}' started with {len(self.registered_players)} players and {self.total_round} rounds.")
         else:
             print("Failed to initialize rounds properly.")
 
@@ -132,6 +147,9 @@ class Tournament:
         except IndexError:
             print("Index de round invalide.")
 
+    
+    
+    
     def end_round(self, round_index, match_results):
         try:
             round = self.rounds[round_index]

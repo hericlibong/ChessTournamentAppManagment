@@ -2,6 +2,7 @@
 
 from .player_views import PlayerView
 from models.tournament import Tournament
+from prettytable import PrettyTable
 
 class TournamentView:
 
@@ -16,34 +17,41 @@ class TournamentView:
         description = input("Entrez une description : ")
         start_date = input("Entrez la date de début (DD/MM/YYYY) : ")
         end_date = input("Entrez la date de fin (DD/MM/YYYY) : ")
-        # Optionnel: Demander le nombre total de rounds
-        total_round = input("Entrez le nombre total de rounds (laissez vide pour la valeur par défaut de 4) : ") or 4
+        # # Optionnel: Demander le nombre total de rounds
+        total_round = input("Entrez le nombre total de rounds (laissez vide pour la valeur par défaut de 4) : ") or 20
         total_round = int(total_round)  # Convertit la saisie en entier
 
         return  name, location, description, start_date, end_date, total_round
 
-    
+
+
     @staticmethod
     def disp_tournaments(tournaments):
-        """Affiche les tournois disponibles avec les joueurs inscrits."""
+        table = PrettyTable()
+        table.field_names = ["ID", "Nom", "Lieu", "Description", "Date de début", "Date de fin" ]
+        table.align = "l"
+        table.align["ID"] = "l"
+
+        # Vérifie qu'il y a des tournois
         if not tournaments:
             print("Aucun tournoi disponible.")
         else:
             for tournament in tournaments:
-                print(f"Le Tournoi a {tournament.current_round}commencé(s)")
-                print(f"Tournoi: {tournament.name} - Lieu: {tournament.location}")
-                print(f"Dates: Du {tournament.start_date.strftime('%d/%m/%Y')} au {tournament.end_date.strftime('%d/%m/%Y')}")
-                print(f"{len(tournament.registered_players)} Joueurs inscrits:")
-                if tournament.registered_players:
-                    for player in tournament.registered_players:
-                        print(f"- {player.firstname} {player.name} (ID: {player.unique_id})")
-                else:
-                    print("- En attente de joueurs.")
-                print("-" * 40)  # Pour séparer visuellement les tournois
+                table.add_row([tournament.t_id, tournament.name, tournament.location, 
+                               tournament.description, tournament.start_date.strftime('%d/%m/%Y'), tournament.end_date.strftime('%d/%m/%Y')])
 
+        table_string = table.get_string()
+        table_width = len(table_string.splitlines()[0])
+        title = "liste des tournois enregistrés"
+        centered_title = title.center(table_width).upper()
+        line = "-" * 40
+        center_line = line.center(table_width)
+        print(centered_title)
+        print(center_line)
+        print(table)
 
-
-
+   
+   
     @staticmethod
     def select_tournament(tournaments):
         """

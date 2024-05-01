@@ -1,6 +1,7 @@
 # player_views.py
 import re
 from datetime import datetime
+from prettytable import PrettyTable
 
 class PlayerView:
 
@@ -43,14 +44,33 @@ class PlayerView:
 
     @staticmethod
     def display_players(players):
-        """Affiche les joueurs enregistrés triés par nom."""
+        """ Affiche les joueurs enregistrés sur l'application. """
+        table = PrettyTable()
+        table.field_names = ["ID", "Prénom", "Nom", "Date de naissance"]
+        table.align = "c"  # Centre tout le texte dans le tableau
+        table.align["ID"] = "l"  # Alignement à gauche pour l'ID
+        
+        # Ajoute des données factices pour démonstration
         if not players:
             print("Aucun joueur n'est enregistré.")
         else:
-            print("Liste des joueurs enregistrés :")
             sorted_players = sorted(players, key=lambda x: (x.name, x.firstname))
             for player in sorted_players:
-                print(f"{player.name} {player.firstname}, {player.birthdate.strftime('%d/%m/%Y')} (ID: {player.unique_id})")
+                table.add_row([player.unique_id, player.name, player.firstname, player.birthdate.strftime('%d/%m/%Y')])
+        
+        # Calcul de la largeur du tableau pour centrer le titre
+        table_string = table.get_string()
+        table_width = len(table_string.splitlines()[0])
+        title = "Liste des joueurs enregistrés"
+        centered_title = title.center(table_width).upper()
+        line = "-" * 40
+        center_line = line.center(table_width)
+
+        print(centered_title)
+        print(center_line)
+        print(table)
+
+
 
 
 

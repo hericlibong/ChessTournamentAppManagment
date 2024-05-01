@@ -85,6 +85,7 @@ def build_tournament_from_data(data):
         start_date=data['start_date'],
         end_date=data['end_date'],
         total_round=data['total_round'],
+        #total_round=data.get('total_round', len(data['registered_players'])),
         t_id=data['t_id'],
         current_round=data['current_round'],
         rounds=rounds,

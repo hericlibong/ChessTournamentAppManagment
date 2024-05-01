@@ -10,8 +10,8 @@ class Round:
         self.is_complete = is_complete
         self.matches = matches if matches else []
         self.start_time = self.convert_str_to_datetime(start_time)
-        #self.end_time = self.convert_str_to_datetime(end_time)
-        self.end_time = None
+        self.end_time = self.convert_str_to_datetime(end_time) # Modification effectuée
+        #self.end_time = None  
         
 
 

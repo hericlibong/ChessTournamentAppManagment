@@ -1,11 +1,393 @@
 [
     {
-        "t_id": "61f5afd0",
-        "name": "Porto",
-        "location": "Porto Portugal",
-        "start_date": "27/04/2024",
-        "end_date": "28/04/2024",
-        "description": "Chess Porto",
+        "t_id": "76463306",
+        "name": "Big Tournament final",
+        "location": "France",
+        "start_date": "29/04/2024",
+        "end_date": "30/04/2024",
+        "description": "10 best players",
+        "current_round": 0,
+        "rounds": [
+            {
+                "name": "Round 1",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "PP25021",
+                            "HL24031"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "CK10121",
+                            "BW15041"
+                        ],
+                        "results": [
+                            0.0,
+                            1.0
+                        ]
+                    }
+                ],
+                "start_time": "2024-04-29 11:37",
+                "end_time": "2024-04-29 11:37"
+            },
+            {
+                "name": "Round 2",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "HL24031",
+                            "BW15041"
+                        ],
+                        "results": [
+                            0.5,
+                            0.5
+                        ]
+                    },
+                    {
+                        "players": [
+                            "PP25021",
+                            "CK10121"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    }
+                ],
+                "start_time": "2024-04-29 11:37",
+                "end_time": "2024-04-29 11:38"
+            },
+            {
+                "name": "Round 3",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "CK10121",
+                            "HL24031"
+                        ],
+                        "results": [
+                            0.0,
+                            1.0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "BW15041",
+                            "PP25021"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    }
+                ],
+                "start_time": "2024-04-29 11:38",
+                "end_time": "2024-04-29 11:38"
+            }
+        ],
+        "registered_players": [
+            {
+                "name": "Wayne",
+                "firstname": "Bruce",
+                "birthdate": "15/04/1968",
+                "unique_id": "BW15041",
+                "past_opponents": [
+                    "CK10121",
+                    "HL24031",
+                    "PP25021"
+                ]
+            },
+            {
+                "name": "Kent",
+                "firstname": "Clark",
+                "birthdate": "10/12/1956",
+                "unique_id": "CK10121",
+                "past_opponents": [
+                    "BW15041",
+                    "HL24031",
+                    "PP25021"
+                ]
+            },
+            {
+                "name": "Parker",
+                "firstname": "Peter",
+                "birthdate": "25/02/1977",
+                "unique_id": "PP25021",
+                "past_opponents": [
+                    "BW15041",
+                    "CK10121",
+                    "HL24031"
+                ]
+            },
+            {
+                "name": "Libong",
+                "firstname": "Heric",
+                "birthdate": "24/03/1969",
+                "unique_id": "HL24031",
+                "past_opponents": [
+                    "BW15041",
+                    "CK10121",
+                    "PP25021"
+                ]
+            }
+        ],
+        "total_round": 3
+    },
+    {
+        "t_id": "e0dab6ec",
+        "name": "Dallas",
+        "location": "Dallas",
+        "start_date": "29/04/2024",
+        "end_date": "30/04/2024",
+        "description": "Dallas",
+        "current_round": 0,
+        "rounds": [
+            {
+                "name": "Round 1",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "BW15041",
+                            "CK10121"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "HL24031",
+                            "PP25021"
+                        ],
+                        "results": [
+                            0.5,
+                            0.5
+                        ]
+                    }
+                ],
+                "start_time": "2024-04-29 13:05",
+                "end_time": "2024-04-29 13:06"
+            },
+            {
+                "name": "Round 2",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "BW15041",
+                            "HL24031"
+                        ],
+                        "results": [
+                            0.0,
+                            1.0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "CK10121",
+                            "PP25021"
+                        ],
+                        "results": [
+                            0.0,
+                            1.0
+                        ]
+                    }
+                ],
+                "start_time": "2024-04-29 13:07",
+                "end_time": "2024-04-29 13:07"
+            },
+            {
+                "name": "Round 3",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "PP25021",
+                            "BW15041"
+                        ],
+                        "results": [
+                            0.5,
+                            0.5
+                        ]
+                    },
+                    {
+                        "players": [
+                            "CK10121",
+                            "HL24031"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    }
+                ],
+                "start_time": "2024-04-29 13:08",
+                "end_time": "2024-04-29 13:08"
+            }
+        ],
+        "registered_players": [
+            {
+                "name": "Wayne",
+                "firstname": "Bruce",
+                "birthdate": "15/04/1968",
+                "unique_id": "BW15041",
+                "past_opponents": [
+                    "CK10121",
+                    "HL24031",
+                    "PP25021"
+                ]
+            },
+            {
+                "name": "Libong",
+                "firstname": "Heric",
+                "birthdate": "24/03/1969",
+                "unique_id": "HL24031",
+                "past_opponents": [
+                    "BW15041",
+                    "CK10121",
+                    "PP25021"
+                ]
+            },
+            {
+                "name": "Parker",
+                "firstname": "Peter",
+                "birthdate": "25/02/1977",
+                "unique_id": "PP25021",
+                "past_opponents": [
+                    "BW15041",
+                    "CK10121",
+                    "HL24031"
+                ]
+            },
+            {
+                "name": "Kent",
+                "firstname": "Clark",
+                "birthdate": "10/12/1956",
+                "unique_id": "CK10121",
+                "past_opponents": [
+                    "BW15041",
+                    "HL24031",
+                    "PP25021"
+                ]
+            }
+        ],
+        "total_round": 3
+    },
+    {
+        "t_id": "5d4b7a62",
+        "name": "troie_chess_game",
+        "location": "Troie",
+        "start_date": "29/04/2024",
+        "end_date": "30/04/2024",
+        "description": "Troie gods of war",
+        "current_round": 0,
+        "rounds": [
+            {
+                "name": "Round 1",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "BD23031",
+                            "JH23092"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    }
+                ],
+                "start_time": "2024-04-29 13:27",
+                "end_time": "2024-04-29 13:28"
+            },
+            {
+                "name": "Round 2",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "BD23031",
+                            "AP07101"
+                        ],
+                        "results": [
+                            0.5,
+                            0.5
+                        ]
+                    }
+                ],
+                "start_time": "2024-04-29 13:29",
+                "end_time": "2024-04-29 13:31"
+            },
+            {
+                "name": "Round 3",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "AP07101",
+                            "JH23092"
+                        ],
+                        "results": [
+                            0.0,
+                            1.0
+                        ]
+                    }
+                ],
+                "start_time": "2024-04-29 13:31",
+                "end_time": "2024-04-29 13:31"
+            }
+        ],
+        "registered_players": [
+            {
+                "name": "Auster",
+                "firstname": "Paul",
+                "birthdate": "07/10/1987",
+                "unique_id": "AP07101",
+                "past_opponents": [
+                    "JH23092",
+                    "BD23031"
+                ]
+            },
+            {
+                "name": "Bedia",
+                "firstname": "Ramzy",
+                "birthdate": "24/03/1969",
+                "unique_id": "BD23031",
+                "past_opponents": [
+                    "AP07101",
+                    "JH23092"
+                ]
+            },
+            {
+                "name": "Joseph",
+                "firstname": "Henry",
+                "birthdate": "23/09/2000",
+                "unique_id": "JH23092",
+                "past_opponents": [
+                    "AP07101",
+                    "BD23031"
+                ]
+            }
+        ],
+        "total_round": 3
+    },
+    {
+        "t_id": "e95a238b",
+        "name": "CHESS HAWKS",
+        "location": "Atlanta",
+        "start_date": "29/04/2024",
+        "end_date": "30/04/2024",
+        "description": "10 players for a title",
         "current_round": 0,
         "rounds": [
             {
@@ -15,16 +397,26 @@
                     {
                         "players": [
                             "HL24031",
-                            "JC14061"
+                            "BW15041"
                         ],
                         "results": [
-                            0,
-                            0
+                            1.0,
+                            0.0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "CP25042",
+                            "PP25021"
+                        ],
+                        "results": [
+                            0.0,
+                            1.0
                         ]
                     }
                 ],
-                "start_time": "2024-04-27 22:58",
-                "end_time": null
+                "start_time": "2024-04-29 17:23",
+                "end_time": "2024-04-29 17:42"
             },
             {
                 "name": "Round 2",
@@ -32,17 +424,27 @@
                 "matches": [
                     {
                         "players": [
-                            "JC14061",
-                            "EH24041"
+                            "HL24031",
+                            "ET24039"
                         ],
                         "results": [
-                            0,
-                            0
+                            0.5,
+                            0.5
+                        ]
+                    },
+                    {
+                        "players": [
+                            "BW15041",
+                            "CP25042"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
                         ]
                     }
                 ],
-                "start_time": "2024-04-27 22:59",
-                "end_time": null
+                "start_time": "2024-04-29 17:43",
+                "end_time": "2024-04-29 17:44"
             },
             {
                 "name": "Round 3",
@@ -50,60 +452,176 @@
                 "matches": [
                     {
                         "players": [
-                            "EH24041",
-                            "HL24031"
+                            "BW15041",
+                            "ET24039"
                         ],
                         "results": [
-                            0,
-                            0
+                            0.0,
+                            1.0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "HL24031",
+                            "PP25021"
+                        ],
+                        "results": [
+                            0.0,
+                            1.0
                         ]
                     }
                 ],
-                "start_time": "2024-04-27 22:59",
-                "end_time": null
+                "start_time": "2024-04-29 17:44",
+                "end_time": "2024-04-29 17:44"
+            },
+            {
+                "name": "Round 4",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "ET24039",
+                            "PP25021"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "HL24031",
+                            "CP25042"
+                        ],
+                        "results": [
+                            0.0,
+                            1.0
+                        ]
+                    }
+                ],
+                "start_time": "2024-04-29 17:45",
+                "end_time": "2024-04-29 17:46"
+            },
+            {
+                "name": "Round 5",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "ET24039",
+                            "CP25042"
+                        ],
+                        "results": [
+                            0.0,
+                            1.0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "BW15041",
+                            "PP25021"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    }
+                ],
+                "start_time": "2024-04-29 17:47",
+                "end_time": "2024-04-29 17:47"
             }
         ],
         "registered_players": [
+            {
+                "name": "Wayne",
+                "firstname": "Bruce",
+                "birthdate": "15/04/1968",
+                "unique_id": "BW15041",
+                "past_opponents": [
+                    "HL24031",
+                    "PP25021",
+                    "ET24039",
+                    "CP25042"
+                ]
+            },
+            {
+                "name": "Tudor",
+                "firstname": "Eric",
+                "birthdate": "24/03/1968",
+                "unique_id": "ET24039",
+                "past_opponents": [
+                    "BW15041",
+                    "HL24031",
+                    "PP25021",
+                    "CP25042"
+                ]
+            },
+            {
+                "name": "Penia",
+                "firstname": "Christine",
+                "birthdate": "25/04/2001",
+                "unique_id": "CP25042",
+                "past_opponents": [
+                    "BW15041",
+                    "HL24031",
+                    "PP25021",
+                    "ET24039"
+                ]
+            },
+            {
+                "name": "Parker",
+                "firstname": "Peter",
+                "birthdate": "25/02/1977",
+                "unique_id": "PP25021",
+                "past_opponents": [
+                    "BW15041",
+                    "HL24031",
+                    "ET24039",
+                    "CP25042"
+                ]
+            },
             {
                 "name": "Libong",
                 "firstname": "Heric",
                 "birthdate": "24/03/1969",
                 "unique_id": "HL24031",
                 "past_opponents": [
-                    "EH24041",
-                    "JC14061"
-                ]
-            },
-            {
-                "name": "Harris",
-                "firstname": "Ed",
-                "birthdate": "24/04/1965",
-                "unique_id": "EH24041",
-                "past_opponents": [
-                    "HL24031",
-                    "JC14061"
-                ]
-            },
-            {
-                "name": "Coffe",
-                "firstname": "John",
-                "birthdate": "14/06/1964",
-                "unique_id": "JC14061",
-                "past_opponents": [
-                    "HL24031",
-                    "EH24041"
+                    "BW15041",
+                    "PP25021",
+                    "ET24039",
+                    "CP25042"
                 ]
             }
         ],
-        "total_round": 3
+        "total_round": 5
     },
     {
-        "t_id": "5eb38af9",
-        "name": "TOULOUSE CHESS GAME",
-        "location": "Toulouse",
-        "start_date": "27/04/2024",
-        "end_date": "29/04/2024",
-        "description": "Echecs dans la ville Rose",
+        "t_id": "401ef491",
+        "name": "test",
+        "location": "test",
+        "start_date": "29/04/2024",
+        "end_date": "30/04/2024",
+        "description": "test",
+        "current_round": 0,
+        "rounds": [],
+        "registered_players": [
+            {
+                "name": "Wayne",
+                "firstname": "Bruce",
+                "birthdate": "15/04/1968",
+                "unique_id": "BW15041",
+                "past_opponents": []
+            }
+        ],
+        "total_round": 4
+    },
+    {
+        "t_id": "c1658b85",
+        "name": "test_2",
+        "location": "test_2",
+        "start_date": "29/04/2024",
+        "end_date": "30/04/2024",
+        "description": "test_2",
         "current_round": 0,
         "rounds": [
             {
@@ -112,26 +630,18 @@
                 "matches": [
                     {
                         "players": [
-                            "AP07101",
-                            "BS06102"
+                            "ET24039",
+                            "PP25021"
                         ],
                         "results": [
                             1.0,
                             0.0
                         ]
-                    }
-                ],
-                "start_time": "2024-04-28 16:27",
-                "end_time": "2024-04-28 16:27"
-            },
-            {
-                "name": "Round 2",
-                "is_complete": true,
-                "matches": [
+                    },
                     {
                         "players": [
-                            "EI19031",
-                            "AP07101"
+                            "HL24031",
+                            "BW15041"
                         ],
                         "results": [
                             0.5,
@@ -139,8 +649,36 @@
                         ]
                     }
                 ],
-                "start_time": "2024-04-28 16:27",
-                "end_time": "2024-04-28 16:29"
+                "start_time": "2024-04-29 21:56",
+                "end_time": "2024-04-29 22:04"
+            },
+            {
+                "name": "Round 2",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "CP25042",
+                            "PP25021"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "HL24031",
+                            "ET24039"
+                        ],
+                        "results": [
+                            0.0,
+                            1.0
+                        ]
+                    }
+                ],
+                "start_time": "2024-04-29 22:06",
+                "end_time": "2024-04-29 22:07"
             },
             {
                 "name": "Round 3",
@@ -148,51 +686,147 @@
                 "matches": [
                     {
                         "players": [
-                            "BS06102",
-                            "EI19031"
+                            "CP25042",
+                            "HL24031"
                         ],
                         "results": [
                             1.0,
                             0.0
                         ]
+                    },
+                    {
+                        "players": [
+                            "BW15041",
+                            "ET24039"
+                        ],
+                        "results": [
+                            0.0,
+                            1.0
+                        ]
                     }
                 ],
-                "start_time": "2024-04-28 16:29",
-                "end_time": "2024-04-28 16:31"
+                "start_time": "2024-04-29 22:07",
+                "end_time": "2024-04-29 22:07"
+            },
+            {
+                "name": "Round 4",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "ET24039",
+                            "CP25042"
+                        ],
+                        "results": [
+                            0.5,
+                            0.5
+                        ]
+                    },
+                    {
+                        "players": [
+                            "PP25021",
+                            "BW15041"
+                        ],
+                        "results": [
+                            0.5,
+                            0.5
+                        ]
+                    }
+                ],
+                "start_time": "2024-04-29 22:07",
+                "end_time": "2024-04-29 22:08"
+            },
+            {
+                "name": "Round 5",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "PP25021",
+                            "HL24031"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    },
+                    {
+                        "players": [
+                            "CP25042",
+                            "BW15041"
+                        ],
+                        "results": [
+                            0.0,
+                            1.0
+                        ]
+                    }
+                ],
+                "start_time": "2024-04-29 22:08",
+                "end_time": "2024-04-29 22:08"
             }
         ],
         "registered_players": [
             {
-                "name": "Elba",
-                "firstname": "Idriss",
-                "birthdate": "19/03/1958",
-                "unique_id": "EI19031",
+                "name": "Wayne",
+                "firstname": "Bruce",
+                "birthdate": "15/04/1968",
+                "unique_id": "BW15041",
                 "past_opponents": [
-                    "BS06102",
-                    "AP07101"
+                    "HL24031",
+                    "PP25021",
+                    "ET24039",
+                    "CP25042"
                 ]
             },
             {
-                "name": "Auster",
-                "firstname": "Paul",
-                "birthdate": "07/10/1987",
-                "unique_id": "AP07101",
+                "name": "Tudor",
+                "firstname": "Eric",
+                "birthdate": "24/03/1968",
+                "unique_id": "ET24039",
                 "past_opponents": [
-                    "EI19031",
-                    "BS06102"
+                    "BW15041",
+                    "HL24031",
+                    "PP25021",
+                    "CP25042"
                 ]
             },
             {
-                "name": "Brakia",
-                "firstname": "Salia",
-                "birthdate": "06/10/2000",
-                "unique_id": "BS06102",
+                "name": "Penia",
+                "firstname": "Christine",
+                "birthdate": "25/04/2001",
+                "unique_id": "CP25042",
                 "past_opponents": [
-                    "EI19031",
-                    "AP07101"
+                    "BW15041",
+                    "HL24031",
+                    "PP25021",
+                    "ET24039"
+                ]
+            },
+            {
+                "name": "Parker",
+                "firstname": "Peter",
+                "birthdate": "25/02/1977",
+                "unique_id": "PP25021",
+                "past_opponents": [
+                    "BW15041",
+                    "HL24031",
+                    "ET24039",
+                    "CP25042"
+                ]
+            },
+            {
+                "name": "Libong",
+                "firstname": "Heric",
+                "birthdate": "24/03/1969",
+                "unique_id": "HL24031",
+                "past_opponents": [
+                    "BW15041",
+                    "PP25021",
+                    "ET24039",
+                    "CP25042"
                 ]
             }
         ],
-        "total_round": 3
+        "total_round": 5
     }
 ]

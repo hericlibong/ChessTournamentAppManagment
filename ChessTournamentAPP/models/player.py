@@ -30,6 +30,7 @@ class Player:
             raise ValueError(f"Erreur de validation de la date de naissance: {e}")
 
     def validate_unique_id(self, unique_id):
+        """Validation du format de l'Id unique des joueurs"""
         if not re.match(r'^[A-Z]{2}\d{5}$', unique_id):
             raise ValueError("L'unique_id doit suivre le format: deux lettres suivies de cinq chiffres")
         return unique_id

@@ -4,6 +4,7 @@ from views.menu_view import MenuView
 from controllers.player_controller import PlayerController
 from controllers.tournament_controller import TournamentController
 
+
 class ApplicationController:
     def __init__(self):
         # Initialisation des contrôleurs avec l'état correct (chargement des données)

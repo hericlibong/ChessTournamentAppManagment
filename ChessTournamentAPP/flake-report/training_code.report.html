@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: training_code.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="training_code.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               training_code.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F401">
+               <span class="count sev-1">
+                  3
+               </span>
+               <strong>F401:</strong> 'datetime.datetime' imported but unused
+               
+                  (and 2 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>'datetime.datetime' imported but unused:</p>
+               
+               <a href="training_code.source.html#l5">
+                  <tt><i>5</i> <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'uuid' imported but unused:</p>
+               
+               <a href="training_code.source.html#l6">
+                  <tt><i>6</i> <span class="kn">import</span> <span class="nn">uuid</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'models.match.Match' imported but unused:</p>
+               
+               <a href="training_code.source.html#l8">
+                  <tt><i>8</i> <span class="kn">from</span> <span class="nn">models.match</span> <span class="kn">import</span> <span class="n">Match</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F811">
+               <span class="count sev-1">
+                  2
+               </span>
+               <strong>F811:</strong> redefinition of unused 'random' from line 1
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Redefinition of unused 'random' from line 1:</p>
+               
+               <a href="training_code.source.html#l10">
+                  <tt><i>10</i> <span class="kn">import</span> <span class="nn">random</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Redefinition of unused 'Player' from line 9:</p>
+               
+               <a href="training_code.source.html#l235">
+                  <tt><i>235</i> <span class="k">class</span> <span class="nc">Player</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E116">
+               <span class="count sev-2">
+                  98
+               </span>
+               <strong>E116:</strong> unexpected indentation (comment)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="training_code.source.html#l15">
+                  <tt><i>15</i>     <span class="c1">#     # Afficher les tournois avec leurs ID pour la sélection</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l16">
+                  <tt><i>16</i>     <span class="c1">#     TournamentView.display_tournaments(self.tournaments)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l17">
+                  <tt><i>17</i>     <span class="c1">#     # Demander à l&#39;utilisateur l&#39;ID du tournoi à modifier</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l18">
+                  <tt><i>18</i>     <span class="c1">#     t_id = input(&quot;Entrez l&#39;ID du conyrol à modifier : &quot;)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l19">
+                  <tt><i>19</i>     <span class="c1">#     # Trouver le tournoi correspondant</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l20">
+                  <tt><i>20</i>     <span class="c1">#     tournament = next((t for t in self.tournaments if t.t_id == t_id), None)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l21">
+                  <tt><i>21</i>     <span class="c1">#     if tournament:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l22">
+                  <tt><i>22</i>     <span class="c1">#         # Demander la nouvelle description</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l23">
+                  <tt><i>23</i>     <span class="c1">#         new_description = input(&quot;Entrez la nouvelle description : &quot;)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l24">
+                  <tt><i>24</i>     <span class="c1">#         # Mettre à jour la description</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l25">
+                  <tt><i>25</i>     <span class="c1">#         tournament.description = new_description</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l26">
+                  <tt><i>26</i>     <span class="c1">#         # sauvegarder les modifications</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l27">
+                  <tt><i>27</i>     <span class="c1">#         self.save_data()</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l28">
+                  <tt><i>28</i>     <span class="c1">#         print(&quot;La description du tournoi a été mise à jour.&quot;)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l29">
+                  <tt><i>29</i>     <span class="c1">#     else:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l30">
+                  <tt><i>30</i>     <span class="c1">#         print(&quot;Tournoi non trouvé&quot;)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l34">
+                  <tt><i>34</i>     <span class="c1"># tournament = Tournament(1,&quot;Championnat International&quot;, &quot;Paris&quot;, &quot;Un tournoi très prestigieux&quot;, &quot;2023-07-01&quot;, &quot;2023-07-10&quot;)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l35">
+                  <tt><i>35</i>     <span class="c1"># # Création de joueurs</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l36">
+                  <tt><i>36</i>     <span class="c1"># player1 = Player(name=&quot;Randal&quot;, firstname=&quot;Kolo&quot;, birthdate=&quot;1990-01-01&quot;, unique_id=&quot;AB12345&quot;)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l37">
+                  <tt><i>37</i>     <span class="c1"># player2 = Player(name=&quot;Mbappe&quot;, firstname=&quot;Kyllian&quot;, birthdate=&quot;1992-02-02&quot;, unique_id=&quot;CD67890&quot;)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l38">
+                  <tt><i>38</i>     <span class="c1"># player3 = Player(name=&quot;Rinner&quot;, firstname=&quot;Teddy&quot;, birthdate=&quot;1994-03-03&quot;, unique_id=&quot;EF12345&quot;)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l39">
+                  <tt><i>39</i>     <span class="c1"># player4 = Player(name=&quot;Perec&quot;, firstname=&quot;Marie José&quot;, birthdate=&quot;1996-04-04&quot;, unique_id=&quot;GH67890&quot;)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l43">
+                  <tt><i>43</i>     <span class="c1"># tournament.add_player(player1)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l44">
+                  <tt><i>44</i>     <span class="c1"># tournament.add_player(player2)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l45">
+                  <tt><i>45</i>     <span class="c1"># tournament.add_player(player3)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l46">
+                  <tt><i>46</i>     <span class="c1"># tournament.add_player(player4)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l48">
+                  <tt><i>48</i>     <span class="c1"># print(&quot;Joueurs inscrits: &quot;)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l49">
+                  <tt><i>49</i>     <span class="c1"># for player in tournament.register_player:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l50">
+                  <tt><i>50</i>     <span class="c1">#     print(player)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l53">
+                  <tt><i>53</i>     <span class="c1"># tournament.remove_player(player3)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l55">
+                  <tt><i>55</i>     <span class="c1"># # Afficher les joueurs inscrits après le retrait</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l56">
+                  <tt><i>56</i>     <span class="c1"># print(&quot;Joueurs inscrits après retrait :&quot;)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l57">
+                  <tt><i>57</i>     <span class="c1"># for player in tournament.register_player:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l58">
+                  <tt><i>58</i>     <span class="c1">#     print(player)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l61">
+                  <tt><i>61</i>     <span class="c1"># # Création d&#39;un tour</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l62">
+                  <tt><i>62</i>     <span class="c1"># round1 = Round(name=&quot;Round 1&quot;, start_time=datetime.now())</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l65">
+                  <tt><i>65</i>     <span class="c1"># # Création et ajout de matchs au tour (association des joueurs dans les matchs)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l66">
+                  <tt><i>66</i>     <span class="c1"># match1 = Match(players=(player1, player2))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l67">
+                  <tt><i>67</i>     <span class="c1"># match2 = Match(players=(player3, player4))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l68">
+                  <tt><i>68</i>     <span class="c1"># match3 = Match(players=(player3, player2))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l69">
+                  <tt><i>69</i>     <span class="c1"># match4 = Match(players=(player4, player1))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l73">
+                  <tt><i>73</i>     <span class="c1"># round1.add_match(match1)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l74">
+                  <tt><i>74</i>     <span class="c1"># round1.add_match(match2)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l75">
+                  <tt><i>75</i>     <span class="c1"># round1.add_match(match3)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l76">
+                  <tt><i>76</i>     <span class="c1"># round1.add_match(match4)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l78">
+                  <tt><i>78</i>     <span class="c1"># # Simulation des résultats pour chaque match</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l79">
+                  <tt><i>79</i>     <span class="c1"># simulate_match_results(match1, scores=(1, 0))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l80">
+                  <tt><i>80</i>     <span class="c1"># simulate_match_results(match2, scores=(0.5, 0.5))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l81">
+                  <tt><i>81</i>     <span class="c1"># simulate_match_results(match3, scores=(1, 0))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l82">
+                  <tt><i>82</i>     <span class="c1"># simulate_match_results(match4, scores=(0, 1))</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l83">
+                  <tt><i>83</i>     <span class="c1"># Affichage des résultats</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l84">
+                  <tt><i>84</i>     <span class="c1"># display_match_results(match1)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l85">
+                  <tt><i>85</i>     <span class="c1"># display_match_results(match2)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l86">
+                  <tt><i>86</i>     <span class="c1">#display_round_details(round1)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l90">
+                  <tt><i>90</i>     <span class="c1"># def validate_date(self, date_str, date_type, start_date=None):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l91">
+                  <tt><i>91</i>     <span class="c1">#     &quot;&quot;&quot; Valide et convertit les dates de début et de fin.&quot;&quot;&quot;</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l92">
+                  <tt><i>92</i>     <span class="c1">#     if not date_str:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l93">
+                  <tt><i>93</i>     <span class="c1">#         raise ValueError(f&quot;Aucune date fournie pour {date_type}.&quot;)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l94">
+                  <tt><i>94</i>     <span class="c1">#     try:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l95">
+                  <tt><i>95</i>     <span class="c1">#         date = datetime.strptime(date_str, &quot;%Y-%m-%d&quot;)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l96">
+                  <tt><i>96</i>     <span class="c1">#         if date_type == &quot;end&quot; and start_date and date &lt;= start_date:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l97">
+                  <tt><i>97</i>     <span class="c1">#             raise ValueError(&quot;La date de fin doit être après la date de début.&quot;)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l98">
+                  <tt><i>98</i>     <span class="c1">#         return date</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l99">
+                  <tt><i>99</i>     <span class="c1">#     except ValueError as e:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l100">
+                  <tt><i>100</i>     <span class="c1">#         raise ValueError(f&quot;Erreur de validation pour la date de {date_type}: {e}&quot;)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l105">
+                  <tt><i>105</i>     <span class="c1">#     self.display_players()</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l106">
+                  <tt><i>106</i>     <span class="c1">#     player_id = input(&quot;Entrez l&#39;ID du joueur à supprimer complètement : &quot;)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l107">
+                  <tt><i>107</i>     <span class="c1">#     player_to_remove = next((player for player in self.players if str(player.unique_id) == player_id), None)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l108">
+                  <tt><i>108</i>     <span class="c1">#     if player_to_remove:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l109">
+                  <tt><i>109</i>     <span class="c1">#         self.players.remove(player_to_remove)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l110">
+                  <tt><i>110</i>     <span class="c1">#         # Retirer le joueur de tous les tournois</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l111">
+                  <tt><i>111</i>     <span class="c1">#         for tournament in self.tournaments:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l112">
+                  <tt><i>112</i>     <span class="c1">#             if player_to_remove in tournament.registered_players:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l113">
+                  <tt><i>113</i>     <span class="c1">#                 tournament.remove_player(player_to_remove)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l114">
+                  <tt><i>114</i>     <span class="c1">#         self.save_data()</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l115">
+                  <tt><i>115</i>     <span class="c1">#         print(f&quot;Le joueur {player_to_remove} a été retiré de la plateforme et de tous les tournois.&quot;)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l116">
+                  <tt><i>116</i>     <span class="c1">#     else:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l117">
+                  <tt><i>117</i>     <span class="c1">#         print(&quot;Joueur non trouvé.&quot;)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l120">
+                  <tt><i>120</i>     <span class="c1"># def remove_player_from_tournament(self):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l121">
+                  <tt><i>121</i>     <span class="c1">#     selected_tournament = PlayerView.display_tournaments_for_selection(self.tournaments)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l122">
+                  <tt><i>122</i>     <span class="c1">#     if selected_tournament:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l123">
+                  <tt><i>123</i>     <span class="c1">#         PlayerView.display_players(selected_tournament.registered_players)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l124">
+                  <tt><i>124</i>     <span class="c1">#         player_id = input(&quot;Entrez l&#39;ID du joueur à retirer de ce tournoi : &quot;)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l125">
+                  <tt><i>125</i>     <span class="c1">#         player_to_remove = next((player for player in selected_tournament.registered_players if str(player.unique_id) == player_id), None)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l126">
+                  <tt><i>126</i>     <span class="c1">#         if player_to_remove:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l127">
+                  <tt><i>127</i>     <span class="c1">#             #selected_tournament.remove_player(player_to_remove)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l128">
+                  <tt><i>128</i>     <span class="c1">#             selected_tournament.registered_players.remove(player_to_remove)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l129">
+                  <tt><i>129</i>     <span class="c1">#             self.save_data()</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l130">
+                  <tt><i>130</i>     <span class="c1">#             print(f&quot;Le joueur {player_to_remove} a été retiré du tournoi {selected_tournament.name} &quot;)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l131">
+                  <tt><i>131</i>     <span class="c1">#         else:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l132">
+                  <tt><i>132</i>     <span class="c1">#             print(&quot;Joueur non trouvé dans ce tournoi =&quot;)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l133">
+                  <tt><i>133</i>     <span class="c1">#     else:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l134">
+                  <tt><i>134</i>     <span class="c1">#         print(&quot;Aucune action effectuée, tournoi non trouvé ou non spécifié.&quot;)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l137">
+                  <tt><i>137</i>       <span class="c1"># def select_tournament(self):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l138">
+                  <tt><i>138</i>     <span class="c1">#     # Cette méthode peut être utilisée pour sélectionner un tournoi pour la gestion des rounds</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l139">
+                  <tt><i>139</i>     <span class="c1">#     TournamentView.disp_tournaments(self.tournaments)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l140">
+                  <tt><i>140</i>     <span class="c1">#     t_id = input(&quot;Entrez l&#39;ID du tournoi pour la gestion des rounds : &quot;)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l141">
+                  <tt><i>141</i>     <span class="c1">#     return next((t for t in self.tournaments if t.t_id == t_id), None)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E303">
+               <span class="count sev-2">
+                  17
+               </span>
+               <strong>E303:</strong> too many blank lines (3)
+               
+                  (and 3 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Too many blank lines (3):</p>
+               
+               <a href="training_code.source.html#l34">
+                  <tt><i>34</i>     <span class="c1"># tournament = Tournament(1,&quot;Championnat International&quot;, &quot;Paris&quot;, &quot;Un tournoi très prestigieux&quot;, &quot;2023-07-01&quot;, &quot;2023-07-10&quot;)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (3):</p>
+               
+               <a href="training_code.source.html#l43">
+                  <tt><i>43</i>     <span class="c1"># tournament.add_player(player1)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="training_code.source.html#l53">
+                  <tt><i>53</i>     <span class="c1"># tournament.remove_player(player3)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="training_code.source.html#l61">
+                  <tt><i>61</i>     <span class="c1"># # Création d&#39;un tour</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="training_code.source.html#l65">
+                  <tt><i>65</i>     <span class="c1"># # Création et ajout de matchs au tour (association des joueurs dans les matchs)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (3):</p>
+               
+               <a href="training_code.source.html#l73">
+                  <tt><i>73</i>     <span class="c1"># round1.add_match(match1)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (3):</p>
+               
+               <a href="training_code.source.html#l90">
+                  <tt><i>90</i>     <span class="c1"># def validate_date(self, date_str, date_type, start_date=None):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (3):</p>
+               
+               <a href="training_code.source.html#l104">
+                  <tt><i>104</i> <span class="c1"># def remove_player_from_platform(self):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="training_code.source.html#l120">
+                  <tt><i>120</i>     <span class="c1"># def remove_player_from_tournament(self):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="training_code.source.html#l137">
+                  <tt><i>137</i>       <span class="c1"># def select_tournament(self):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (6):</p>
+               
+               <a href="training_code.source.html#l148">
+                  <tt><i>148</i> <span class="k">def</span> <span class="nf">simulate_match_results</span><span class="p">(</span><span class="n">match</span><span class="p">,</span> <span class="n">scores</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (3):</p>
+               
+               <a href="training_code.source.html#l158">
+                  <tt><i>158</i> <span class="k">def</span> <span class="nf">display_match_results</span><span class="p">(</span><span class="n">match</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (3):</p>
+               
+               <a href="training_code.source.html#l182">
+                  <tt><i>182</i>  <span class="c1"># def add_match(self, match):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="training_code.source.html#l190">
+                  <tt><i>190</i>     <span class="c1"># # Ajouté en guise de test</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (5):</p>
+               
+               <a href="training_code.source.html#l199">
+                  <tt><i>199</i> <span class="c1"># refactorisation des fonctions de data_manager</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="training_code.source.html#l225">
+                  <tt><i>225</i>     <span class="nd">@classmethod</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (3):</p>
+               
+               <a href="training_code.source.html#l233">
+                  <tt><i>233</i> <span class="c1"># models/player.py</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="W293">
+               <span class="count sev-2">
+                  6
+               </span>
+               <strong>W293:</strong> blank line contains whitespace
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="training_code.source.html#l42">
+                  <tt><i>42</i>     </tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l59">
+                  <tt><i>59</i>     </tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l63">
+                  <tt><i>63</i>    </tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l119">
+                  <tt><i>119</i>     </tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l171">
+                  <tt><i>171</i>     </tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l223">
+                  <tt><i>223</i>     </tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E114">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E114:</strong> indentation is not a multiple of 4 (comment)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="training_code.source.html#l137">
+                  <tt><i>137</i>       <span class="c1"># def select_tournament(self):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="training_code.source.html#l182">
+                  <tt><i>182</i>  <span class="c1"># def add_match(self, match):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E501">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E501:</strong> line too long (128 > 119 characters)
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Line too long (128 > 119 characters):</p>
+               
+               <a href="training_code.source.html#l34">
+                  <tt><i>34</i>     <span class="c1"># tournament = Tournament(1,&quot;Championnat International&quot;, &quot;Paris&quot;, &quot;Un tournoi très prestigieux&quot;, &quot;2023-07-01&quot;, &quot;2023-07-10&quot;)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (144 > 119 characters):</p>
+               
+               <a href="training_code.source.html#l125">
+                  <tt><i>125</i>     <span class="c1">#         player_to_remove = next((player for player in selected_tournament.registered_players if str(player.unique_id) == player_id), None)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E203">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E203:</strong> whitespace before ':'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="training_code.source.html#l151">
+                  <tt><i>151</i>     <span class="k">else</span> <span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E265">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E265:</strong> block comment should start with '# '
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="training_code.source.html#l86">
+                  <tt><i>86</i>     <span class="c1">#display_round_details(round1)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E301">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E301:</strong> expected 1 blank line, found 0
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="training_code.source.html#l201">
+                  <tt><i>201</i>     <span class="nd">@classmethod</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 3
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="training_code.source.html#l235">
+                  <tt><i>235</i> <span class="k">class</span> <span class="nc">Player</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

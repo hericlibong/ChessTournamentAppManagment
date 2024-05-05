@@ -1,13 +1,11 @@
-
-# controllers/round_controller.py
-
 from controllers.base_controller import BaseController
 from views.menu_view import MenuView
 from views.round_views import RoundView
 
-class RoundController(BaseController):
 
+class RoundController(BaseController):
     def manage_rounds(self, tournament):
+        """Manage et controle la gestion des rounds dans le tournoi"""
         while True:
             choice = MenuView.display_round_menu()
             if choice == '1':
@@ -31,4 +29,3 @@ class RoundController(BaseController):
                     self.save_data()
             elif choice == '4':
                 break
-

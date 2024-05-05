@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>tests\test_round.py - flake8 annotated source</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <h1>
+            <a href="tests.test_round.report.html">
+               <img src="back.svg" alt="&#x2B05;">
+               tests\test_round.py source
+            </a>
+         </h1>
+
+         <div id="doc">
+            <div id="l1"
+               class="code sev- "><tt><i>1</i> <span class="kn">import</span> <span class="nn">unittest</span></tt>
+            </div>
+            <div id="l2"
+               class="code sev- "><tt><i>2</i> <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span></tt>
+            </div>
+            <div id="l3"
+               class="code sev- "><tt><i>3</i> <span class="kn">from</span> <span class="nn">models.round</span> <span class="kn">import</span> <span class="n">Round</span></tt>
+            </div>
+            <div id="l4"
+               class="code sev- "><tt><i>4</i> <span class="kn">from</span> <span class="nn">models.player</span> <span class="kn">import</span> <span class="n">Player</span></tt>
+            </div>
+            <div id="l5"
+               class="code sev- "><tt><i>5</i> &nbsp;</tt>
+            </div>
+            <div id="l6"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>6</i> <span class="k">class</span> <span class="nc">TestRound</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span></tt>
+            </div>
+            <div id="l7"
+               class="code sev- "><tt><i>7</i> &nbsp;</tt>
+            </div>
+            <div id="l8"
+               class="code sev- "><tt><i>8</i>     <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+            </div>
+            <div id="l9"
+               class="code sev- "><tt><i>9</i>         <span class="c1"># Assurez-vous d&#39;inclure tous les paramètres requis pour créer un joueur</span></tt>
+            </div>
+            <div id="l10"
+               class="code sev- "><tt><i>10</i>         <span class="bp">self</span><span class="o">.</span><span class="n">player1</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="n">unique_id</span><span class="o">=</span><span class="s2">&quot;AL76589&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="n">firstname</span><span class="o">=</span><span class="s2">&quot;Land&quot;</span><span class="p">,</span> <span class="n">birthdate</span><span class="o">=</span><span class="s2">&quot;01/01/1990&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l11"
+               class="code sev- "><tt><i>11</i>         <span class="bp">self</span><span class="o">.</span><span class="n">player2</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="n">unique_id</span><span class="o">=</span><span class="s2">&quot;BC89065&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="n">firstname</span><span class="o">=</span><span class="s2">&quot;Denard&quot;</span><span class="p">,</span> <span class="n">birthdate</span><span class="o">=</span><span class="s2">&quot;02/02/1999&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l12"
+               class="code sev- "><tt><i>12</i>         <span class="bp">self</span><span class="o">.</span><span class="n">player1</span><span class="o">.</span><span class="n">past_opponents</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>  <span class="c1"># S&#39;assurer que les adversaires passés sont réinitialisés</span></tt>
+            </div>
+            <div id="l13"
+               class="code sev- "><tt><i>13</i>         <span class="bp">self</span><span class="o">.</span><span class="n">player2</span><span class="o">.</span><span class="n">past_opponents</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></tt>
+            </div>
+            <div id="l14"
+               class="code sev- "><tt><i>14</i> &nbsp;</tt>
+            </div>
+            <div id="l15"
+               class="code sev- "><tt><i>15</i>         <span class="c1"># Création d&#39;un round</span></tt>
+            </div>
+            <div id="l16"
+               class="code sev- "><tt><i>16</i>         <span class="bp">self</span><span class="o">.</span><span class="n">round</span> <span class="o">=</span> <span class="n">Round</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Test Round&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l17"
+               class="code sev- "><tt><i>17</i> &nbsp;</tt>
+            </div>
+            <div id="l18"
+               class="code sev- "><tt><i>18</i> &nbsp;</tt>
+            </div>
+            <div id="l19"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E303
+                     </span>
+                     Too many blank lines (2)</li>
+               
+               </ul><tt><i>19</i>     <span class="k">def</span> <span class="nf">test_end_time_serialization</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+            </div>
+            <div id="l20"
+               class="code sev- "><tt><i>20</i> <span class="w">        </span><span class="sd">&quot;&quot;&quot;Teste que l&#39;heure de fin est correctement sérialisée dans to_dict.&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l21"
+               class="code sev- "><tt><i>21</i>         <span class="bp">self</span><span class="o">.</span><span class="n">round</span><span class="o">.</span><span class="n">end_round</span><span class="p">()</span>  <span class="c1"># Définir l&#39;heure de fin</span></tt>
+            </div>
+            <div id="l22"
+               class="code sev- "><tt><i>22</i>         <span class="n">round_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">round</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span></tt>
+            </div>
+            <div id="l23"
+               class="code sev- "><tt><i>23</i>         <span class="bp">self</span><span class="o">.</span><span class="n">assertIsNotNone</span><span class="p">(</span><span class="n">round_dict</span><span class="p">[</span><span class="s1">&#39;end_time&#39;</span><span class="p">])</span>  <span class="c1"># S&#39;assurer que l&#39;heure de fin n&#39;est pas None</span></tt>
+            </div>
+            <div id="l24"
+               class="code sev- "><tt><i>24</i>         <span class="bp">self</span><span class="o">.</span><span class="n">assertIsInstance</span><span class="p">(</span><span class="n">round_dict</span><span class="p">[</span><span class="s1">&#39;end_time&#39;</span><span class="p">],</span> <span class="nb">str</span><span class="p">)</span>  <span class="c1"># S&#39;assurer que l&#39;heure de fin est une chaîne</span></tt>
+            </div>
+            <div id="l25"
+               class="code sev- "><tt><i>25</i>         <span class="c1"># Vérifier le format de la date</span></tt>
+            </div>
+            <div id="l26"
+               class="code sev- "><tt><i>26</i>         <span class="k">try</span><span class="p">:</span></tt>
+            </div>
+            <div id="l27"
+               class="code sev- "><tt><i>27</i>             <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">round_dict</span><span class="p">[</span><span class="s1">&#39;end_time&#39;</span><span class="p">],</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M&#39;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l28"
+               class="code sev- "><tt><i>28</i>             <span class="n">format_is_correct</span> <span class="o">=</span> <span class="kc">True</span></tt>
+            </div>
+            <div id="l29"
+               class="code sev- "><tt><i>29</i>         <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span></tt>
+            </div>
+            <div id="l30"
+               class="code sev- "><tt><i>30</i>             <span class="n">format_is_correct</span> <span class="o">=</span> <span class="kc">False</span></tt>
+            </div>
+            <div id="l31"
+               class="code sev- "><tt><i>31</i>         <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">format_is_correct</span><span class="p">,</span> <span class="s2">&quot;Le format de la date de fin doit être &#39;%Y-%m-</span><span class="si">%d</span><span class="s2"> %H:%M&#39;&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l32"
+               class="code sev- "><tt><i>32</i> &nbsp;</tt>
+            </div>
+            <div id="l33"
+               class="code sev- "><tt><i>33</i>     <span class="k">def</span> <span class="nf">test_round_initialization</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+            </div>
+            <div id="l34"
+               class="code sev- "><tt><i>34</i> <span class="w">        </span><span class="sd">&quot;&quot;&quot;Teste si un round est correctement initialisé.&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l35"
+               class="code sev- "><tt><i>35</i>         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">round</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;Test Round&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l36"
+               class="code sev- "><tt><i>36</i>         <span class="bp">self</span><span class="o">.</span><span class="n">assertIsNone</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">round</span><span class="o">.</span><span class="n">start_time</span><span class="p">)</span></tt>
+            </div>
+            <div id="l37"
+               class="code sev- "><tt><i>37</i>         <span class="bp">self</span><span class="o">.</span><span class="n">assertFalse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">round</span><span class="o">.</span><span class="n">is_complete</span><span class="p">)</span></tt>
+            </div>
+            <div id="l38"
+               class="code sev- "><tt><i>38</i>         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">round</span><span class="o">.</span><span class="n">matches</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span></tt>
+            </div>
+            <div id="l39"
+               class="code sev- "><tt><i>39</i> &nbsp;</tt>
+            </div>
+            <div id="l40"
+               class="code sev- "><tt><i>40</i>     <span class="k">def</span> <span class="nf">test_add_match</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+            </div>
+            <div id="l41"
+               class="code sev- "><tt><i>41</i> <span class="w">        </span><span class="sd">&quot;&quot;&quot;Teste l&#39;ajout d&#39;un match au round.&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l42"
+               class="code sev- "><tt><i>42</i>         <span class="bp">self</span><span class="o">.</span><span class="n">round</span><span class="o">.</span><span class="n">add_match</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">player1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">player2</span><span class="p">,</span> <span class="nb">set</span><span class="p">())</span></tt>
+            </div>
+            <div id="l43"
+               class="code sev- "><tt><i>43</i>         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">round</span><span class="o">.</span><span class="n">matches</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Vérifie qu&#39;un match a été ajouté</span></tt>
+            </div>
+            <div id="l44"
+               class="code sev- "><tt><i>44</i> &nbsp;</tt>
+            </div>
+            <div id="l45"
+               class="code sev- "><tt><i>45</i>     <span class="k">def</span> <span class="nf">test_add_match_prevents_duplicates</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+            </div>
+            <div id="l46"
+               class="code sev- "><tt><i>46</i> <span class="w">        </span><span class="sd">&quot;&quot;&quot;Teste que l&#39;ajout de matchs en double est empêché.&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l47"
+               class="code sev- "><tt><i>47</i>         <span class="n">current_matches</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></tt>
+            </div>
+            <div id="l48"
+               class="code sev- "><tt><i>48</i>         <span class="bp">self</span><span class="o">.</span><span class="n">round</span><span class="o">.</span><span class="n">add_match</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">player1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">player2</span><span class="p">,</span> <span class="n">current_matches</span><span class="p">)</span></tt>
+            </div>
+            <div id="l49"
+               class="code sev- "><tt><i>49</i>         <span class="bp">self</span><span class="o">.</span><span class="n">round</span><span class="o">.</span><span class="n">add_match</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">player1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">player2</span><span class="p">,</span> <span class="n">current_matches</span><span class="p">)</span></tt>
+            </div>
+            <div id="l50"
+               class="code sev- "><tt><i>50</i>         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">round</span><span class="o">.</span><span class="n">matches</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Seul un match doit être ajouté</span></tt>
+            </div>
+            <div id="l51"
+               class="code sev- "><tt><i>51</i> &nbsp;</tt>
+            </div>
+            <div id="l52"
+               class="code sev- "><tt><i>52</i>     <span class="k">def</span> <span class="nf">test_end_round</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+            </div>
+            <div id="l53"
+               class="code sev- "><tt><i>53</i> <span class="w">        </span><span class="sd">&quot;&quot;&quot;Teste que le round peut être terminé et que l&#39;heure de fin est correctement enregistrée.&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l54"
+               class="code sev- "><tt><i>54</i>         <span class="bp">self</span><span class="o">.</span><span class="n">round</span><span class="o">.</span><span class="n">end_round</span><span class="p">()</span></tt>
+            </div>
+            <div id="l55"
+               class="code sev- "><tt><i>55</i>         <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">round</span><span class="o">.</span><span class="n">is_complete</span><span class="p">)</span></tt>
+            </div>
+            <div id="l56"
+               class="code sev- "><tt><i>56</i>         <span class="bp">self</span><span class="o">.</span><span class="n">assertIsNotNone</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">round</span><span class="o">.</span><span class="n">end_time</span><span class="p">)</span>  <span class="c1"># Vérifie que l&#39;heure de fin est bien enregistrée</span></tt>
+            </div>
+            <div id="l57"
+               class="code sev- "><tt><i>57</i>         <span class="bp">self</span><span class="o">.</span><span class="n">assertIsInstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">round</span><span class="o">.</span><span class="n">end_time</span><span class="p">,</span> <span class="n">datetime</span><span class="p">)</span>  <span class="c1"># Vérifie que end_time est bien un objet datetime</span></tt>
+            </div>
+            <div id="l58"
+               class="code sev- "><tt><i>58</i> &nbsp;</tt>
+            </div>
+            <div id="l59"
+               class="code sev- "><tt><i>59</i> &nbsp;</tt>
+            </div>
+            <div id="l60"
+               class="code sev- "><tt><i>60</i> <span class="c1"># Ceci permet d&#39;exécuter les tests si ce script est exécuté directement</span></tt>
+            </div>
+            <div id="l61"
+               class="code sev- "><tt><i>61</i> <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span></tt>
+            </div>
+            <div id="l62"
+               class="code sev- "><tt><i>62</i>     <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span></tt>
+            </div>
+            
+         </div>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: views\player_views.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="views.player_views.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               views\player_views.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F401">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F401:</strong> 'datetime.datetime' imported but unused
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="views.player_views.source.html#l3">
+                  <tt><i>3</i> <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="W293">
+               <span class="count sev-2">
+                  6
+               </span>
+               <strong>W293:</strong> blank line contains whitespace
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="views.player_views.source.html#l19">
+                  <tt><i>19</i>         </tt>
+               </a>
+            </li><li>
+               
+               <a href="views.player_views.source.html#l27">
+                  <tt><i>27</i>         </tt>
+               </a>
+            </li><li>
+               
+               <a href="views.player_views.source.html#l29">
+                  <tt><i>29</i>         </tt>
+               </a>
+            </li><li>
+               
+               <a href="views.player_views.source.html#l42">
+                  <tt><i>42</i>     </tt>
+               </a>
+            </li><li>
+               
+               <a href="views.player_views.source.html#l52">
+                  <tt><i>52</i>         </tt>
+               </a>
+            </li><li>
+               
+               <a href="views.player_views.source.html#l60">
+                  <tt><i>60</i>         </tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E303">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E303:</strong> too many blank lines (2)
+               
+                  (and 2 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="views.player_views.source.html#l31">
+                  <tt><i>31</i>         <span class="c1"># Valider l&#39;identifiant unique</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (3):</p>
+               
+               <a href="views.player_views.source.html#l45">
+                  <tt><i>45</i>     <span class="nd">@staticmethod</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (6):</p>
+               
+               <a href="views.player_views.source.html#l78">
+                  <tt><i>78</i>     <span class="nd">@staticmethod</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="W291">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>W291:</strong> trailing whitespace
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="views.player_views.source.html#l10">
+                  <tt><i>10</i> <span class="w">        </span><span class="sd">&quot;&quot;&quot; </span></tt>
+               </a>
+            </li><li>
+               
+               <a href="views.player_views.source.html#l26">
+                  <tt><i>26</i>                 <span class="k">break</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="views.player_views.source.html#l38">
+                  <tt><i>38</i>             <span class="k">else</span> <span class="p">:</span> </tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E501">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E501:</strong> line too long (139 > 119 characters)
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Line too long (139 > 119 characters):</p>
+               
+               <a href="views.player_views.source.html#l81">
+                  <tt><i>81</i> <span class="sd">        Affiche la liste de tournois disponibles pour permettre à l&#39;utilisateur de sélectionner celui auquel il souhaite ajouter un joueur.</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (178 > 119 characters):</p>
+               
+               <a href="views.player_views.source.html#l88">
+                  <tt><i>88</i>             <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">tournament</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> - Lieu : </span><span class="si">{</span><span class="n">tournament</span><span class="o">.</span><span class="n">location</span><span class="si">}</span><span class="s2">, Dates : </span><span class="si">{</span><span class="n">tournament</span><span class="o">.</span><span class="n">start_date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">/%m/%Y&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2"> à </span><span class="si">{</span><span class="n">tournament</span><span class="o">.</span><span class="n">end_date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">/%m/%Y&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E203">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E203:</strong> whitespace before ':'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="views.player_views.source.html#l38">
+                  <tt><i>38</i>             <span class="k">else</span> <span class="p">:</span> </tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="views.player_views.source.html#l6">
+                  <tt><i>6</i> <span class="k">class</span> <span class="nc">PlayerView</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

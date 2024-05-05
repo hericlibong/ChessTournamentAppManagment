@@ -1,5 +1,3 @@
-# util/config.py
-
 import os
 
 

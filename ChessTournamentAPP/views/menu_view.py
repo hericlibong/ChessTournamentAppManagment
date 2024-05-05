@@ -2,7 +2,6 @@
 
 class MenuView:
     """Creation du menu"""
-    
 
     @staticmethod
     def display_main_menu():
@@ -13,7 +12,6 @@ class MenuView:
         print("3. Quitter l'application")
         choice = input("Entrez le choix : ")
         return choice
-    
 
     @staticmethod
     def display_tournament_menu():
@@ -28,7 +26,7 @@ class MenuView:
         print("7. Retour au menu principal")
         choice = input("Entrez votre choix : ")
         return choice
-    
+
     @staticmethod
     def display_player_menu():
         print("\nGestion des Joueurs :")
@@ -40,8 +38,6 @@ class MenuView:
 
         print("--------------")
         return choice
-    
-
 
     @staticmethod
     def display_round_menu():

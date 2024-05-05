@@ -4,9 +4,12 @@ from util.data_manager import load_tournaments, save_tournaments, load_players, 
 
 
 class BaseController:
-    tournaments = load_tournaments()  # Chargement statique des tournois
-    players = load_players()          # Chargement statique des joueurs
+    """Base controller that manages data loading and saving operations."""
+
+    tournaments = load_tournaments()  # Load static tournaments data
+    players = load_players()          # Load static players data
 
     def save_data(self):
-        save_tournaments(BaseController.tournaments)  # Sauvegarde des tournois
-        save_players(BaseController.players)  
+        """Save data to persistent storage."""
+        save_tournaments(BaseController.tournaments)  # Save tournaments to the file system
+        save_players(BaseController.players)          # Save players to the file system

@@ -98,17 +98,17 @@ class TournamentController(BaseController):
             if tournament.rounds:
                 for round in tournament.rounds:
                     matches_table = PrettyTable()
-                    matches_table.field_names = ["Match #", "Nom P1", "Rang P1", "Score P1", "vs.", "Nom P2", "Rang P2", "Score P2"]
+                    matches_table.field_names = ["Match #", "Nom P1", "Score P1", "vs.", "Nom P2", "Score P2"]
 
                     for index, match in enumerate(round.matches, start=1):
                         matches_table.add_row([
                             index,
                             match.players[0].name,
-                            "Rank P1",  # Remplacez par l'attribut réel si disponible
+                            #"Rank P1",  # Remplacez par l'attribut réel si disponible
                             match.results[0],
                             "vs.",
                             match.players[1].name,
-                            "Rank P2",  # Remplacez par l'attribut réel si disponible
+                            #"Rank P2",  # Remplacez par l'attribut réel si disponible
                             match.results[1]
                         ])
 

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: views\round_views.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="views.round_views.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               views\round_views.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="E303">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E303:</strong> too many blank lines (5)
+               
+                  (and 2 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Too many blank lines (5):</p>
+               
+               <a href="views.round_views.source.html#l38">
+                  <tt><i>38</i> <span class="c1">#     @staticmethod</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (4):</p>
+               
+               <a href="views.round_views.source.html#l88">
+                  <tt><i>88</i> <span class="k">class</span> <span class="nc">RoundView</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="views.round_views.source.html#l133">
+                  <tt><i>133</i>     <span class="c1"># @staticmethod</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E501">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E501:</strong> line too long (148 > 119 characters)
+               
+                  (and 2 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Line too long (148 > 119 characters):</p>
+               
+               <a href="views.round_views.source.html#l49">
+                  <tt><i>49</i> <span class="c1">#                 print(f&quot;Match entre {match.players[0].firstname} {match.players[0].name} et {match.players[1].firstname} {match.players[1].name}&quot;)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (141 > 119 characters):</p>
+               
+               <a href="views.round_views.source.html#l69">
+                  <tt><i>69</i> <span class="c1">#         Affiche la liste de tournois disponibles pour permettre à l&#39;utilisateur de sélectionner celui auquel il souhaite ajouter un joueur.</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (180 > 119 characters):</p>
+               
+               <a href="views.round_views.source.html#l73">
+                  <tt><i>73</i> <span class="c1">#             print(f&quot;{index}. {tournament.name} - Lieu : {tournament.location}, Dates : {tournament.start_date.strftime(&#39;%d/%m/%Y&#39;)} à {tournament.end_date.strftime(&#39;%d/%m/%Y&#39;)}&quot;)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="W293">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>W293:</strong> blank line contains whitespace
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="views.round_views.source.html#l34">
+                  <tt><i>34</i>    </tt>
+               </a>
+            </li><li>
+               
+               <a href="views.round_views.source.html#l58">
+                  <tt><i>58</i>     </tt>
+               </a>
+            </li><li>
+               
+               <a href="views.round_views.source.html#l116">
+                  <tt><i>116</i>     </tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E301">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E301:</strong> expected 1 blank line, found 0
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="views.round_views.source.html#l138">
+                  <tt><i>138</i>     <span class="nd">@staticmethod</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

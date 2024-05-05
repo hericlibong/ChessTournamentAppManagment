@@ -26,8 +26,8 @@
         "birthdate": "25/04/2001",
         "unique_id": "CP25042",
         "past_opponents": [
-            "AR29071",
-            "CK10121"
+            "CK10121",
+            "AR29071"
         ]
     },
     {
@@ -49,21 +49,34 @@
         "firstname": "Paul",
         "birthdate": "07/10/1987",
         "unique_id": "AP07101",
-        "past_opponents": []
+        "past_opponents": [
+            "HL24031",
+            "BW15041",
+            "PP25021",
+            "EH24041"
+        ]
     },
     {
         "name": "Libong",
         "firstname": "Heric",
         "birthdate": "24/03/1969",
         "unique_id": "HL24031",
-        "past_opponents": []
+        "past_opponents": [
+            "BW15041",
+            "PP25021"
+        ]
     },
     {
         "name": "Harris",
         "firstname": "Ed",
         "birthdate": "24/04/1965",
         "unique_id": "EH24041",
-        "past_opponents": []
+        "past_opponents": [
+            "HL24031",
+            "BW15041",
+            "PP25021",
+            "AP07101"
+        ]
     },
     {
         "name": "Coffe",
@@ -84,14 +97,20 @@
         "firstname": "Peter",
         "birthdate": "25/02/1977",
         "unique_id": "PP25021",
-        "past_opponents": []
+        "past_opponents": [
+            "HL24031",
+            "BW15041"
+        ]
     },
     {
         "name": "Wayne",
         "firstname": "Bruce",
         "birthdate": "15/04/1968",
         "unique_id": "BW15041",
-        "past_opponents": []
+        "past_opponents": [
+            "HL24031",
+            "PP25021"
+        ]
     },
     {
         "name": "Kent",

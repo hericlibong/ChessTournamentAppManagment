@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>views\round_views.py - flake8 annotated source</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <h1>
+            <a href="views.round_views.report.html">
+               <img src="back.svg" alt="&#x2B05;">
+               views\round_views.py source
+            </a>
+         </h1>
+
+         <div id="doc">
+            <div id="l1"
+               class="code sev- "><tt><i>1</i> <span class="c1"># views/round_views.py</span></tt>
+            </div>
+            <div id="l2"
+               class="code sev- "><tt><i>2</i> <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span></tt>
+            </div>
+            <div id="l3"
+               class="code sev- "><tt><i>3</i> &nbsp;</tt>
+            </div>
+            <div id="l4"
+               class="code sev- "><tt><i>4</i> <span class="c1"># class RoundView:</span></tt>
+            </div>
+            <div id="l5"
+               class="code sev- "><tt><i>5</i> <span class="c1">#     @staticmethod</span></tt>
+            </div>
+            <div id="l6"
+               class="code sev- "><tt><i>6</i> <span class="c1">#     def create_round():</span></tt>
+            </div>
+            <div id="l7"
+               class="code sev- "><tt><i>7</i> <span class="c1">#         &quot;&quot;&quot;Permet à l&#39;utilisateur de saisir les informations pour créer un nouveau round.&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l8"
+               class="code sev- "><tt><i>8</i> <span class="c1">#         round_name = input(&quot;Entrez le nom du round : &quot;)</span></tt>
+            </div>
+            <div id="l9"
+               class="code sev- "><tt><i>9</i> <span class="c1">#         start_choice = input(&quot;Voulez-vous spécifier une heure de début ? (o/n) : &quot;)</span></tt>
+            </div>
+            <div id="l10"
+               class="code sev- "><tt><i>10</i> <span class="c1">#         start_time = None</span></tt>
+            </div>
+            <div id="l11"
+               class="code sev- "><tt><i>11</i> <span class="c1">#         if start_choice.lower() == &#39;o&#39;:</span></tt>
+            </div>
+            <div id="l12"
+               class="code sev- "><tt><i>12</i> <span class="c1">#             start_time_input = input(&quot;Entrez l&#39;heure de début (format YYYY-MM-DD HH:MM) : &quot;)</span></tt>
+            </div>
+            <div id="l13"
+               class="code sev- "><tt><i>13</i> <span class="c1">#             try:</span></tt>
+            </div>
+            <div id="l14"
+               class="code sev- "><tt><i>14</i> <span class="c1">#                 start_time = datetime.strptime(start_time_input, &quot;%Y-%m-%d %H:%M&quot;)</span></tt>
+            </div>
+            <div id="l15"
+               class="code sev- "><tt><i>15</i> <span class="c1">#             except ValueError:</span></tt>
+            </div>
+            <div id="l16"
+               class="code sev- "><tt><i>16</i> <span class="c1">#                 print(&quot;Format de date invalide, le round commencera immédiatement.&quot;) # Réfléchir sur cette option</span></tt>
+            </div>
+            <div id="l17"
+               class="code sev- "><tt><i>17</i> <span class="c1">#         return round_name, start_time</span></tt>
+            </div>
+            <div id="l18"
+               class="code sev- "><tt><i>18</i> &nbsp;</tt>
+            </div>
+            <div id="l19"
+               class="code sev- "><tt><i>19</i> <span class="c1">#     @staticmethod</span></tt>
+            </div>
+            <div id="l20"
+               class="code sev- "><tt><i>20</i> <span class="c1">#     def start_round(tournament):</span></tt>
+            </div>
+            <div id="l21"
+               class="code sev- "><tt><i>21</i> <span class="c1">#         &quot;&quot;&quot;Permet à l&#39;utilisateur de démarrer un round spécifié.&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l22"
+               class="code sev- "><tt><i>22</i> <span class="c1">#         RoundView.display_rounds(tournament)</span></tt>
+            </div>
+            <div id="l23"
+               class="code sev- "><tt><i>23</i> <span class="c1">#         round_index = int(input(&quot;Entrez le numéro du round à démarrer : &quot;)) - 1</span></tt>
+            </div>
+            <div id="l24"
+               class="code sev- "><tt><i>24</i> <span class="c1">#         if round_index &lt; 0 or round_index &gt;= len(tournament.rounds):</span></tt>
+            </div>
+            <div id="l25"
+               class="code sev- "><tt><i>25</i> <span class="c1">#             print(&quot;Numéro de round invalide.&quot;)</span></tt>
+            </div>
+            <div id="l26"
+               class="code sev- "><tt><i>26</i> <span class="c1">#             return</span></tt>
+            </div>
+            <div id="l27"
+               class="code sev- "><tt><i>27</i> <span class="c1">#         selected_round = tournament.rounds[round_index]</span></tt>
+            </div>
+            <div id="l28"
+               class="code sev- "><tt><i>28</i> <span class="c1">#         if selected_round.start_time is None:</span></tt>
+            </div>
+            <div id="l29"
+               class="code sev- "><tt><i>29</i> <span class="c1">#             tournament.start_round(selected_round.name)</span></tt>
+            </div>
+            <div id="l30"
+               class="code sev- "><tt><i>30</i> <span class="c1">#             print(f&quot;Round &#39;{selected_round.name}&#39; a commencé.&quot;)</span></tt>
+            </div>
+            <div id="l31"
+               class="code sev- "><tt><i>31</i> <span class="c1">#         else:</span></tt>
+            </div>
+            <div id="l32"
+               class="code sev- "><tt><i>32</i> <span class="c1">#             print(&quot;Ce round a déjà été démarré.&quot;)</span></tt>
+            </div>
+            <div id="l33"
+               class="code sev- "><tt><i>33</i> &nbsp;</tt>
+            </div>
+            <div id="l34"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        W293
+                     </span>
+                     Blank line contains whitespace</li>
+               
+               </ul><tt><i>34</i>    </tt>
+            </div>
+            <div id="l35"
+               class="code sev- "><tt><i>35</i> &nbsp;</tt>
+            </div>
+            <div id="l36"
+               class="code sev- "><tt><i>36</i> &nbsp;</tt>
+            </div>
+            <div id="l37"
+               class="code sev- "><tt><i>37</i> &nbsp;</tt>
+            </div>
+            <div id="l38"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E303
+                     </span>
+                     Too many blank lines (5)</li>
+               
+               </ul><tt><i>38</i> <span class="c1">#     @staticmethod</span></tt>
+            </div>
+            <div id="l39"
+               class="code sev- "><tt><i>39</i> <span class="c1">#     def end_round(tournament):</span></tt>
+            </div>
+            <div id="l40"
+               class="code sev- "><tt><i>40</i> <span class="c1">#         &quot;&quot;&quot;Permet à l&#39;utilisateur de terminer un round spécifié.&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l41"
+               class="code sev- "><tt><i>41</i> <span class="c1">#         RoundView.display_rounds(tournament)</span></tt>
+            </div>
+            <div id="l42"
+               class="code sev- "><tt><i>42</i> <span class="c1">#         round_index = int(input(&quot;Entrez le numéro du round à terminer : &quot;)) - 1</span></tt>
+            </div>
+            <div id="l43"
+               class="code sev- "><tt><i>43</i> <span class="c1">#         if round_index &lt; 0 or round_index &gt;= len(tournament.rounds):</span></tt>
+            </div>
+            <div id="l44"
+               class="code sev- "><tt><i>44</i> <span class="c1">#             print(&quot;Numéro de round invalide.&quot;)</span></tt>
+            </div>
+            <div id="l45"
+               class="code sev- "><tt><i>45</i> <span class="c1">#             return</span></tt>
+            </div>
+            <div id="l46"
+               class="code sev- "><tt><i>46</i> <span class="c1">#         selected_round = tournament.rounds[round_index]</span></tt>
+            </div>
+            <div id="l47"
+               class="code sev- "><tt><i>47</i> <span class="c1">#         if selected_round.start_time and not selected_round.is_complete:</span></tt>
+            </div>
+            <div id="l48"
+               class="code sev- "><tt><i>48</i> <span class="c1">#             for match in selected_round.matches:</span></tt>
+            </div>
+            <div id="l49"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E501
+                     </span>
+                     Line too long (148 > 119 characters)</li>
+               
+               </ul><tt><i>49</i> <span class="c1">#                 print(f&quot;Match entre {match.players[0].firstname} {match.players[0].name} et {match.players[1].firstname} {match.players[1].name}&quot;)</span></tt>
+            </div>
+            <div id="l50"
+               class="code sev- "><tt><i>50</i> <span class="c1">#                 result = input(&quot;Entrez le résultat (1-0, 0-1, 0.5-0.5) : &quot;)</span></tt>
+            </div>
+            <div id="l51"
+               class="code sev- "><tt><i>51</i> <span class="c1">#                 match.set_results(tuple(map(float, result.split(&#39;-&#39;))))</span></tt>
+            </div>
+            <div id="l52"
+               class="code sev- "><tt><i>52</i> <span class="c1">#             selected_round.is_complete = True</span></tt>
+            </div>
+            <div id="l53"
+               class="code sev- "><tt><i>53</i> <span class="c1">#             selected_round.end_time = datetime.now()  # Définir l&#39;heure de fin lors de la terminaison du round</span></tt>
+            </div>
+            <div id="l54"
+               class="code sev- "><tt><i>54</i> <span class="c1">#             print(f&quot;Round &#39;{selected_round.name}&#39; terminé à {selected_round.end_time.strftime(&#39;%Y-%m-%d %H:%M&#39;)}.&quot;)</span></tt>
+            </div>
+            <div id="l55"
+               class="code sev- "><tt><i>55</i> <span class="c1">#         else:</span></tt>
+            </div>
+            <div id="l56"
+               class="code sev- "><tt><i>56</i> <span class="c1">#             print(&quot;Ce round ne peut pas être terminé (non commencé ou déjà terminé).&quot;)</span></tt>
+            </div>
+            <div id="l57"
+               class="code sev- "><tt><i>57</i> &nbsp;</tt>
+            </div>
+            <div id="l58"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        W293
+                     </span>
+                     Blank line contains whitespace</li>
+               
+               </ul><tt><i>58</i>     </tt>
+            </div>
+            <div id="l59"
+               class="code sev- "><tt><i>59</i> <span class="c1">#     @staticmethod</span></tt>
+            </div>
+            <div id="l60"
+               class="code sev- "><tt><i>60</i> <span class="c1">#     def display_rounds(tournament):</span></tt>
+            </div>
+            <div id="l61"
+               class="code sev- "><tt><i>61</i> <span class="c1">#         print(&quot;\nListe des Rounds :&quot;)</span></tt>
+            </div>
+            <div id="l62"
+               class="code sev- "><tt><i>62</i> <span class="c1">#         for index, rnd in enumerate(tournament.rounds):</span></tt>
+            </div>
+            <div id="l63"
+               class="code sev- "><tt><i>63</i> <span class="c1">#             status = &quot;Non commencé&quot; if not rnd.start_time else &quot;Terminé&quot; if rnd.is_complete else &quot;En cours&quot;</span></tt>
+            </div>
+            <div id="l64"
+               class="code sev- "><tt><i>64</i> <span class="c1">#             print(f&quot;{index + 1}. Round: {rnd.name}, Statut: {status}&quot;)</span></tt>
+            </div>
+            <div id="l65"
+               class="code sev- "><tt><i>65</i> &nbsp;</tt>
+            </div>
+            <div id="l66"
+               class="code sev- "><tt><i>66</i> <span class="c1">#     @staticmethod</span></tt>
+            </div>
+            <div id="l67"
+               class="code sev- "><tt><i>67</i> <span class="c1">#     def display_tournaments_for_selection(tournaments):</span></tt>
+            </div>
+            <div id="l68"
+               class="code sev- "><tt><i>68</i> <span class="c1">#         &quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l69"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E501
+                     </span>
+                     Line too long (141 > 119 characters)</li>
+               
+               </ul><tt><i>69</i> <span class="c1">#         Affiche la liste de tournois disponibles pour permettre à l&#39;utilisateur de sélectionner celui auquel il souhaite ajouter un joueur.</span></tt>
+            </div>
+            <div id="l70"
+               class="code sev- "><tt><i>70</i> <span class="c1">#         &quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l71"
+               class="code sev- "><tt><i>71</i> <span class="c1">#         print(&quot;Sélectionnez un tournoi pour y ajouter un round :&quot;)</span></tt>
+            </div>
+            <div id="l72"
+               class="code sev- "><tt><i>72</i> <span class="c1">#         for index, tournament in enumerate(tournaments, start=1):</span></tt>
+            </div>
+            <div id="l73"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E501
+                     </span>
+                     Line too long (180 > 119 characters)</li>
+               
+               </ul><tt><i>73</i> <span class="c1">#             print(f&quot;{index}. {tournament.name} - Lieu : {tournament.location}, Dates : {tournament.start_date.strftime(&#39;%d/%m/%Y&#39;)} à {tournament.end_date.strftime(&#39;%d/%m/%Y&#39;)}&quot;)</span></tt>
+            </div>
+            <div id="l74"
+               class="code sev- "><tt><i>74</i> <span class="c1">#         choice = input(&quot;Entrez le numéro du tournoi : &quot;)</span></tt>
+            </div>
+            <div id="l75"
+               class="code sev- "><tt><i>75</i> <span class="c1">#         try:</span></tt>
+            </div>
+            <div id="l76"
+               class="code sev- "><tt><i>76</i> <span class="c1">#             selected_index = int(choice) - 1</span></tt>
+            </div>
+            <div id="l77"
+               class="code sev- "><tt><i>77</i> <span class="c1">#             if 0 &lt;= selected_index &lt; len(tournaments):</span></tt>
+            </div>
+            <div id="l78"
+               class="code sev- "><tt><i>78</i> <span class="c1">#                 return tournaments[selected_index]</span></tt>
+            </div>
+            <div id="l79"
+               class="code sev- "><tt><i>79</i> <span class="c1">#             else:</span></tt>
+            </div>
+            <div id="l80"
+               class="code sev- "><tt><i>80</i> <span class="c1">#                 print(&quot;Sélection invalide. Veuillez réessayer.&quot;)</span></tt>
+            </div>
+            <div id="l81"
+               class="code sev- "><tt><i>81</i> <span class="c1">#         except ValueError:</span></tt>
+            </div>
+            <div id="l82"
+               class="code sev- "><tt><i>82</i> <span class="c1">#             print(&quot;Veuillez entrer un nombre valide.&quot;)</span></tt>
+            </div>
+            <div id="l83"
+               class="code sev- "><tt><i>83</i> <span class="c1">#         return None</span></tt>
+            </div>
+            <div id="l84"
+               class="code sev- "><tt><i>84</i> &nbsp;</tt>
+            </div>
+            <div id="l85"
+               class="code sev- "><tt><i>85</i> &nbsp;</tt>
+            </div>
+            <div id="l86"
+               class="code sev- "><tt><i>86</i> &nbsp;</tt>
+            </div>
+            <div id="l87"
+               class="code sev- "><tt><i>87</i> &nbsp;</tt>
+            </div>
+            <div id="l88"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E303
+                     </span>
+                     Too many blank lines (4)</li>
+               
+               </ul><tt><i>88</i> <span class="k">class</span> <span class="nc">RoundView</span><span class="p">:</span></tt>
+            </div>
+            <div id="l89"
+               class="code sev- "><tt><i>89</i>     <span class="nd">@staticmethod</span></tt>
+            </div>
+            <div id="l90"
+               class="code sev- "><tt><i>90</i>     <span class="k">def</span> <span class="nf">create_round_info</span><span class="p">():</span></tt>
+            </div>
+            <div id="l91"
+               class="code sev- "><tt><i>91</i> <span class="w">        </span><span class="sd">&quot;&quot;&quot;Collecte les informations pour créer un nouveau round.&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l92"
+               class="code sev- "><tt><i>92</i>         <span class="n">round_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez le nom du round : &quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l93"
+               class="code sev- "><tt><i>93</i>         <span class="n">start_choice</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Voulez-vous spécifier une heure de début ? (o/n) : &quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l94"
+               class="code sev- "><tt><i>94</i>         <span class="n">start_time</span> <span class="o">=</span> <span class="kc">None</span></tt>
+            </div>
+            <div id="l95"
+               class="code sev- "><tt><i>95</i>         <span class="k">if</span> <span class="n">start_choice</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;o&#39;</span><span class="p">:</span></tt>
+            </div>
+            <div id="l96"
+               class="code sev- "><tt><i>96</i>             <span class="n">start_time_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez l&#39;heure de début (format YYYY-MM-DD HH:MM) : &quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l97"
+               class="code sev- "><tt><i>97</i>             <span class="k">try</span><span class="p">:</span></tt>
+            </div>
+            <div id="l98"
+               class="code sev- "><tt><i>98</i>                 <span class="n">start_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">start_time_input</span><span class="p">,</span> <span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2"> %H:%M&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l99"
+               class="code sev- "><tt><i>99</i>             <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span></tt>
+            </div>
+            <div id="l100"
+               class="code sev- "><tt><i>100</i>                 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Format de date invalide.&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l101"
+               class="code sev- "><tt><i>101</i>         <span class="k">return</span> <span class="n">round_name</span><span class="p">,</span> <span class="n">start_time</span></tt>
+            </div>
+            <div id="l102"
+               class="code sev- "><tt><i>102</i> &nbsp;</tt>
+            </div>
+            <div id="l103"
+               class="code sev- "><tt><i>103</i>     <span class="nd">@staticmethod</span></tt>
+            </div>
+            <div id="l104"
+               class="code sev- "><tt><i>104</i>     <span class="k">def</span> <span class="nf">select_round_to_start</span><span class="p">(</span><span class="n">tournament</span><span class="p">):</span></tt>
+            </div>
+            <div id="l105"
+               class="code sev- "><tt><i>105</i> <span class="w">        </span><span class="sd">&quot;&quot;&quot;Demande à l&#39;utilisateur de sélectionner un round à démarrer.&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l106"
+               class="code sev- "><tt><i>106</i>         <span class="n">RoundView</span><span class="o">.</span><span class="n">display_rounds</span><span class="p">(</span><span class="n">tournament</span><span class="p">)</span></tt>
+            </div>
+            <div id="l107"
+               class="code sev- "><tt><i>107</i>         <span class="n">round_index</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez le numéro du round à démarrer : &quot;</span><span class="p">))</span> <span class="o">-</span> <span class="mi">1</span></tt>
+            </div>
+            <div id="l108"
+               class="code sev- "><tt><i>108</i>         <span class="k">return</span> <span class="n">round_index</span></tt>
+            </div>
+            <div id="l109"
+               class="code sev- "><tt><i>109</i> &nbsp;</tt>
+            </div>
+            <div id="l110"
+               class="code sev- "><tt><i>110</i>     <span class="nd">@staticmethod</span></tt>
+            </div>
+            <div id="l111"
+               class="code sev- "><tt><i>111</i>     <span class="k">def</span> <span class="nf">select_round_to_end</span><span class="p">(</span><span class="n">tournament</span><span class="p">):</span></tt>
+            </div>
+            <div id="l112"
+               class="code sev- "><tt><i>112</i> <span class="w">        </span><span class="sd">&quot;&quot;&quot;Demande à l&#39;utilisateur de sélectionner un round à terminer.&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l113"
+               class="code sev- "><tt><i>113</i>         <span class="n">RoundView</span><span class="o">.</span><span class="n">display_rounds</span><span class="p">(</span><span class="n">tournament</span><span class="p">)</span></tt>
+            </div>
+            <div id="l114"
+               class="code sev- "><tt><i>114</i>         <span class="n">round_index</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez le numéro du round à terminer : &quot;</span><span class="p">))</span> <span class="o">-</span> <span class="mi">1</span></tt>
+            </div>
+            <div id="l115"
+               class="code sev- "><tt><i>115</i>         <span class="k">return</span> <span class="n">round_index</span></tt>
+            </div>
+            <div id="l116"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        W293
+                     </span>
+                     Blank line contains whitespace</li>
+               
+               </ul><tt><i>116</i>     </tt>
+            </div>
+            <div id="l117"
+               class="code sev- "><tt><i>117</i>     <span class="nd">@staticmethod</span></tt>
+            </div>
+            <div id="l118"
+               class="code sev- "><tt><i>118</i>     <span class="k">def</span> <span class="nf">get_round_results</span><span class="p">(</span><span class="n">tournament</span><span class="p">):</span></tt>
+            </div>
+            <div id="l119"
+               class="code sev- "><tt><i>119</i> <span class="w">        </span><span class="sd">&quot;&quot;&quot;Demande à l&#39;utilisateur de sélectionner un round à terminer.&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l120"
+               class="code sev- "><tt><i>120</i>         <span class="n">RoundView</span><span class="o">.</span><span class="n">display_rounds</span><span class="p">(</span><span class="n">tournament</span><span class="p">)</span></tt>
+            </div>
+            <div id="l121"
+               class="code sev- "><tt><i>121</i>         <span class="n">round_index</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez le numéro du round à terminer : &quot;</span><span class="p">))</span> <span class="o">-</span> <span class="mi">1</span></tt>
+            </div>
+            <div id="l122"
+               class="code sev- "><tt><i>122</i>         <span class="k">return</span> <span class="n">round_index</span></tt>
+            </div>
+            <div id="l123"
+               class="code sev- "><tt><i>123</i> &nbsp;</tt>
+            </div>
+            <div id="l124"
+               class="code sev- "><tt><i>124</i>     <span class="nd">@staticmethod</span></tt>
+            </div>
+            <div id="l125"
+               class="code sev- "><tt><i>125</i>     <span class="k">def</span> <span class="nf">display_rounds</span><span class="p">(</span><span class="n">tournament</span><span class="p">):</span></tt>
+            </div>
+            <div id="l126"
+               class="code sev- "><tt><i>126</i> <span class="w">        </span><span class="sd">&quot;&quot;&quot;Affiche tous les rounds d&#39;un tournoi avec leur état actuel.&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l127"
+               class="code sev- "><tt><i>127</i>         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Liste des Rounds :&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l128"
+               class="code sev- "><tt><i>128</i>         <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">rnd</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">tournament</span><span class="o">.</span><span class="n">rounds</span><span class="p">):</span></tt>
+            </div>
+            <div id="l129"
+               class="code sev- "><tt><i>129</i>             <span class="n">status</span> <span class="o">=</span> <span class="s2">&quot;Non commencé&quot;</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">rnd</span><span class="o">.</span><span class="n">start_time</span> <span class="k">else</span> <span class="s2">&quot;Terminé&quot;</span> <span class="k">if</span> <span class="n">rnd</span><span class="o">.</span><span class="n">is_complete</span> <span class="k">else</span> <span class="s2">&quot;En cours&quot;</span></tt>
+            </div>
+            <div id="l130"
+               class="code sev- "><tt><i>130</i>             <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">. Round: </span><span class="si">{</span><span class="n">rnd</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">, Statut: </span><span class="si">{</span><span class="n">status</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l131"
+               class="code sev- "><tt><i>131</i> &nbsp;</tt>
+            </div>
+            <div id="l132"
+               class="code sev- "><tt><i>132</i> &nbsp;</tt>
+            </div>
+            <div id="l133"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E303
+                     </span>
+                     Too many blank lines (2)</li>
+               
+               </ul><tt><i>133</i>     <span class="c1"># @staticmethod</span></tt>
+            </div>
+            <div id="l134"
+               class="code sev- "><tt><i>134</i>     <span class="c1"># def get_match_results():</span></tt>
+            </div>
+            <div id="l135"
+               class="code sev- "><tt><i>135</i>     <span class="c1">#     result = input(&quot;Entrez le résultat (1-0, 0-1, 0.5-0.5) : &quot;)</span></tt>
+            </div>
+            <div id="l136"
+               class="code sev- "><tt><i>136</i>     <span class="c1">#     return tuple(map(float, result.split(&#39;-&#39;)))</span></tt>
+            </div>
+            <div id="l137"
+               class="code sev- "><tt><i>137</i> &nbsp;</tt>
+            </div>
+            <div id="l138"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E301
+                     </span>
+                     Expected 1 blank line, found 0</li>
+               
+               </ul><tt><i>138</i>     <span class="nd">@staticmethod</span></tt>
+            </div>
+            <div id="l139"
+               class="code sev- "><tt><i>139</i>     <span class="k">def</span> <span class="nf">get_match_results</span><span class="p">():</span></tt>
+            </div>
+            <div id="l140"
+               class="code sev- "><tt><i>140</i>         <span class="n">result</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez le résultat (1-0, 0-1, 0.5-0.5) : &quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l141"
+               class="code sev- "><tt><i>141</i>         <span class="k">try</span><span class="p">:</span></tt>
+            </div>
+            <div id="l142"
+               class="code sev- "><tt><i>142</i>             <span class="n">results_tuple</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)))</span></tt>
+            </div>
+            <div id="l143"
+               class="code sev- "><tt><i>143</i>             <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">results_tuple</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span> <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">results_tuple</span><span class="p">):</span></tt>
+            </div>
+            <div id="l144"
+               class="code sev- "><tt><i>144</i>                 <span class="k">raise</span> <span class="ne">ValueError</span></tt>
+            </div>
+            <div id="l145"
+               class="code sev- "><tt><i>145</i>             <span class="k">return</span> <span class="n">results_tuple</span></tt>
+            </div>
+            <div id="l146"
+               class="code sev- "><tt><i>146</i>         <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span></tt>
+            </div>
+            <div id="l147"
+               class="code sev- "><tt><i>147</i>             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Format invalide. Veuillez entrer les résultats sous la forme &#39;score1-score2&#39;.&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l148"
+               class="code sev- "><tt><i>148</i>             <span class="k">return</span> <span class="kc">None</span></tt>
+            </div>
+            
+         </div>
+      </div>
+   </body>
+</html>

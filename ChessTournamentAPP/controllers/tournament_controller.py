@@ -8,12 +8,14 @@ from models.tournament import Tournament
 from prettytable import PrettyTable
 from datetime import datetime
 
+
 class TournamentController(BaseController):
     def __init__(self):
         super().__init__()
         self.round_controller = RoundController()
 
     def manage_tournaments(self):
+        """Gère le menu des tournois"""
         while True:
             choice = MenuView.display_tournament_menu()
             if choice == '1':
@@ -30,33 +32,28 @@ class TournamentController(BaseController):
                 tournament = TournamentView.select_tournament(self.tournaments)
                 if tournament:
                     self.round_controller.manage_rounds(tournament)
-                else :
+                else:
                     print("Aucun tournoi sélectionné")
             elif choice == '7':  # Retour au menu principal
                 break
             else:
-    
+
                 print("Invalid choice, please try again.")
-    
-    
-    
-    
+
     def create_tournament(self):
+        """Crée un tournoi dans l'application"""
         tournament_details = TournamentView.create_tournament()
         new_tournament = Tournament(*tournament_details)
         self.tournaments.append(new_tournament)
         self.save_data()
         print(f"Tournament '{new_tournament.name}' has been successfully created.")
 
-    
     def start_tournament(self):
         tournament = TournamentView.select_tournament(self.tournaments)
         if tournament:
             tournament.start_tournament()  # La méthode start_tournament de Tournament gère toutes les vérifications
         else:
             print("Aucun tournoi sélectionné ou tournoi invalide.")
-
-   
 
     def load_tournament(self):
         """Charge les tournois de l'application"""
@@ -82,7 +79,8 @@ class TournamentController(BaseController):
                 table.header = True
 
                 for player in sorted(tournament.registered_players, key=lambda x: (x.name, x.firstname)):
-                    table.add_row([player.unique_id, player.name, player.firstname, player.birthdate.strftime('%d/%m/%Y')])
+                    table.add_row([player.unique_id, player.name, player.firstname,
+                                   player.birthdate.strftime('%d/%m/%Y')])
                 table_string = table.get_string()
                 table_width = len(table_string.splitlines()[0])
                 title = "liste des joueurs inscrits"
@@ -104,11 +102,11 @@ class TournamentController(BaseController):
                         matches_table.add_row([
                             index,
                             match.players[0].name,
-                            #"Rank P1",  # Remplacez par l'attribut réel si disponible
+                            # Rank P1,  # Remplacez par l'attribut réel si disponible
                             match.results[0],
                             "vs.",
                             match.players[1].name,
-                            #"Rank P2",  # Remplacez par l'attribut réel si disponible
+                            # Rank P2,  # Remplacez par l'attribut réel si disponible
                             match.results[1]
                         ])
 
@@ -119,7 +117,6 @@ class TournamentController(BaseController):
                     if hasattr(round, 'end_time') and round.end_time:
                         round_details += f" - Fin : {round.end_time.strftime('%d/%m/%Y %H:%M')}"
 
-                    
                     print(matches_table.get_string(title=round_details))
             else:
                 print("Aucun round joué")
@@ -127,16 +124,13 @@ class TournamentController(BaseController):
         else:
             print("Aucun tournoi sélectionné ou sélection invalide.")
 
-
-    
-    
     def display_tournaments(self):
         """ Afficher les tournois disponibles  """
         TournamentView.disp_tournaments(self.tournaments)
 
     def update_tournament(self):
         """ Modifier les tournois"""
-        #tournament = RoundView.display_tournaments_for_selection(self.tournaments)  # Utilisez la méthode de sélection des tournois
+        # tournament = RoundView.display_tournaments_for_selection(self.tournaments)
         tournament = TournamentView.select_tournament(self.tournaments)
         if tournament:
             print("Quel attribut voulez-vous modifier ?")
@@ -146,7 +140,7 @@ class TournamentController(BaseController):
             print("4. Date de fin")
             print("5. Description")
             choice = input("Entrez votre choix : ")
-            
+
             if choice == '1':
                 new_value = input("Entrez le nouveau nom : ")
                 tournament.name = new_value
@@ -165,16 +159,8 @@ class TournamentController(BaseController):
             else:
                 print("Choix non valide.")
                 return
-            
+
             self.save_data()
             print("Le tournoi a été mis à jour.")
         else:
             print("Tournoi non trouvé.")
-
-
-
-
-
-
-    
-   

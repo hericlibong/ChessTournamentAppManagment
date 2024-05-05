@@ -1,1 +1,100 @@
-Invalid JSON
+[
+    {
+        "t_id": "d8e0319f",
+        "name": "Giro",
+        "location": "Italy",
+        "start_date": "05/05/2024",
+        "end_date": "06/06/2024",
+        "description": "Giro Italy Chess",
+        "current_round": 0,
+        "rounds": [
+            {
+                "name": "Round 1",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "CP25042",
+                            "HL24031"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    }
+                ],
+                "start_time": "2024-05-05 14:47",
+                "end_time": "2024-05-05 14:48"
+            },
+            {
+                "name": "Round 2",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "HL24031",
+                            "BW15041"
+                        ],
+                        "results": [
+                            0.0,
+                            1.0
+                        ]
+                    }
+                ],
+                "start_time": "2024-05-05 14:48",
+                "end_time": "2024-05-05 14:48"
+            },
+            {
+                "name": "Round 3",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "CP25042",
+                            "BW15041"
+                        ],
+                        "results": [
+                            0.0,
+                            1.0
+                        ]
+                    }
+                ],
+                "start_time": "2024-05-05 14:48",
+                "end_time": "2024-05-05 14:49"
+            }
+        ],
+        "registered_players": [
+            {
+                "name": "Libong",
+                "firstname": "Heric",
+                "birthdate": "24/03/1969",
+                "unique_id": "HL24031",
+                "past_opponents": [
+                    "BW15041",
+                    "CP25042"
+                ]
+            },
+            {
+                "name": "Wayne",
+                "firstname": "Bruce",
+                "birthdate": "15/04/1968",
+                "unique_id": "BW15041",
+                "past_opponents": [
+                    "HL24031",
+                    "CP25042"
+                ]
+            },
+            {
+                "name": "Penia",
+                "firstname": "Christine",
+                "birthdate": "25/04/2001",
+                "unique_id": "CP25042",
+                "past_opponents": [
+                    "HL24031",
+                    "BW15041"
+                ]
+            }
+        ],
+        "total_round": 3
+    }
+]

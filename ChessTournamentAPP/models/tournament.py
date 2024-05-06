@@ -1,3 +1,5 @@
+# models/tournament.py
+
 from datetime import datetime
 import uuid
 from models.round import Round
@@ -53,6 +55,8 @@ class Tournament:
         num_players = len(self.registered_players)
         if num_players < 2:
             print("Pas assez de joueurs pour commencer un tournoi.")
+            print("Allez dans la section 'Gestion des joueurs' pour inscrire des participants.")
+            print(" 7. Retour au menu principal --> Gestion des joueurs. ")
             return
         # Annuler le paramètre par défaut de total_round
         self.total_round = num_players - 1 if num_players % 2 == 0 else num_players
@@ -60,8 +64,8 @@ class Tournament:
         self.generate_matches()
         if self.rounds:
             self.rounds[0].start_time = datetime.now()
-            print(f"Tournament '{self.name}' started with {len(self.registered_players)}"
-                  f"players and {self.total_round} rounds.")
+            print(f"Le Tournoi '{self.name}' a commencé avec {len(self.registered_players)} "
+                  f"joueurs et {self.total_round} rounds.")
         else:
             print("Failed to initialize rounds properly.")
 
@@ -101,7 +105,10 @@ class Tournament:
 
     def is_active(self):
         """ Vérifie si le tournoi est toujours en cours. """
-        return self.current_round < self.total_round and self.end_date > datetime.now()
+        # Utilise datetime.now() pour obtenir le datetime actuel et le convertit pour obtenir minuit ce jour-là.
+        today_midnight = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
+        return self.current_round < self.total_round and self.end_date >= today_midnight
+
 
     def add_round(self, round_name, start_time=None):
         """Ajoute un nouveau round au tournoi si possible."""
@@ -125,16 +132,21 @@ class Tournament:
             print("Index de round invalide.")
 
     def end_round(self, round_index, match_results):
-        """Termine un round et le déclare complet"""
+        """Termine un round et le déclare complet. Ne permet pas de terminer un round non commencé"""
         try:
             round = self.rounds[round_index]
+            if round.start_time is None:
+                print(f"Le '{round.name}' n'est pas commencé.")
+                print(f"Démarrer {round.name}.")
+                return
+
             if not round.is_complete:
                 for match, result in zip(round.matches, match_results):
                     match.set_results(result)
                 round.end_time = datetime.now()
                 round.is_complete = True
-                print(f"Round '{round.name}' has ended.")
+                print(f"Round '{round.name}' terminé.")
             else:
-                print(f"Round '{round.name}' has already been completed.")
+                print(f"Round '{round.name}' est déjà terminé.")
         except IndexError:
-            print("Indx de round invalide")
+            print("Index de round invalide")

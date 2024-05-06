@@ -1,3 +1,5 @@
+# models/round.py
+
 from datetime import datetime
 from .match import Match
 
@@ -63,11 +65,14 @@ class Round:
 
         }
 
-    def end_round(self):
-        """Marque la fin du round et enregistre l'heure de fin."""
-        self.end_time = datetime.now()
-        self.is_complete = True
-        print(f"Round '{self.name}' has ended at {self.end_time}.")
+    # def end_round(self):
+    #     """Marque la fin du round et enregistre l'heure de fin."""
+    #     if self.start_time is None:
+    #         print(f"Erreur : Le round '{self.name}'n'a pas encore commencé et ne peut pas être terminé")
+    #         return
+    #     self.end_time = datetime.now()
+    #     self.is_complete = True
+    #     print(f"Round '{self.name}' has ended at {self.end_time}.")
 
     def update_match_result(self, match_index, new_results):
         """Met à jour les résultats d'un match spécifié si le round n'est pas complet."""

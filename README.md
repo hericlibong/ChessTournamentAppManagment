@@ -19,7 +19,7 @@ Chess Game OffLine Software est une application desktop développée en Python d
 
 ## II - Initialisation du projet
 
-### Windows
+### Windows, MacOs, Linux
 
 Pour installer et lancer le logiciel sous Windows, suivez ces étapes :
 
@@ -27,34 +27,55 @@ Pour installer et lancer le logiciel sous Windows, suivez ces étapes :
 
  ```
 https://github.com/hericlibong/ChessTournamentApp_p4.git
+```
 
- ```
 2. Naviguez dans le dossier du projet :
 
 ```
 ChessTournamentApp_p4
-
 ```
 
-3. Installez les dépendances :
+3. Installez un environnement virtuel :
+  ```
+  python -m venv venv
+  ```
+
+4. Activez l'environnement virtuel :
+
+- Sur Windows :
+  ```
+  venv\Scripts\activate
+  ```
+- Sur MacOS/Linux :
+  ```
+  source venv/bin/activate
+  ```
+
+5. Installez les dépendances :
 
 ```
 pip install requirements.txt
 
 ```
 
-4. Lancez l'application :
+6. Lancez l'application :
 
 ```
 python main.py
-
 ```
 
 ## III - Générer un rapport flake8
 
 Pour générer un rapport flake8 afin de vérifier la conformité du code aux standards de codage Python, utilisez la commande suivante :
 
-![flake8_report](flake8_report.png)
+```
+flake8 --format=html --htmldir=flake-report
+```
+
+Ouvrir `index` dans le dossier `flake-report` 
+
+![flake8_report](flake8.png)
+
 
 ## IV - Options des menus
 

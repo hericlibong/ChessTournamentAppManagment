@@ -66,9 +66,9 @@
         "birthdate": "24/04/1965",
         "unique_id": "EH24041",
         "past_opponents": [
-            "AP07101",
-            "PP25021",
             "BW15041",
+            "PP25021",
+            "AP07101",
             "HL24031"
         ]
     },
@@ -85,8 +85,8 @@
         "birthdate": "23/09/2000",
         "unique_id": "JH23092",
         "past_opponents": [
-            "AP07101",
-            "CK10121"
+            "CK10121",
+            "AP07101"
         ]
     },
     {
@@ -121,8 +121,8 @@
         "birthdate": "29/07/1998",
         "unique_id": "AR29071",
         "past_opponents": [
-            "CP25042",
-            "CK10121"
+            "CK10121",
+            "CP25042"
         ]
     }
 ]

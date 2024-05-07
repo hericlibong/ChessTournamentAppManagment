@@ -58,5 +58,3 @@ class MenuView:
         print("[4] Retour")
         print("-" * 30)
         return input("Choisissez une option [1-4]: ")
-
-

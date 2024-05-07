@@ -93,6 +93,13 @@
                     "BW15041",
                     "HL24031"
                 ]
+            },
+            {
+                "name": "Elba",
+                "firstname": "Idriss",
+                "birthdate": "19/03/1958",
+                "unique_id": "EI19031",
+                "past_opponents": []
             }
         ],
         "total_round": 3
@@ -178,8 +185,8 @@
                 "birthdate": "23/09/2000",
                 "unique_id": "JH23092",
                 "past_opponents": [
-                    "AP07101",
-                    "CK10121"
+                    "CK10121",
+                    "AP07101"
                 ]
             },
             {
@@ -188,9 +195,16 @@
                 "birthdate": "10/12/1956",
                 "unique_id": "CK10121",
                 "past_opponents": [
-                    "AP07101",
-                    "JH23092"
+                    "JH23092",
+                    "AP07101"
                 ]
+            },
+            {
+                "name": "Jarry",
+                "firstname": "Alfred",
+                "birthdate": "24/06/1975",
+                "unique_id": "JA09874",
+                "past_opponents": []
             }
         ],
         "total_round": 3
@@ -352,10 +366,10 @@
                 "birthdate": "24/03/1969",
                 "unique_id": "HL24031",
                 "past_opponents": [
-                    "BS06102",
                     "BD23031",
+                    "CK10121",
                     "CP25042",
-                    "CK10121"
+                    "BS06102"
                 ]
             },
             {
@@ -364,10 +378,10 @@
                 "birthdate": "25/04/2001",
                 "unique_id": "CP25042",
                 "past_opponents": [
-                    "BS06102",
                     "BD23031",
                     "HL24031",
-                    "CK10121"
+                    "CK10121",
+                    "BS06102"
                 ]
             },
             {
@@ -376,10 +390,10 @@
                 "birthdate": "10/12/1956",
                 "unique_id": "CK10121",
                 "past_opponents": [
-                    "BS06102",
                     "BD23031",
+                    "HL24031",
                     "CP25042",
-                    "HL24031"
+                    "BS06102"
                 ]
             },
             {
@@ -389,9 +403,9 @@
                 "unique_id": "BS06102",
                 "past_opponents": [
                     "BD23031",
+                    "CK10121",
                     "CP25042",
-                    "HL24031",
-                    "CK10121"
+                    "HL24031"
                 ]
             },
             {
@@ -400,10 +414,10 @@
                 "birthdate": "24/03/1969",
                 "unique_id": "BD23031",
                 "past_opponents": [
-                    "HL24031",
-                    "BS06102",
+                    "CK10121",
                     "CP25042",
-                    "CK10121"
+                    "BS06102",
+                    "HL24031"
                 ]
             }
         ],

@@ -3,19 +3,19 @@
 ![picture_chess](media/chess.png)
 
 ## Table des Matières
-1. [Présentation](#i-présentation)
-2. [Initialisation du projet](#ii-initialisation-du-projet)
+I.  [Présentation](#i-présentation)
+II. [Initialisation du projet](#ii-initialisation-du-projet)
    - [Windows](#windows)
    - [MacOS et Linux](#macos-et-linux)
-3. [Générer un rapport flake8](#iii-générer-un-rapport-flake8)
-4. [Options des menus](#iv-options-des-menus)
+III. [Générer un rapport flake8](#iii-générer-un-rapport-flake8)
+IV. [Options des menus](#iv-options-des-menus)
    - [Menu principal](#menu-principal)
    - [Rapports](#rapports)
-5. [Exemples d'affichage](#v-exemples-daffichage)
+
 
 ## I - Présentation
 
-Chess Game OffLine Software est une application desktop développée en Python destinée à la gestion de tournois d'échecs hors ligne. Cette application permet aux organisateurs de tournois d'échecs de créer, gérer et suivre le déroulement de leurs événements en toute simplicité. Grâce à son interface intuitive et ses fonctionnalités complètes, le logiciel offre une expérience utilisateur optimale pour la gestion des rounds, des joueurs et des résultats.
+Chess Game OffLine Software est une application desktop développée en Python destinée à la gestion de tournois d'échecs hors ligne. Cette application permet aux organisateurs de tournois d'échecs de créer, gérer et suivre le déroulement de leurs événements en toute simplicité. Le logiciel permet à l'utilisateur de créer de tournois, d'inscrire des joueurs, de gérer les rounds, des joueurs et d'afficher les résultats. Les données sont sauvegardées au format json dans `util/data/tournaments.json` et `util/data/players.json`.  
 
 ## II - Initialisation du projet
 
@@ -54,11 +54,15 @@ ChessTournamentApp_p4
 5. Installez les dépendances :
 
 ```
-pip install requirements.txt
-
+pip install -r requirements.txt
 ```
 
-6. Lancez l'application :
+6. Allez dans le dossier de l'application:
+```
+ChessTournamentAPP
+```
+
+7. Lancez l'application :
 
 ```
 python main.py

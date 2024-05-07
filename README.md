@@ -1,6 +1,6 @@
 # Chess Game OffLine Software
 
-![picture_chess](chess.png)
+![picture_chess](media/chess.png)
 
 ## Table des Matières
 1. [Présentation](#i-présentation)
@@ -74,28 +74,33 @@ flake8 --format=html --htmldir=flake-report
 
 Ouvrir `index` dans le dossier `flake-report` 
 
-![flake8_report](flake8.png)
+![flake8_report](media/flake8.png)
 
 
 ## IV - Options des menus
 
-### Menu principal
+
 
 Le menu principal offre plusieurs options pour gérer le tournoi :
 
-![menu_principal](media/menu_principal.png)
+### Menu principal et gestion tournoi
+
+![menu_principal](media/menu_principal_tournament.png)
+
+
+###  Gestions des Joueurs
+
+![menu_joueur](media/menu_player.png)
 
 ### Rapports
 
-Le menu des rapports permet d'accéder à divers statistiques et résultats :
+Le menu des rapports permet d'accéder aux résultats :
 
-![rapports](rapports.png)
 
-## V - Exemples d'affichage
 
-Voici quelques exemples de l'interface utilisateur et des fonctionnalités du logiciel :
+![rapports](media/rapport.png)
 
-![exemple_affichage](exemple_affichage.png)
+
 
 
 

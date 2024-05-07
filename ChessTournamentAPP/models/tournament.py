@@ -109,7 +109,6 @@ class Tournament:
         today_midnight = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
         return self.current_round < self.total_round and self.end_date >= today_midnight
 
-
     def add_round(self, round_name, start_time=None):
         """Ajoute un nouveau round au tournoi si possible."""
         if not self.is_active():

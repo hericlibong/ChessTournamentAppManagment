@@ -83,7 +83,7 @@ Ouvrir `index` dans le dossier `flake-report`
 
 Le menu principal offre plusieurs options pour gérer le tournoi :
 
-![menu_principal](menu_principal.png)
+![menu_principal](media/menu_principal.png)
 
 ### Rapports
 

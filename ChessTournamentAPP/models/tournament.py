@@ -73,21 +73,33 @@ class Tournament:
             print("Failed to initialize rounds properly.")
 
     def generate_matches(self):
-        for round in self.rounds:
-            players = self.registered_players[:]
-            random.shuffle(players)
-            matches = []
-            while len(players) > 1:
-                player1 = players.pop(0)
+        """
+        Génère et organise les matches pour chaque round du tournoi basé sur les joueurs inscrits.
+        Les joueurs sont appariés de manière à éviter les répétitions avec des adversaires précédents.
+        Cette méthode mélange les joueurs inscrits, les associe en paires pour les matches,
+        et s'assure qu'aucun joueur ne rencontre un adversaire contre qui il a déjà joué,
+        autant que possible. Les matches sont ajoutés aux rounds existants dans le tournoi.
+
+        Les joueurs sans adversaires disponibles sont replacés dans la liste pour un nouvel essai,
+        évitant ainsi de laisser un joueur sans match à la fin du processus de jumelage.
+        """
+        players = self.registered_players[:]  # Copie de la liste des joueurs pour manipulation
+        random.shuffle(players)  # Mélange des joueurs pour l'aléatoire
+        for round in self.rounds:  # Itérer sur chaque round du tournoi
+            matches = []  # Liste pour stocker les matches de ce round
+            while len(players) > 1:  # Tant qu'il y a au moins deux joueurs pour former un match
+                player1 = players.pop(0)  # Sélection du premier joueur
+                # Recherche d'un adversaire non rencontré précédemment
                 player2 = next((p for p in players if p.unique_id not in player1.past_opponents), None)
                 if player2:
-                    matches.append(Match(players=(player1, player2)))
+                    matches.append(Match(players=(player1, player2)))  # Création du match
+                    # Enregistrement de l'adversaire dans l'historique des deux joueurs
                     player1.past_opponents.add(player2.unique_id)
                     player2.past_opponents.add(player1.unique_id)
-                    players.remove(player2)
+                    players.remove(player2)  # Retirer l'adversaire de la liste des joueurs disponibles
                 else:
-                    players.append(player1)
-            round.matches.extend(matches)
+                    players.append(player1)  # Retour du joueur dans la liste pour une nouvelle tentative
+            round.matches.extend(matches)  # Ajout des matches au round courant
 
     def update_scores(self, round_index, match_index, score1, score2):
         """Permet de mettre les score à jour"""

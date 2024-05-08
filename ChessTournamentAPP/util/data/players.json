@@ -11,7 +11,10 @@
         "firstname": "Eric",
         "birthdate": "24/03/1968",
         "unique_id": "ET24039",
-        "past_opponents": []
+        "past_opponents": [
+            "AP07101",
+            "JA09874"
+        ]
     },
     {
         "name": "Elba",
@@ -39,7 +42,10 @@
         "firstname": "Alfred",
         "birthdate": "24/06/1975",
         "unique_id": "JA09874",
-        "past_opponents": []
+        "past_opponents": [
+            "AP07101",
+            "ET24039"
+        ]
     },
     {
         "name": "Auster",
@@ -47,8 +53,8 @@
         "birthdate": "07/10/1987",
         "unique_id": "AP07101",
         "past_opponents": [
-            "JH23092",
-            "CK10121"
+            "ET24039",
+            "JA09874"
         ]
     },
     {
@@ -57,7 +63,7 @@
         "birthdate": "24/03/1969",
         "unique_id": "HL24031",
         "past_opponents": [
-            "BW15041"
+            "AR29071"
         ]
     },
     {
@@ -66,10 +72,10 @@
         "birthdate": "24/04/1965",
         "unique_id": "EH24041",
         "past_opponents": [
+            "HL24031",
             "BW15041",
-            "PP25021",
             "AP07101",
-            "HL24031"
+            "PP25021"
         ]
     },
     {
@@ -94,10 +100,7 @@
         "firstname": "Peter",
         "birthdate": "25/02/1977",
         "unique_id": "PP25021",
-        "past_opponents": [
-            "BW15041",
-            "HL24031"
-        ]
+        "past_opponents": []
     },
     {
         "name": "Wayne",
@@ -121,8 +124,7 @@
         "birthdate": "29/07/1998",
         "unique_id": "AR29071",
         "past_opponents": [
-            "CK10121",
-            "CP25042"
+            "HL24031"
         ]
     }
 ]

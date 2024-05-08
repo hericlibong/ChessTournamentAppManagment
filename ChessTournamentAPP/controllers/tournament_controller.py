@@ -51,7 +51,11 @@ class TournamentController(BaseController):
     def start_tournament(self):
         tournament = TournamentView.select_tournament(self.tournaments)
         if tournament:
-            tournament.start_tournament()  # La méthode start_tournament de Tournament gère toutes les vérifications
+            if tournament.is_tournament_complete():
+                print(f"Le Tournoi '{tournament.name}' est déjà terminé.")
+                return
+            else:
+                tournament.start_tournament()
         else:
             print("Aucun tournoi sélectionné ou tournoi invalide.")
 

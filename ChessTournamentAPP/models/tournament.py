@@ -107,12 +107,17 @@ class Tournament:
         match.set_results((score1, score2))
 
     def register_player(self, player):
-        """ Enregistre un joueur dans le tournoi si le tournoi est actif. """
+        """ Enregistre un joueur dans le tournoi si le tournoi est actif ou non terminé ou non commencé. """
+        # Vérifie si le tournoi est terminé ou si le premier round a commencé
+        if self.is_tournament_complete() or (self.rounds and self.rounds[0].start_time is not None):
+            print(f"Le tournoi'{self.name}' est terminé ou en cours.")
+            print("Inscription impossible.")
+            return
         if not self.is_active():
-            print(f"Le tournoi '{self.name}' n'est pas actif ou est déjà terminé.")
+            print(f" Le tournoi '{self.name}'n'est pas actif")
             return
         if player not in self.registered_players:
-            player.past_opponents.clear()
+            player.past_opponents.clear() # Efface l'historique du joueur 
             self.registered_players.append(player)
             print(f"{player.firstname} {player.name} a été ajouté(e) au tournoi '{self.name}'.")
         else:

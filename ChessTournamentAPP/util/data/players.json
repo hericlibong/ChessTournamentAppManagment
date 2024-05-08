@@ -12,8 +12,8 @@
         "birthdate": "24/03/1968",
         "unique_id": "ET24039",
         "past_opponents": [
-            "AP07101",
-            "JA09874"
+            "JA09874",
+            "AP07101"
         ]
     },
     {
@@ -53,8 +53,8 @@
         "birthdate": "07/10/1987",
         "unique_id": "AP07101",
         "past_opponents": [
-            "ET24039",
-            "JA09874"
+            "JA09874",
+            "ET24039"
         ]
     },
     {
@@ -72,10 +72,10 @@
         "birthdate": "24/04/1965",
         "unique_id": "EH24041",
         "past_opponents": [
-            "HL24031",
+            "PP25021",
             "BW15041",
             "AP07101",
-            "PP25021"
+            "HL24031"
         ]
     },
     {
@@ -90,10 +90,7 @@
         "firstname": "Henry",
         "birthdate": "23/09/2000",
         "unique_id": "JH23092",
-        "past_opponents": [
-            "CK10121",
-            "AP07101"
-        ]
+        "past_opponents": []
     },
     {
         "name": "Parker",

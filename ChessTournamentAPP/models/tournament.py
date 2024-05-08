@@ -117,7 +117,7 @@ class Tournament:
             print(f" Le tournoi '{self.name}'n'est pas actif")
             return
         if player not in self.registered_players:
-            player.past_opponents.clear() # Efface l'historique du joueur 
+            player.past_opponents.clear()  # Efface l'historique du joueur
             self.registered_players.append(player)
             print(f"{player.firstname} {player.name} a été ajouté(e) au tournoi '{self.name}'.")
         else:

@@ -12,8 +12,8 @@
         "birthdate": "24/03/1968",
         "unique_id": "ET24039",
         "past_opponents": [
-            "AP07101",
-            "JA09874"
+            "JA09874",
+            "AP07101"
         ]
     },
     {
@@ -28,7 +28,10 @@
         "firstname": "Christine",
         "birthdate": "25/04/2001",
         "unique_id": "CP25042",
-        "past_opponents": []
+        "past_opponents": [
+            "BW15041",
+            "HL24031"
+        ]
     },
     {
         "name": "Brakia",
@@ -53,8 +56,8 @@
         "birthdate": "07/10/1987",
         "unique_id": "AP07101",
         "past_opponents": [
-            "ET24039",
-            "JA09874"
+            "JA09874",
+            "ET24039"
         ]
     },
     {
@@ -63,7 +66,8 @@
         "birthdate": "24/03/1969",
         "unique_id": "HL24031",
         "past_opponents": [
-            "AR29071"
+            "CP25042",
+            "BW15041"
         ]
     },
     {
@@ -72,10 +76,10 @@
         "birthdate": "24/04/1965",
         "unique_id": "EH24041",
         "past_opponents": [
-            "HL24031",
             "BW15041",
-            "AP07101",
-            "PP25021"
+            "HL24031",
+            "PP25021",
+            "AP07101"
         ]
     },
     {
@@ -91,8 +95,8 @@
         "birthdate": "23/09/2000",
         "unique_id": "JH23092",
         "past_opponents": [
-            "CK10121",
-            "AP07101"
+            "AP07101",
+            "CK10121"
         ]
     },
     {
@@ -108,6 +112,7 @@
         "birthdate": "15/04/1968",
         "unique_id": "BW15041",
         "past_opponents": [
+            "CP25042",
             "HL24031"
         ]
     },

@@ -162,3 +162,4 @@ class Tournament:
                 print(f"Round '{round.name}' est déjà terminé.")
         except IndexError:
             print("Index de round invalide")
+

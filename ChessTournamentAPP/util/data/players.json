@@ -4,7 +4,9 @@
         "firstname": "Ramzy",
         "birthdate": "24/03/1969",
         "unique_id": "BD23031",
-        "past_opponents": []
+        "past_opponents": [
+            "HL24031"
+        ]
     },
     {
         "name": "Tudor",
@@ -28,7 +30,9 @@
         "firstname": "Christine",
         "birthdate": "25/04/2001",
         "unique_id": "CP25042",
-        "past_opponents": []
+        "past_opponents": [
+            "AR29071"
+        ]
     },
     {
         "name": "Brakia",
@@ -53,8 +57,8 @@
         "birthdate": "07/10/1987",
         "unique_id": "AP07101",
         "past_opponents": [
-            "ET24039",
-            "JA09874"
+            "JA09874",
+            "ET24039"
         ]
     },
     {
@@ -63,7 +67,7 @@
         "birthdate": "24/03/1969",
         "unique_id": "HL24031",
         "past_opponents": [
-            "BW15041"
+            "BD23031"
         ]
     },
     {
@@ -73,9 +77,9 @@
         "unique_id": "EH24041",
         "past_opponents": [
             "PP25021",
-            "AP07101",
             "BW15041",
-            "HL24031"
+            "HL24031",
+            "AP07101"
         ]
     },
     {
@@ -104,9 +108,7 @@
         "firstname": "Bruce",
         "birthdate": "15/04/1968",
         "unique_id": "BW15041",
-        "past_opponents": [
-            "HL24031"
-        ]
+        "past_opponents": []
     },
     {
         "name": "Kent",
@@ -121,7 +123,7 @@
         "birthdate": "29/07/1998",
         "unique_id": "AR29071",
         "past_opponents": [
-            "HL24031"
+            "CP25042"
         ]
     },
     {
@@ -129,6 +131,8 @@
         "firstname": "Vladimir",
         "birthdate": "08/01/2000",
         "unique_id": "PV08012",
-        "past_opponents": []
+        "past_opponents": [
+            "AR29071"
+        ]
     }
 ]

@@ -46,8 +46,8 @@ class RoundView:
             status = "Non commencé" if not rnd.start_time else "Terminé" if rnd.is_complete else "En cours"
             print(f"{index + 1}. Round: {rnd.name}, Statut: {status}")
 
-    @staticmethod
     def get_match_results():
+        """Demande et valide les résultats des matches d'un round."""
         result = input("Entrez le résultat (1-0, 0-1, 0.5-0.5) : ")
         try:
             results_tuple = tuple(map(float, result.split('-')))

@@ -157,28 +157,29 @@ class Tournament:
         return all(round.is_complete for round in self.rounds)
 
     def end_round(self, round_index, match_results):
-        """Termine un round et le déclare complet. Ne permet pas de terminer un round non commencé"""
         try:
             round = self.rounds[round_index]
+            print(f"Attempting to end round: {round.name}, which started at: {round.start_time}")
+            
             if round.start_time is None:
-                print(f"Le '{round.name}' n'est pas commencé.")
-                print(f"Démarrer {round.name}.")
+                print(f"Cannot end round {round.name} as it has not started.")
                 return
 
             if not round.is_complete:
+                print(f"Ending round: {round.name}")
                 for match, result in zip(round.matches, match_results):
+                    print(f"Updating match result: {result}")
                     match.set_results(result)
                 round.end_time = datetime.now()
                 round.is_complete = True
-                print(f"Round '{round.name}' terminé.")
-                # Vérifier si tous les rounds sont terminés
+                print(f"Round '{round.name}' completed at {round.end_time}.")
                 if all(r.is_complete for r in self.rounds):
-                    self.is_complete = True
-                    print(f"Le tournoi '{self.name}' est maintenant terminé.")
+                    print(f"All rounds completed. Tournament '{self.name}' is now finished.")
             else:
-                print(f"Round '{round.name}' est déjà terminé.")
+                print(f"Round '{round.name}' is already completed.")
         except IndexError:
-            print("Index de round invalide")
+            print("Invalid round index.")
+
 
     def calculate_player_points(self):
         player_points = {}

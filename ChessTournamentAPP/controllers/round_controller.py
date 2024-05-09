@@ -24,7 +24,7 @@ class RoundController(BaseController):
                 if round_index is not None:
                     if tournament.rounds[round_index].start_time is None:
                         print(f"Erreur : Le round '{tournament.rounds[round_index].name}'"
-                              f"n'a pas encore commencé et ne peut pas être terminé.")
+                            f"n'a pas encore commencé et ne peut pas être terminé.")
                     else:
                         match_results = []
                         for match in tournament.rounds[round_index].matches:
@@ -35,5 +35,8 @@ class RoundController(BaseController):
                         if match_results:  # Ensure that results have been correctly collected
                             tournament.end_round(round_index, match_results)
                             self.save_data()
+
             elif choice == '4':
                 break
+
+

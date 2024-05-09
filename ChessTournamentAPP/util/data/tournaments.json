@@ -80,8 +80,8 @@
                 "birthdate": "15/04/1968",
                 "unique_id": "BW15041",
                 "past_opponents": [
-                    "HL24031",
-                    "CP25042"
+                    "CP25042",
+                    "HL24031"
                 ]
             },
             {
@@ -366,10 +366,17 @@
                 "birthdate": "24/03/1969",
                 "unique_id": "HL24031",
                 "past_opponents": [
+<<<<<<< HEAD
                     "CK10121",
                     "CP25042",
                     "BS06102",
                     "BD23031"
+=======
+                    "BS06102",
+                    "CP25042",
+                    "BD23031",
+                    "CK10121"
+>>>>>>> experimental-features
                 ]
             },
             {
@@ -378,10 +385,17 @@
                 "birthdate": "25/04/2001",
                 "unique_id": "CP25042",
                 "past_opponents": [
+<<<<<<< HEAD
                     "CK10121",
                     "HL24031",
                     "BS06102",
                     "BD23031"
+=======
+                    "BS06102",
+                    "HL24031",
+                    "BD23031",
+                    "CK10121"
+>>>>>>> experimental-features
                 ]
             },
             {
@@ -392,7 +406,11 @@
                 "past_opponents": [
                     "HL24031",
                     "CP25042",
+<<<<<<< HEAD
                     "BS06102",
+=======
+                    "HL24031",
+>>>>>>> experimental-features
                     "BD23031"
                 ]
             },
@@ -402,10 +420,15 @@
                 "birthdate": "06/10/2000",
                 "unique_id": "BS06102",
                 "past_opponents": [
+<<<<<<< HEAD
                     "CK10121",
                     "HL24031",
+=======
+>>>>>>> experimental-features
                     "CP25042",
-                    "BD23031"
+                    "HL24031",
+                    "BD23031",
+                    "CK10121"
                 ]
             },
             {
@@ -416,7 +439,11 @@
                 "past_opponents": [
                     "HL24031",
                     "CP25042",
+<<<<<<< HEAD
                     "BS06102",
+=======
+                    "HL24031",
+>>>>>>> experimental-features
                     "CK10121"
                 ]
             }
@@ -604,8 +631,8 @@
                 "birthdate": "24/03/1968",
                 "unique_id": "ET24039",
                 "past_opponents": [
-                    "AP07101",
-                    "JA09874"
+                    "JA09874",
+                    "AP07101"
                 ]
             },
             {
@@ -702,8 +729,8 @@
                 "birthdate": "25/02/1977",
                 "unique_id": "PP25021",
                 "past_opponents": [
-                    "EI19031",
-                    "BD23031"
+                    "BD23031",
+                    "EI19031"
                 ]
             },
             {
@@ -715,6 +742,7 @@
                     "PP25021",
                     "EI19031"
                 ]
+<<<<<<< HEAD
             },
             {
                 "name": "Joseph",
@@ -722,11 +750,14 @@
                 "birthdate": "23/09/2000",
                 "unique_id": "JH23092",
                 "past_opponents": []
+=======
+>>>>>>> experimental-features
             }
         ],
         "total_round": 3
     },
     {
+<<<<<<< HEAD
         "t_id": "eab17649",
         "name": "Addis Chess tournament",
         "location": "Addis",
@@ -778,6 +809,9 @@
     },
     {
         "t_id": "d31f9ccd",
+=======
+        "t_id": "7c3e9865",
+>>>>>>> experimental-features
         "name": "test",
         "location": "test",
         "start_date": "09/05/2024",
@@ -800,6 +834,7 @@
                         ]
                     }
                 ],
+<<<<<<< HEAD
                 "start_time": "2024-05-09 19:31",
                 "end_time": "2024-05-09 19:32"
             },
@@ -816,6 +851,46 @@
                 "matches": [],
                 "start_time": null,
                 "end_time": null
+=======
+                "start_time": "2024-05-09 19:39",
+                "end_time": "2024-05-09 19:39"
+            },
+            {
+                "name": "Round 2",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "BW15041",
+                            "HL24031"
+                        ],
+                        "results": [
+                            0.0,
+                            1.0
+                        ]
+                    }
+                ],
+                "start_time": "2024-05-09 19:40",
+                "end_time": "2024-05-09 19:40"
+            },
+            {
+                "name": "Round 3",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "HL24031",
+                            "CP25042"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    }
+                ],
+                "start_time": "2024-05-09 19:40",
+                "end_time": "2024-05-09 19:40"
+>>>>>>> experimental-features
             }
         ],
         "registered_players": [
@@ -825,6 +900,7 @@
                 "birthdate": "15/04/1968",
                 "unique_id": "BW15041",
                 "past_opponents": [
+<<<<<<< HEAD
                     "CP25042"
                 ]
             },
@@ -836,11 +912,32 @@
                 "past_opponents": []
             },
             {
+=======
+                    "CP25042",
+                    "HL24031"
+                ]
+            },
+            {
+>>>>>>> experimental-features
                 "name": "Penia",
                 "firstname": "Christine",
                 "birthdate": "25/04/2001",
                 "unique_id": "CP25042",
                 "past_opponents": [
+<<<<<<< HEAD
+=======
+                    "BW15041",
+                    "HL24031"
+                ]
+            },
+            {
+                "name": "Libong",
+                "firstname": "Heric",
+                "birthdate": "24/03/1969",
+                "unique_id": "HL24031",
+                "past_opponents": [
+                    "CP25042",
+>>>>>>> experimental-features
                     "BW15041"
                 ]
             }

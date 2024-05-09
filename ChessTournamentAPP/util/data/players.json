@@ -14,8 +14,8 @@
         "birthdate": "24/03/1968",
         "unique_id": "ET24039",
         "past_opponents": [
-            "AP07101",
-            "JA09874"
+            "JA09874",
+            "AP07101"
         ]
     },
     {
@@ -31,7 +31,12 @@
         "birthdate": "25/04/2001",
         "unique_id": "CP25042",
         "past_opponents": [
+<<<<<<< HEAD
             "AR29071"
+=======
+            "BW15041",
+            "HL24031"
+>>>>>>> experimental-features
         ]
     },
     {
@@ -67,7 +72,12 @@
         "birthdate": "24/03/1969",
         "unique_id": "HL24031",
         "past_opponents": [
+<<<<<<< HEAD
             "BD23031"
+=======
+            "CP25042",
+            "BW15041"
+>>>>>>> experimental-features
         ]
     },
     {
@@ -76,9 +86,15 @@
         "birthdate": "24/04/1965",
         "unique_id": "EH24041",
         "past_opponents": [
+<<<<<<< HEAD
             "PP25021",
             "BW15041",
             "HL24031",
+=======
+            "BW15041",
+            "HL24031",
+            "PP25021",
+>>>>>>> experimental-features
             "AP07101"
         ]
     },
@@ -94,7 +110,14 @@
         "firstname": "Henry",
         "birthdate": "23/09/2000",
         "unique_id": "JH23092",
+<<<<<<< HEAD
         "past_opponents": []
+=======
+        "past_opponents": [
+            "AP07101",
+            "CK10121"
+        ]
+>>>>>>> experimental-features
     },
     {
         "name": "Parker",
@@ -108,7 +131,14 @@
         "firstname": "Bruce",
         "birthdate": "15/04/1968",
         "unique_id": "BW15041",
+<<<<<<< HEAD
         "past_opponents": []
+=======
+        "past_opponents": [
+            "CP25042",
+            "HL24031"
+        ]
+>>>>>>> experimental-features
     },
     {
         "name": "Kent",

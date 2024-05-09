@@ -178,6 +178,7 @@ class Tournament:
             else:
                 print(f"Round '{round.name}' is already completed.")
         except IndexError:
+<<<<<<< HEAD
             print("Invalid round index.")
 
 
@@ -196,3 +197,7 @@ class Tournament:
                 player_points[match.players[1].unique_id] += match.results[1]
 
         return player_points
+=======
+            print("Index de round invalide")
+
+>>>>>>> experimental-features

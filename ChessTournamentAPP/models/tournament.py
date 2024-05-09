@@ -67,7 +67,7 @@ class Tournament:
         self.generate_matches()
         if self.rounds:
             self.rounds[0].start_time = datetime.now()
-            print(f"Le Tournoi '{self.name}' a commencé avec {len(self.registered_players)} "
+            print(f"Le Tournoi '{self.name}' a commencé avec {len(self.registered_players)}"
                   f"joueurs et {self.total_round} rounds.")
         else:
             print("Failed to initialize rounds properly.")
@@ -124,7 +124,7 @@ class Tournament:
             print(f"{player.firstname} {player.name} est déjà inscrit(e) à ce tournoi.")
 
     def is_active(self):
-        """ Vérifie si le tournoi est toujours en cours. """
+        """ Vérifie si le tournoi est toujours en cours."""
         # Utilise datetime.now() pour obtenir le datetime actuel et le convertit pour obtenir minuit ce jour-là.
         today_midnight = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
         return self.current_round < self.total_round and self.end_date >= today_midnight
@@ -179,3 +179,19 @@ class Tournament:
                 print(f"Round '{round.name}' est déjà terminé.")
         except IndexError:
             print("Index de round invalide")
+
+    def calculate_player_points(self):
+        player_points = {}
+        for round in self.rounds:
+            for match in round.matches:
+                # Assurez-vous que chaque joueur est dans le dictionnaire
+                if match.players[0].unique_id not in player_points:
+                    player_points[match.players[0].unique_id] = 0
+                if match.players[1].unique_id not in player_points:
+                    player_points[match.players[1].unique_id] = 0
+
+                # Ajouter les points pour chaque joueur selon les résultats
+                player_points[match.players[0].unique_id] += match.results[0]
+                player_points[match.players[1].unique_id] += match.results[1]
+
+        return player_points

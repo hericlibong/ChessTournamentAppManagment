@@ -5,7 +5,6 @@ from views.tournament_views import TournamentView
 from views.menu_view import MenuView
 from controllers.round_controller import RoundController
 from models.tournament import Tournament
-from prettytable import PrettyTable
 from datetime import datetime
 
 
@@ -60,84 +59,17 @@ class TournamentController(BaseController):
             print("Aucun tournoi sélectionné ou tournoi invalide.")
 
     def load_tournament(self):
-        """Charge les tournois de l'application"""
+        """
+        Charge un tournoi sélectionné et affiche ses informations détaillées,
+        les joueurs inscrits, les rounds joués et le classement par points
+        """
         tournament = TournamentView.select_tournament(self.tournaments)
         if tournament:
-            # Affichage des détails du tournoi
-            width = 80  # Largeur fixe pour la centralisation du texte
-            separator = "-" * width
-            title = "Détails du Tournoi Chargé".center(width)
-            # Affichage des détails du tournoi avec centralisation
-            print(separator)
-            print(title)
-            print(separator)
-            print(f"Nom du tournoi : {tournament.name}".upper().center(width))
-            print(f"Lieu : {tournament.location}".center(width))
-            print(f"Description : {tournament.description}".center(width))
-            print(f"Date de début : {tournament.start_date.strftime('%d/%m/%Y')}".center(width))
-            print(f"Date de fin : {tournament.end_date.strftime('%d/%m/%Y')}".center(width))
-            print(f"Nombre total de rounds prévus : {tournament.total_round}".center(width))
-            print(f"Rounds actuellement complétés : {len(tournament.rounds)}".center(width))
-            print(f"Nombre de joueurs inscrits : {len(tournament.registered_players)}".center(width))
-            print(separator)
-            print()  # Ligne vide pour une meilleure séparation
-
-            # Préparation du tableau pour les joueurs inscrits
-            if tournament.registered_players:
-                table = PrettyTable()
-                table.field_names = ["ID", "Nom", "Prénom", "Date de naissance"]
-                table.align = "l"  # Alignement des colonnes à gauche
-                table.border = True
-                table.header = True
-
-                for player in sorted(tournament.registered_players, key=lambda x: (x.name, x.firstname)):
-                    table.add_row([player.unique_id, player.name, player.firstname,
-                                   player.birthdate.strftime('%d/%m/%Y')])
-                table_string = table.get_string()
-                table_width = len(table_string.splitlines()[0])
-                title = "liste des joueurs inscrits au tournoi"
-                centered_title = title.center(table_width).upper()
-                line = "-" * 40
-                center_line = line.center(table_width)
-                print(centered_title)
-                print(center_line)
-                print(table)
-                print()
-            else:
-                print("Aucun joueur n'est inscrit dans le tournoi.")
-            if tournament.rounds:
-                rounds_title = "Tables des rounds joués"
-                round_line = "-" * 40
-                width = 60
-                print(rounds_title.center(width).upper())
-                print(round_line.center(width))
-                for round in tournament.rounds:
-                    matches_table = PrettyTable()
-                    matches_table.field_names = ["Match #", "Joueur 1", "Score J-1", "vs.", "Joueur 2", "Score J-2"]
-                    for index, match in enumerate(round.matches, start=1):
-                        player1_full_name = f"{match.players[0].firstname} {match.players[0].name}"
-                        player2_full_name = f"{match.players[1].firstname} {match.players[1].name}"
-                        matches_table.add_row([
-                            index,
-                            player1_full_name,
-                            # Rank P1,  # Remplacez par l'attribut réel si disponible
-                            match.results[0],
-                            "vs.",
-                            player2_full_name,
-                            # Rank P2,  # Remplacez par l'attribut réel si disponible
-                            match.results[1]
-                        ])
-
-                    # Ajout de la date de début et de fin du round s'ils sont définis
-                    round_details = f"Round {round.name}"
-                    if hasattr(round, 'start_time') and round.start_time:
-                        round_details += f" - Début : {round.start_time.strftime('%d/%m/%Y %H:%M')}"
-                    if hasattr(round, 'end_time') and round.end_time:
-                        round_details += f" - Fin : {round.end_time.strftime('%d/%m/%Y %H:%M')}"
-                    print(matches_table.get_string(title=round_details))
-            else:
-                print("Aucun round joué")
-
+            TournamentView.display_tournament_details(tournament)
+            TournamentView.display_players(tournament)
+            TournamentView.display_rounds(tournament)
+            player_points = tournament.calculate_player_points()
+            TournamentView.display_ranking(tournament, player_points)
         else:
             print("Aucun tournoi sélectionné ou sélection invalide.")
 

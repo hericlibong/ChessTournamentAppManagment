@@ -70,8 +70,8 @@
                 "birthdate": "24/03/1969",
                 "unique_id": "HL24031",
                 "past_opponents": [
-                    "BW15041",
-                    "CP25042"
+                    "CP25042",
+                    "BW15041"
                 ]
             },
             {
@@ -185,8 +185,8 @@
                 "birthdate": "23/09/2000",
                 "unique_id": "JH23092",
                 "past_opponents": [
-                    "CK10121",
-                    "AP07101"
+                    "AP07101",
+                    "CK10121"
                 ]
             },
             {
@@ -195,8 +195,8 @@
                 "birthdate": "10/12/1956",
                 "unique_id": "CK10121",
                 "past_opponents": [
-                    "JH23092",
-                    "AP07101"
+                    "AP07101",
+                    "JH23092"
                 ]
             },
             {
@@ -366,10 +366,10 @@
                 "birthdate": "24/03/1969",
                 "unique_id": "HL24031",
                 "past_opponents": [
-                    "BD23031",
-                    "CK10121",
                     "CP25042",
-                    "BS06102"
+                    "BD23031",
+                    "BS06102",
+                    "CK10121"
                 ]
             },
             {
@@ -378,10 +378,10 @@
                 "birthdate": "25/04/2001",
                 "unique_id": "CP25042",
                 "past_opponents": [
-                    "BD23031",
-                    "CK10121",
                     "BS06102",
-                    "HL24031"
+                    "BD23031",
+                    "HL24031",
+                    "CK10121"
                 ]
             },
             {
@@ -390,10 +390,10 @@
                 "birthdate": "10/12/1956",
                 "unique_id": "CK10121",
                 "past_opponents": [
-                    "BD23031",
                     "BS06102",
-                    "CP25042",
-                    "HL24031"
+                    "BD23031",
+                    "HL24031",
+                    "CP25042"
                 ]
             },
             {
@@ -402,10 +402,10 @@
                 "birthdate": "06/10/2000",
                 "unique_id": "BS06102",
                 "past_opponents": [
-                    "BD23031",
-                    "CK10121",
                     "CP25042",
-                    "HL24031"
+                    "BD23031",
+                    "HL24031",
+                    "CK10121"
                 ]
             },
             {
@@ -414,10 +414,10 @@
                 "birthdate": "24/03/1969",
                 "unique_id": "BD23031",
                 "past_opponents": [
-                    "CK10121",
                     "CP25042",
+                    "HL24031",
                     "BS06102",
-                    "HL24031"
+                    "CK10121"
                 ]
             }
         ],
@@ -594,8 +594,8 @@
                 "birthdate": "07/10/1987",
                 "unique_id": "AP07101",
                 "past_opponents": [
-                    "JA09874",
-                    "ET24039"
+                    "ET24039",
+                    "JA09874"
                 ]
             },
             {
@@ -604,8 +604,8 @@
                 "birthdate": "24/03/1968",
                 "unique_id": "ET24039",
                 "past_opponents": [
-                    "JA09874",
-                    "AP07101"
+                    "AP07101",
+                    "JA09874"
                 ]
             },
             {
@@ -692,8 +692,8 @@
                 "birthdate": "19/03/1958",
                 "unique_id": "EI19031",
                 "past_opponents": [
-                    "BD23031",
-                    "PP25021"
+                    "PP25021",
+                    "BD23031"
                 ]
             },
             {
@@ -712,8 +712,8 @@
                 "birthdate": "24/03/1969",
                 "unique_id": "BD23031",
                 "past_opponents": [
-                    "EI19031",
-                    "PP25021"
+                    "PP25021",
+                    "EI19031"
                 ]
             },
             {
@@ -725,5 +725,55 @@
             }
         ],
         "total_round": 3
+    },
+    {
+        "t_id": "eab17649",
+        "name": "Addis Chess tournament",
+        "location": "Addis",
+        "start_date": "09/05/2024",
+        "end_date": "09/05/2024",
+        "description": "chess etthipia",
+        "current_round": 0,
+        "rounds": [
+            {
+                "name": "Round 1",
+                "is_complete": true,
+                "matches": [
+                    {
+                        "players": [
+                            "BW15041",
+                            "HL24031"
+                        ],
+                        "results": [
+                            1.0,
+                            0.0
+                        ]
+                    }
+                ],
+                "start_time": "2024-05-09 11:32",
+                "end_time": "2024-05-09 11:33"
+            }
+        ],
+        "registered_players": [
+            {
+                "name": "Libong",
+                "firstname": "Heric",
+                "birthdate": "24/03/1969",
+                "unique_id": "HL24031",
+                "past_opponents": [
+                    "BW15041"
+                ]
+            },
+            {
+                "name": "Wayne",
+                "firstname": "Bruce",
+                "birthdate": "15/04/1968",
+                "unique_id": "BW15041",
+                "past_opponents": [
+                    "HL24031"
+                ]
+            }
+        ],
+        "total_round": 1
     }
 ]

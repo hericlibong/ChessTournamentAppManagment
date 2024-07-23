@@ -1,6 +1,9 @@
 # Chess Game OffLine Software
 
-![picture_chess](media/chess.png)
+
+<p align="center">
+  <img src="media/chess.png" alt="chess-picture">
+</p>
 
 ## Table des Matières
 1. [Présentation](#i---présentation)
@@ -95,18 +98,23 @@ Le menu principal offre plusieurs options pour gérer le tournoi :
 
 ### Menu principal et gestion tournoi
 
-![menu_principal](media/menu_principal_tournament.png)
+<p align="center">
+  <img src="media/menu_principal_tournament.png" alt="menu_principal">
+</p>
 
 ### Gestions des Joueurs
 
-![menu_joueur](media/menu_player.png)
+<p align="center">
+  <img src="media/menu_player.png" alt="menu_joueur">
+</p>
 
 ### Rapports
 
 Le menu des rapports permet d'accéder aux résultats :
 
-![rapports](media/rapport.png)
-
+<p align="center">
+  <img src="media/rapport.png" alt="rapports">
+</p>
 
 
 
